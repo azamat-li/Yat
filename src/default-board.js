@@ -1,4 +1,4 @@
-import { ulid } from '../utils'
+import { ulid } from './utils'
 
 export default {
   name: 'week',
