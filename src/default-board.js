@@ -7,7 +7,7 @@ export default {
       name: 'Понедельник',
       lessons: [
         {
-          notes: '',
+          notes: 'Замещение',
           name: 'Урок #1',
           id: ulid(),
           teacherAssigned: null
