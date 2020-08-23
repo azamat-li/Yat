@@ -33,7 +33,7 @@ export default {
       for (var min = 0, code = 1; min <= 45; min += 5, code += 1) {
         var cl = {}
         cl.time = '8:' + min
-        cl.code = '#' + code
+        cl.code = 'Класс #' + code
         cl.leftIndentCoefficient = code
         classObjects.push(cl)
       }
@@ -47,4 +47,6 @@ export default {
 .global-time {
 @apply bg-teal-dark h-full
 }
+
+
 </style>

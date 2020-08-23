@@ -1,8 +1,10 @@
 <template>
-  <div class="class-with-time-container">
-    <div class="time">{{ time }}</div>
-    <div class="codePosition " :style="leftIndentStyle">
-      {{ code }}
+  <div class="class-container">
+    <div class="time beautiful">{{ time }}</div>
+    <div class="codePosition beautiful" :style="leftIndentStyle">
+      <div class="code">
+        {{ code }}
+      </div>
     </div>
   </div>
 </template>
@@ -23,14 +25,13 @@ export default {
   },
   computed: {
     leftIndentStyle: function() {
-      return 'left: ' + this.leftIndent + ';' + 'width:' + this.leftIndent
+      return 'left: ' + this.leftIndent
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-.class-with-time-container
 
 .time
     position: absolute
@@ -40,7 +41,18 @@ export default {
 
 .codePosition
     position: relative
-    width: 10em
+    width: 6em
 </style>
 
-<style lang="css"></style>
+<style lang="css">
+.class-container {
+    @apply bg-grey-light
+}
+
+.beautiful {
+    @apply shadow items-center flex flex-wrap mb-2 px-2 py-2 rounded bg-white text-grey-darkest no-underline
+}
+.code {
+    @apply items-center
+}
+</style>
