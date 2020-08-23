@@ -45,12 +45,11 @@ export default {
 </style>
 
 <style lang="css">
-.class-container {
-    @apply bg-grey-light
+.class-container{
+@apply bg-teal-light
 }
-
 .beautiful {
-    @apply shadow items-center flex flex-wrap mb-2 px-2 py-2 rounded bg-white text-grey-darkest no-underline
+    @apply shadow items-center flex flex-wrap mb-2 px-2 py-2 rounded bg-grey-light text-grey-darkest no-underline
 }
 .code {
     @apply items-center
