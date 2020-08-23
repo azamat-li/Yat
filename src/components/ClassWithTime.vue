@@ -1,8 +1,7 @@
 <template>
   <div class="class-with-time-container">
-    {{ classObject }}
     <div class="time">{{ time }}</div>
-    <div class="classCode" :style="{ left: leftIndentStyle }">
+    <div class="codePosition " :style="leftIndentStyle">
       {{ code }}
     </div>
   </div>
@@ -17,14 +16,14 @@ export default {
   },
   data() {
     return {
-      leftIndent: `${this.classObject.leftIndentCoefficient * 8}em`,
-      code: this.classObject.classCode,
+      leftIndent: `${this.classObject.leftIndentCoefficient * 6}em`,
+      code: this.classObject.code,
       time: this.classObject.time
     }
   },
   computed: {
     leftIndentStyle: function() {
-      return this.leftIndent
+      return 'left: ' + this.leftIndent + ';' + 'width:' + this.leftIndent
     }
   }
 }
@@ -32,13 +31,16 @@ export default {
 
 <style lang="sass" scoped>
 .class-with-time-container
-    width: 100vw
-    position: relative
 
 .time
     position: absolute
     left: 0px
+    display: flex-wrap
+    flex-wrap: wrap
 
-.classCode
-    position: absolute
+.codePosition
+    position: relative
+    width: 10em
 </style>
+
+<style lang="css"></style>

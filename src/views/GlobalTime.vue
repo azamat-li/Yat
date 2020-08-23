@@ -8,14 +8,6 @@
       class="class"
     >
     </ClassWithTime>
-    <ClassWithTime
-      :classObject="{
-        time: '9:00',
-        code: '#2',
-        leftIndentCoefficient: '3'
-      }"
-    >
-    </ClassWithTime>
     <router-link class="router-link" :to="{ name: 'board' }"
       >Доска расписания</router-link
     >
@@ -38,7 +30,7 @@ export default {
     },
     classObjects: function() {
       var classObjects = []
-      for (var min = 0, code = 1; min < 45; min += 5, code += 1) {
+      for (var min = 0, code = 1; min <= 35; min += 5, code += 1) {
         var cl = {}
         cl.time = '8:' + min
         cl.code = '#' + code
