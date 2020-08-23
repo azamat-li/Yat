@@ -23,6 +23,30 @@ export default {
           name: 'Урок #3',
           id: ulid(),
           teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #4',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #5',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #6',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #7',
+          id: ulid(),
+          teacherAssigned: null
         }
       ]
     },
@@ -44,6 +68,30 @@ export default {
         {
           notes: '',
           name: 'Урок #3',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #4',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #5',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #6',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #7',
           id: ulid(),
           teacherAssigned: null
         }
@@ -69,6 +117,30 @@ export default {
           name: 'Урок #3',
           id: ulid(),
           teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #4',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #5',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #6',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #7',
+          id: ulid(),
+          teacherAssigned: null
         }
       ]
     },
@@ -90,6 +162,30 @@ export default {
         {
           notes: '',
           name: 'Урок #3',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #4',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #5',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #6',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #7',
           id: ulid(),
           teacherAssigned: null
         }
@@ -115,6 +211,30 @@ export default {
           name: 'Урок #3',
           id: ulid(),
           teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #4',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #5',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #6',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #7',
+          id: ulid(),
+          teacherAssigned: null
         }
       ]
     },
@@ -136,6 +256,24 @@ export default {
         {
           notes: '',
           name: 'Урок #3',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #4',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #5',
+          id: ulid(),
+          teacherAssigned: null
+        },
+        {
+          notes: '',
+          name: 'Урок #6',
           id: ulid(),
           teacherAssigned: null
         }
