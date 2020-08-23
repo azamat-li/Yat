@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      leftIndent: `${this.classObject.leftIndentCoefficient * 6}em`,
+      leftIndent: `${this.classObject.leftIndentCoefficient * 5}em`,
       code: this.classObject.code,
       time: this.classObject.time
     }

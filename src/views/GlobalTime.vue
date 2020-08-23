@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="global-time">
     <h1>Общее школьное время</h1>
     <ClassWithTime
       v-for="(classObject, index) in classObjects"
@@ -30,7 +30,7 @@ export default {
     },
     classObjects: function() {
       var classObjects = []
-      for (var min = 0, code = 1; min <= 35; min += 5, code += 1) {
+      for (var min = 0, code = 1; min <= 45; min += 5, code += 1) {
         var cl = {}
         cl.time = '8:' + min
         cl.code = '#' + code
@@ -43,4 +43,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="css" scoped>
+.global-time {
+@apply bg-teal-dark h-full
+}
+</style>
