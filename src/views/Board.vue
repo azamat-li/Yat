@@ -11,6 +11,7 @@
         </div>
       </div>
     </div>
+    <router-link :to="{name: 'time-between-classes'}">Распределить время между классами</router-link>
   </div>
 </template>
 
@@ -39,4 +40,5 @@ export default {
   @apply pin absolute;
   background: rgba(0, 0, 0, 0.5);
 }
+
 </style>
