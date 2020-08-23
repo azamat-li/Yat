@@ -2,15 +2,20 @@
   <div>
     <h1>Общее школьное время</h1>
     <ClassWithTime
+      v-for="(classObject, index) in classObjects"
+      :classObject="classObject"
+      :key="index"
       class="class"
-      v-bind:classObject="{
-        time: '08:00',
-        classCode: '#2',
-        leftIndentCoefficient: '2'
+    >
+    </ClassWithTime>
+    <ClassWithTime
+      :classObject="{
+        time: '9:00',
+        code: '#2',
+        leftIndentCoefficient: '3'
       }"
     >
     </ClassWithTime>
-    <ClassWithTime time="05" classCode="#2"> </ClassWithTime>
     <router-link class="router-link" :to="{ name: 'board' }"
       >Доска расписания</router-link
     >
@@ -23,11 +28,24 @@ export default {
   components: {
     ClassWithTime
   },
-  data() {
-    return {
-      class: {
-        type: Object
+  computed: {
+    time() {
+      var times = []
+      for (var min = 0; min < 45; min += 5) {
+        times.push('8:' + min)
       }
+      return times
+    },
+    classObjects: function() {
+      var classObjects = []
+      for (var min = 0, code = 1; min < 45; min += 5, code += 1) {
+        var cl = {}
+        cl.time = '8:' + min
+        cl.code = '#' + code
+        cl.leftIndentCoefficient = code
+        classObjects.push(cl)
+      }
+      return classObjects
     }
   }
 }

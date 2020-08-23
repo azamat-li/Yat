@@ -1,8 +1,9 @@
 <template>
   <div class="class-with-time-container">
+    {{ classObject }}
     <div class="time">{{ time }}</div>
     <div class="classCode" :style="{ left: leftIndentStyle }">
-      {{ classCode }}
+      {{ code }}
     </div>
   </div>
 </template>
@@ -17,7 +18,7 @@ export default {
   data() {
     return {
       leftIndent: `${this.classObject.leftIndentCoefficient * 8}em`,
-      classCode: this.classObject.classCode,
+      code: this.classObject.classCode,
       time: this.classObject.time
     }
   },
