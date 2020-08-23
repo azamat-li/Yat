@@ -24,7 +24,7 @@
       </div>
     </div>
     <router-link :to="{ name: 'time-between-classes' }" class="router-link"
-      >Распределить время между классами</router-link
+      >Общее школьное время</router-link
     >
   </div>
 </template>

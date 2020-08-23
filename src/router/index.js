@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Board from '../views/Board.vue'
-import TimeBetweenClasses from '../views/TimeBetweenClasses.vue'
+import GlobalTime from '../views/GlobalTime.vue'
 
 Vue.use(VueRouter)
 
@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/распределение-времени-между-классами',
     name: 'time-between-classes',
-    component: TimeBetweenClasses
+    component: GlobalTime
   }
 ]
 

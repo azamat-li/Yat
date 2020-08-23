@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Распределение времени между классами</h1>
+    <h1>Общее школьное время</h1>
     <router-link class="router-link" :to="{ name: 'board' }"
       >Доска расписания</router-link
     >
