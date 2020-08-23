@@ -1,6 +1,6 @@
 <template>
   <div class="global-time">
-    <h1>Общее школьное время</h1>
+    <h1>Общее школьное время корпуса</h1>
     <ClassWithTime
       v-for="(classObject, index) in classObjects"
       :classObject="classObject"
@@ -32,7 +32,13 @@ export default {
       var classObjects = []
       for (var min = 0, code = 1; min <= 45; min += 5, code += 1) {
         var cl = {}
-        cl.time = '8:' + min
+        var minTwoDigitized = '00'
+        if (min < 10) {
+          minTwoDigitized = '0' + min
+        } else {
+          minTwoDigitized = min
+        }
+        cl.time = '8:' + minTwoDigitized
         cl.code = 'Класс #' + code
         cl.leftIndentCoefficient = code
         classObjects.push(cl)
