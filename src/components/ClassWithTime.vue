@@ -1,8 +1,8 @@
 <template>
   <div class="class-with-time-container">
-    <div class="time">{{ this.classObject.time }}</div>
-    <div class="class" :class="classWithPosition">
-      {{ this.classObject.classCode }}
+    <div class="time">{{ time }}</div>
+    <div class="classCode" :style="{ left: leftIndentStyle }">
+      {{ classCode }}
     </div>
   </div>
 </template>
@@ -14,9 +14,16 @@ export default {
       type: Object
     }
   },
+  data() {
+    return {
+      leftIndent: `${this.classObject.leftIndentCoefficient * 8}em`,
+      classCode: this.classObject.classCode,
+      time: this.classObject.time
+    }
+  },
   computed: {
-    classWithPosition() {
-      return null
+    leftIndentStyle: function() {
+      return this.leftIndent
     }
   }
 }
@@ -32,5 +39,5 @@ export default {
     left: 0px
 
 .classCode
-    position: relative
+    position: absolute
 </style>

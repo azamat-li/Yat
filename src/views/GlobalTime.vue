@@ -3,7 +3,11 @@
     <h1>Общее школьное время</h1>
     <ClassWithTime
       class="class"
-      v-bind:classObject="{ time: '08:00', classCode: '#1' }"
+      v-bind:classObject="{
+        time: '08:00',
+        classCode: '#2',
+        leftIndentCoefficient: '2'
+      }"
     >
     </ClassWithTime>
     <ClassWithTime time="05" classCode="#2"> </ClassWithTime>
