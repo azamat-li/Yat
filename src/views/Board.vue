@@ -1,17 +1,31 @@
 <template>
   <div class="board">
     <div class="flex flex-row items-start">
-      <div class="column" v-for="(column, $columnIndex) of board.columns" :key="$columnIndex">
+      <div
+        class="column"
+        v-for="(column, $columnIndex) of board.columns"
+        :key="$columnIndex"
+      >
         <div class="flex items-center mb-2 font-bold">{{ column.name }}</div>
         <div class="list-reset">
-          <div class="lesson" v-for="(lesson, $lessonIndex) of column.lessons" :key="$lessonIndex">
-            <span class="w-full flex-no-shrink font-bold">{{ lesson.name }}</span>
-            <p class="w-full flex-no-shrink mt-1 text-sm" v-if="lesson.notes">{{ lesson.notes }}</p>
+          <div
+            class="lesson"
+            v-for="(lesson, $lessonIndex) of column.lessons"
+            :key="$lessonIndex"
+          >
+            <span class="w-full flex-no-shrink font-bold">{{
+              lesson.name
+            }}</span>
+            <p class="w-full flex-no-shrink mt-1 text-sm" v-if="lesson.notes">
+              {{ lesson.notes }}
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <router-link :to="{name: 'time-between-classes'}">Распределить время между классами</router-link>
+    <router-link :to="{ name: 'time-between-classes' }" class="router-link"
+      >Распределить время между классами</router-link
+    >
   </div>
 </template>
 
@@ -40,5 +54,4 @@ export default {
   @apply pin absolute;
   background: rgba(0, 0, 0, 0.5);
 }
-
 </style>
