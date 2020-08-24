@@ -1,5 +1,6 @@
 <template>
   <div class="class-container">
+    <div v-if="minute == '00' & hour != '8'" class="whole-hour-separator">  </div>
     <div class="time beautiful">{{ time }}</div>
     <div class="code-position beautiful" :style="leftIndentStyle">
       <div class="code">
@@ -20,7 +21,9 @@ export default {
     return {
       leftIndent: `${this.classObject.leftIndentCoefficient * 5}em`,
       code: this.classObject.code,
-      time: this.classObject.time
+      time: this.classObject.hour + ':' + this.classObject.minute,
+      minute: this.classObject.minute,
+      hour: this.classObject.hour
     }
   },
   computed: {
@@ -46,6 +49,9 @@ export default {
     @apply relative w-24
 }
 .time {
-    @apply absolute px-1 mx-1 w-12
+    @apply absolute px-2 mx-1 w-16
+}
+.whole-hour-separator {
+    @apply my-2 py-3 bg-teal-dark
 }
 </style>
