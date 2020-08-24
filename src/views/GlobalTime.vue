@@ -18,7 +18,12 @@
 </template>
 
 <script>
+import Vuex from 'vuex'
+import Vue from 'vue'
 import ClassWithTime from '../components/ClassWithTime'
+
+Vue.use(Vuex)
+
 export default {
   components: {
     ClassWithTime
@@ -34,7 +39,7 @@ export default {
       var classObjects = []
       for (var hour = 8; hour <= 19; hour += 1) {
         for (var min = 0, code = 1; min <= 55; min += 5, code += 1) {
-          if (!(hour === 19 & min >= 45)) {
+          if (!(hour === 19 & min >= (45-35))) {
             var cl = {}
             var minTwoDigitized = '00'
             if (min < 10) {
