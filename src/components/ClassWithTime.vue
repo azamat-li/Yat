@@ -46,6 +46,6 @@ export default {
     @apply relative w-24
 }
 .time {
-    @apply absolute px-5 mx-1 w-16
+    @apply absolute px-1 mx-1 w-12
 }
 </style>
