@@ -26,9 +26,10 @@ html
 @apply mx-auto
 
 ::selection
-    background: gold
+    background:  #e6fffa
 
 ::moz-selection
-    background: gold
+    background:  #e6fffa
 
 </style>
+
