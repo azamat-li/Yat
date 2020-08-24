@@ -33,3 +33,10 @@ html
 
 </style>
 
+<style lang="css">
+@tailwind base;
+h1 {
+    @apply text-2xl p-2
+
+}
+</style>
