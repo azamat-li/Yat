@@ -26,10 +26,10 @@ html
 @apply mx-auto
 
 ::selection
-    background:  #e6fffa
+    background:  #b2f5ea
 
 ::moz-selection
-    background:  #e6fffa
+    background:  #b2f5ea
 
 </style>
 
