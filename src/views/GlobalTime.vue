@@ -51,7 +51,7 @@ export default {
 
 <style lang="css" scoped>
 .global-time {
-@apply bg-teal-dark h-full
+@apply bg-teal-dark h-full 
 }
 
 

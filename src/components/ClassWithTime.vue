@@ -1,7 +1,7 @@
 <template>
   <div class="class-container">
     <div class="time beautiful">{{ time }}</div>
-    <div class="codePosition beautiful" :style="leftIndentStyle">
+    <div class="code-position beautiful" :style="leftIndentStyle">
       <div class="code">
         {{ code }}
       </div>
@@ -31,18 +31,6 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-
-.time
-    position: absolute
-    left: 0px
-    display: flex-wrap
-    flex-wrap: wrap
-
-.codePosition
-    position: relative
-    width: 6em
-</style>
 
 <style lang="css">
 .class-container{
@@ -52,6 +40,12 @@ export default {
     @apply shadow items-center flex flex-wrap mb-2 px-2 py-2 rounded bg-grey-light text-grey-darkest no-underline
 }
 .code {
-    @apply items-center
+    @apply items-center 
+}
+.code-position {
+    @apply relative w-24
+}
+.time {
+    @apply absolute px-5 mx-1 
 }
 </style>
