@@ -19,8 +19,6 @@ html
     color: #2c3e50
     height: 100%
 
-.router-link
-    color: #2c3e50
 
 .container
 @apply mx-auto
@@ -31,12 +29,14 @@ html
 ::moz-selection
     background:  #b2f5ea
 
+.router-link 
+    color: #4a5568
 </style>
 
 <style lang="css">
 @tailwind base;
 h1 {
     @apply text-2xl p-2
-
 }
+
 </style>
