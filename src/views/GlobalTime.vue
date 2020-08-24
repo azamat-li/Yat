@@ -21,27 +21,22 @@ export default {
     ClassWithTime
   },
   computed: {
-    time() {
-      var times = []
-      for (var min = 0; min < 45; min += 5) {
-        times.push('8:' + min)
-      }
-      return times
-    },
     classObjects: function() {
       var classObjects = []
-      for (var min = 0, code = 1; min <= 45; min += 5, code += 1) {
-        var cl = {}
-        var minTwoDigitized = '00'
-        if (min < 10) {
-          minTwoDigitized = '0' + min
-        } else {
-          minTwoDigitized = min
+      for (var hour = 8; hour <= 19; hour += 1) {
+        for (var min = 0, code = 1; min <= 55; min += 5, code += 1) {
+          var cl = {}
+          var minTwoDigitized = '00'
+          if (min < 10) {
+            minTwoDigitized = '0' + min
+          } else {
+            minTwoDigitized = min
+          }
+          cl.time = hour + ':' + minTwoDigitized
+          cl.code = 'Класс #' + code
+          cl.leftIndentCoefficient = code
+          classObjects.push(cl)
         }
-        cl.time = '8:' + minTwoDigitized
-        cl.code = 'Класс #' + code
-        cl.leftIndentCoefficient = code
-        classObjects.push(cl)
       }
       return classObjects
     }

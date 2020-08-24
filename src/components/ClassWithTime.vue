@@ -34,7 +34,7 @@ export default {
 
 <style lang="css">
 .class-container{
-@apply bg-teal-light
+@apply bg-teal-light 
 }
 .beautiful {
     @apply shadow items-center flex flex-wrap mb-2 px-2 py-2 rounded bg-grey-light text-grey-darkest no-underline
@@ -46,6 +46,6 @@ export default {
     @apply relative w-24
 }
 .time {
-    @apply absolute px-5 mx-1 
+    @apply absolute px-5 mx-1 w-16
 }
 </style>
