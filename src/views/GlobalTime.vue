@@ -2,7 +2,12 @@
   <div class="global-time">
     <h1>Общее школьное время корпуса</h1>
     <div class="table-header">Время начала урока</div>
-    <FormWithTimeRow v-for="(form, formIndex) of forms.forms" :key="formIndex" :form="form"></FormWithTimeRow>
+    <FormWithTimeRow
+      v-for="(form, formIndex) of forms.forms"
+      :key="formIndex"
+      :form="form"
+      :indent="formIndex * 5"
+    ></FormWithTimeRow>
     <div class="form-bg" v-if="isFormOpen" @click.self="close">
       <router-view />
     </div>
@@ -10,7 +15,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import FormWithTimeRow from '../components/FormWithTimeRow'
 
 export default {
@@ -18,8 +23,8 @@ export default {
     FormWithTimeRow
   },
   computed: {
-    ...mapState(['schooltimetable']),
-    ...mapState(['forms']),
+    ...mapState(['schooltimetable', 'forms']),
+    ...mapActions(['resetIndent']),
     isFormOpen() {
       return this.$route.name === 'form'
     }
@@ -28,6 +33,9 @@ export default {
     close() {
       this.$router.push({ name: 'main' })
     }
+  },
+  beforeCreate() {
+    this.resetIndent()
   }
 }
 </script>

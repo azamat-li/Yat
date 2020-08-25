@@ -1,32 +1,41 @@
 <template>
-  <div class="class-container">
-    <div>
-      <div @click.self="goToForm">{{ form.name }}</div>
-    </div>
+  <div class="form-container">
+    <div @click.self="goToForm" class="form" :style="computedStyle">{{ form.name }}</div>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   props: {
     form: {
       type: Object
+    },
+    indent: {
+      type: Number
     }
   },
   methods: {
     goToForm(form) {
       this.$router.push({ name: 'form', params: { id: form.id } })
     }
+  },
+  computed: {
+    computedStyle() {
+      return `left: ${this.indent}em`
+    },
+    ...mapActions(['incrementIndent'])
   }
 }
 </script>
 
 <style lang="css">
-.class-container {
-  @apply bg-teal-light;
+.form-container {
+  @apply bg-teal-light rounded m-3 p-5 relative;
 }
 .form {
-  @apply items-center;
+  @apply bg-white items-center rounded m-2 p-2 w-10 shadow flex  text-grey-darkest no-underline relative;
 }
 .form-wrapper {
   @apply shadow items-center flex flex-wrap mb-2 px-2 py-2 rounded bg-grey-light text-grey-darkest no-underline relative w-24;
