@@ -1,9 +1,9 @@
 <template>
-  <div class="board">
+  <div class="form">
     <div class="flex flex-row items-start">
       <div
         class="column"
-        v-for="(column, $columnIndex) of board.columns"
+        v-for="(column, $columnIndex) of form.columns"
         :key="$columnIndex"
       >
         <div class="flex items-center mb-2 font-bold">{{ column.name }}</div>
@@ -23,10 +23,6 @@
         </div>
       </div>
     </div>
-
-    <div class="form-bg" v-if="isFormOpen" @click.self="close"> 
-        
-    </div>
     <router-link :to="{ name: 'time-between-classes' }" class="router-link"
       >Общее школьное время</router-link
     >
@@ -37,10 +33,7 @@
 import { mapState } from 'vuex'
 export default {
   computed: {
-    ...mapState(['board']),
-    isFormOpen() {
-      return this.$route.name === 'form'
-    }
+    ...mapState(['form'])
   }
 }
 </script>
@@ -55,8 +48,8 @@ export default {
   min-width: 350px;
 }
 
-.board {
-  @apply p-4 bg-teal-dark h-full overflow-auto;
+.form {
+  @apply p-4 bg-teal-dark h-full  overflow-auto;
 }
 
 .form-bg {

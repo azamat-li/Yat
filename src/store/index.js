@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import defaultBoard from '../default-form-board'
+import defaultForm from '../default-form'
 import { saveStatePlugin } from '../utils'
 
 Vue.use(Vuex)
 
-const board = JSON.parse(localStorage.getItem('board')) || defaultBoard
+const form = JSON.parse(localStorage.getItem('form')) || defaultForm
 
 export default new Vuex.Store({
   plugins: [saveStatePlugin],
   state: {
-    board
+    form
   },
   mutations: {}
 })

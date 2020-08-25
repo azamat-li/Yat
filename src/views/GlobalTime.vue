@@ -11,6 +11,9 @@
       class="class"
     >
     </ClassRow>
+    <div class="form-bg" v-if="isFormOpen" @click.self="close">
+        <router-view/>
+    </div>
     <router-link class="router-link" :to="{ name: 'board' }"
       >Доска расписания</router-link
     >
@@ -18,11 +21,9 @@
 </template>
 
 <script>
-import Vuex from 'vuex'
-import Vue from 'vue'
-import ClassRow from '../components/ClassRow'
+import { mapState } from 'vuex'
 
-Vue.use(Vuex)
+import ClassRow from '../components/ClassRow'
 
 export default {
   components: {
@@ -35,6 +36,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['formboard']),
     classObjects: function() {
       var classObjects = []
       for (var hour = 8; hour <= 19; hour += 1) {
@@ -56,6 +58,9 @@ export default {
         }
       }
       return classObjects
+    },
+    isFormOpen() {
+      return this.$route.name === 'form'
     }
   }
 }
