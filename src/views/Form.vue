@@ -23,6 +23,10 @@
         </div>
       </div>
     </div>
+
+    <div class="form-bg" v-if="isFormOpen" @click.self="close"> 
+        
+    </div>
     <router-link :to="{ name: 'time-between-classes' }" class="router-link"
       >Общее школьное время</router-link
     >
@@ -32,7 +36,12 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-  computed: mapState(['board'])
+  computed: {
+    ...mapState(['board']),
+    isFormOpen() {
+      return this.$route.name === 'form'
+    }
+  }
 }
 </script>
 
@@ -50,7 +59,7 @@ export default {
   @apply p-4 bg-teal-dark h-full overflow-auto;
 }
 
-.task-bg {
+.form-bg {
   @apply pin absolute;
   background: rgba(0, 0, 0, 0.5);
 }

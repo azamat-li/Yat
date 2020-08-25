@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Board from '../views/Board.vue'
+import Form from '../views/Form.vue'
 import GlobalTime from '../views/GlobalTime.vue'
 
 Vue.use(VueRouter)
@@ -8,13 +8,15 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'board',
-    component: Board
-  },
-  {
-    path: '/распределение-времени-между-классами',
-    name: 'time-between-classes',
-    component: GlobalTime
+    name: 'main',
+    component: GlobalTime,
+    children: [
+      {
+        path: '/form/:id',
+        name: 'form',
+        component: Form
+      }
+    ]
   }
 ]
 
