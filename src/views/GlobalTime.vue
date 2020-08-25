@@ -1,22 +1,17 @@
 <template>
   <div class="global-time">
     <h1>Общее школьное время корпуса</h1>
-    <div class="table-header">
-      Время начала урока
-    </div>
+    <div class="table-header">Время начала урока</div>
     <ClassRow
       v-for="(classObject, index) in classObjects"
       :classObject="classObject"
       :key="index"
       class="class"
-    >
-    </ClassRow>
+    ></ClassRow>
     <div class="form-bg" v-if="isFormOpen" @click.self="close">
-        <router-view/>
+      <router-view />
     </div>
-    <router-link class="router-link" :to="{ name: 'board' }"
-      >Доска расписания</router-link
-    >
+    <router-link class="router-link" :to="{ name: 'board' }">Доска расписания</router-link>
   </div>
 </template>
 
@@ -32,16 +27,16 @@ export default {
   data() {
     return {
       hour: this.classObjects.hour,
-      minute: this.classObjects.minute
+      minute: this.classObjects.minute,
+      ...mapState(['schooltimetable'])
     }
   },
   computed: {
-    ...mapState(['formboard']),
     classObjects: function() {
       var classObjects = []
       for (var hour = 8; hour <= 19; hour += 1) {
         for (var min = 0, code = 1; min <= 55; min += 5, code += 1) {
-          if (!(hour === 19 & min >= (45-35))) {
+          if (!((hour === 19) & (min >= 45 - 35))) {
             var cl = {}
             var minTwoDigitized = '00'
             if (min < 10) {
@@ -68,11 +63,9 @@ export default {
 
 <style lang="css" scoped>
 .global-time {
-@apply bg-teal-dark 
+  @apply bg-teal-dark;
 }
 .table-header {
-    @apply   mx-1 my-2 py-1 w-16 h-16 rounded bg-teal 
+  @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
 }
-
-
 </style>

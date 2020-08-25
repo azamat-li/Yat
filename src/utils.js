@@ -4,6 +4,12 @@ export function ulid() {
     .slice(2)
 }
 
+export function ufid() {
+  return Math.random()
+    .toString(8)
+    .slice(2)
+}
+
 export function saveStatePlugin(store) {
   store.subscribe((mutation, state) => {
     localStorage.setItem('board', JSON.stringify(state.board))
