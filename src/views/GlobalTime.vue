@@ -68,7 +68,7 @@ export default {
   @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
 }
 .form-bg {
-    @apply pin absolute  p-10;
-    background: rgba(0, 0, 0, 0.5);
+  @apply pin py-32 absolute;
+  background: rgba(0, 0, 0, 0.8);
 }
 </style>

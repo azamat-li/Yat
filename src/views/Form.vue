@@ -41,6 +41,6 @@ export default {
 }
 
 .form {
-  @apply p-32 bg-teal-dark   h-full overflow-auto;
+  @apply py-32 bg-teal-dark   h-full overflow-auto;
 }
 </style>
