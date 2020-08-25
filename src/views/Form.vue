@@ -1,9 +1,23 @@
 <template>
-  <div class="form">
-    <div class="flex flex-row items-start">
-      <div class="day" v-for="(form, $formIndex) of schooltimetable.forms" :key="$formIndex">
-        <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex">
-          <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex">{{ lesson.name }}</div>
+  <div >
+    <div class="form" v-for="(form, $formIndex) of schooltimetable.forms" :key="$formIndex">
+      <div class="flex flex-row items-start">
+        <div
+          v-for="(day, $dayIndex) of form.days"
+          :key="$dayIndex"
+          class="day"
+        >
+          <div class="list-reset">
+          <div class="flex items-center mb-2 font-bold">{{ day.name }}</div>
+            <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
+              <span class="w-full flex-no-shrink font-bold">
+                {{
+                lesson.name
+                }}
+              </span>
+              <p v-if="lesson.notes" class="w-full text-no-shrink mt-1 text-sm">{{ lesson.notes }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -27,12 +41,11 @@ export default {
 }
 
 .day {
-  @apply bg-grey-light p-2 mr-4 text-left shadow rounded;
-  min-width: 350px;
+  @apply bg-grey-light p-5 m-4 text-left shadow rounded;
 }
 
 .form {
-  @apply p-4 bg-teal-dark   overflow-auto relative flex flex-row bg-white pin mx-4 m-32 mx-auto py-4 text-left rounded shadow;
+  @apply p-4 bg-teal-dark   h-full overflow-auto;
   max-height: 90%;
   max-width: 90%;
 }
