@@ -4,13 +4,13 @@
     <div class="table-header">
       Время начала урока
     </div>
-    <ClassWithTime
+    <ClassRow
       v-for="(classObject, index) in classObjects"
       :classObject="classObject"
       :key="index"
       class="class"
     >
-    </ClassWithTime>
+    </ClassRow>
     <router-link class="router-link" :to="{ name: 'board' }"
       >Доска расписания</router-link
     >
@@ -20,13 +20,13 @@
 <script>
 import Vuex from 'vuex'
 import Vue from 'vue'
-import ClassWithTime from '../components/ClassWithTime'
+import ClassRow from '../components/ClassRow'
 
 Vue.use(Vuex)
 
 export default {
   components: {
-    ClassWithTime
+    ClassRow
   },
   data() {
     return {
