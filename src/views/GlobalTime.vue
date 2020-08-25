@@ -56,6 +56,11 @@ export default {
     isFormOpen() {
       return this.$route.name === 'form'
     }
+  },
+  methods: {
+    close() {
+      this.$router.push({ name: 'main' })
+    }
   }
 }
 </script>

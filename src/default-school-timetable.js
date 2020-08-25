@@ -239,6 +239,54 @@ export default {
               teacherAssigned: null
             }
           ]
+        },
+        {
+          name: 'Нераспределенные',
+          englishname: 'unassociated',
+          lessons: [
+            {
+              notes: '',
+              name: 'Урок #1',
+              id: ulid(),
+              teacherAssigned: null
+            },
+            {
+              notes: '',
+              name: 'Урок #2',
+              id: ulid(),
+              teacherAssigned: null
+            },
+            {
+              notes: '',
+              name: 'Урок #3',
+              id: ulid(),
+              teacherAssigned: null
+            },
+            {
+              notes: '',
+              name: 'Урок #4',
+              id: ulid(),
+              teacherAssigned: null
+            },
+            {
+              notes: '',
+              name: 'Урок #5',
+              id: ulid(),
+              teacherAssigned: null
+            },
+            {
+              notes: '',
+              name: 'Урок #6',
+              id: ulid(),
+              teacherAssigned: null
+            },
+            {
+              notes: '',
+              name: 'Урок #7',
+              id: ulid(),
+              teacherAssigned: null
+            }
+          ]
         }
       ]
     }
