@@ -1,13 +1,17 @@
 <template>
   <div>
     <div class="form" v-for="(form, $formIndex) of schooltimetable.forms" :key="$formIndex">
-          <div class="text-2xl font-bold">Расписание</div>
+      <div class="text-2xl font-bold">{{ form.name }}</div>
       <div class="flex flex-row items-start">
         <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
           <div class="list-reset">
             <div class="flex items-center mb-2 font-bold">{{ day.name }}</div>
             <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
-              <span class="w-full flex-no-shrink font-bold">{{ lesson.name }}</span>
+              <span class="w-full flex-no-shrink font-bold">
+                {{
+                lesson.name
+                }}
+              </span>
               <p v-if="lesson.notes" class="w-full text-no-shrink mt-1 text-sm">{{ lesson.notes }}</p>
             </div>
           </div>
@@ -37,6 +41,6 @@ export default {
 }
 
 .form {
-  @apply  p-32 bg-teal-dark   h-full overflow-auto;
+  @apply p-32 bg-teal-dark   h-full overflow-auto;
 }
 </style>
