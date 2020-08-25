@@ -1,12 +1,6 @@
-export function ulid() {
+export function uid() {
   return Math.random()
     .toString(16)
-    .slice(2)
-}
-
-export function ufid() {
-  return Math.random()
-    .toString(8)
     .slice(2)
 }
 

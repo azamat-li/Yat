@@ -7,7 +7,11 @@
           <div class="list-reset">
             <div class="flex items-center mb-2 font-bold">{{ day.name }}</div>
             <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
-              <span class="w-full flex-no-shrink font-bold">{{ lesson.name }}</span>
+              <span class="w-full flex-no-shrink font-bold">
+                {{
+                lesson.name
+                }}
+              </span>
               <p v-if="lesson.notes" class="w-full text-no-shrink mt-1 text-sm">{{ lesson.notes }}</p>
             </div>
           </div>
