@@ -11,7 +11,6 @@
     <div class="form-bg" v-if="isFormOpen" @click.self="close">
       <router-view />
     </div>
-    <router-link class="router-link" :to="{ name: 'board' }">Доска расписания</router-link>
   </div>
 </template>
 
@@ -67,5 +66,9 @@ export default {
 }
 .table-header {
   @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
+}
+.form-bg {
+    @apply pin absolute  p-10;
+    background: rgba(0, 0, 0, 0.5);
 }
 </style>
