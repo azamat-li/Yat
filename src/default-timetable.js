@@ -241,7 +241,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -529,7 +529,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -817,7 +817,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -1105,7 +1105,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -1393,7 +1393,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -1681,7 +1681,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -1969,7 +1969,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -2257,7 +2257,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -2545,7 +2545,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {
@@ -2833,7 +2833,7 @@ export default {
           ]
         },
         {
-          name: 'Нераспределенные',
+          name: 'Распределить:',
           englishname: 'unassociated',
           lessons: [
             {

@@ -29,7 +29,7 @@ export default {
 
 <style lang="css">
 .lesson {
-  @apply flex items-center flex-wrap shadow mb-2 py-2 px-2 rounded bg-white text-grey-darkest no-underline;
+  @apply flex items-center text-center flex-wrap shadow mb-2 py-2 px-2 rounded bg-white text-grey-darkest no-underline ;
 }
 
 .day {
