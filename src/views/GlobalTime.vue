@@ -6,6 +6,7 @@
       v-for="(form, formIndex) in schooltimetable.forms"
       :key="formIndex"
       :form="form"
+      :indent="formIndex * 5"
     ></FormWithTimeRow>
     <div class="form-bg" v-if="isFormOpen" @click.self="close">
       <router-view />
