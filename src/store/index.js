@@ -14,28 +14,20 @@ export default new Vuex.Store({
     schooltimetable
   },
   getters: {
-    getForm(state) {
-      return id => {
-        for (const form of state.schooltimetable.forms) {
-          if (form.id === id) {
-            return form
-          }
-        }
-      }
+    getFormById: state => id => {
+      return state.schooltimetable.find(form => form.id === id)
     }
   },
   mutations: {
-    SET_DEFAULT_FORMS(state) {
-      for (var i = 1; i <= 12; i++) {
-        Object.values(state.schooltimetable).forEach(form => {
-          form.name = '0'
-        })
-      }
+    UPDATE_FORM_NAME(state, formWithNewName) {
+      state.schooltimetable.forms.filter(form => {
+        form.id === formWithNewName.id
+      }).name = formWithNewName.name
     }
   },
   actions: {
-    setDefaultForms({ commit }) {
-      commit('SET_DEFAULT_FORMS')
+    updateFormName({ commit }, formWithNewName) {
+      commit('UPDATE_FORM_NAME', formWithNewName)
     }
   }
 })
