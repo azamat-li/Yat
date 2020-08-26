@@ -16,7 +16,8 @@ export default new Vuex.Store({
   getters: {
     getFormById: state => id => {
       return state.schooltimetable.forms.find(form => form.id === id)
-    }
+    },
+
   },
   mutations: {
     UPDATE_FORM_NAME(state, formWithNewName) {
@@ -29,6 +30,9 @@ export default new Vuex.Store({
         name,
         id: uid()
       })
+    },
+    UPDATE_LESSON(state, { lesson, key, value }) {
+      Vue.set(lesson, key, value)
     }
   },
   actions: {

@@ -5,7 +5,10 @@
       <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
         <div class="list-reset">
           <div class="flex items-center mb-2 font-bold">{{ day.name }}</div>
-          <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
+          <div v-for="(lesson, $lessonIndex) of day.lessons" 
+          :key="$lessonIndex" 
+          class="lesson"
+          @click="goToLesson(lesson)">
             <span class="w-full flex-no-shrink font-bold">{{ lesson.name }}</span>
             <p v-if="lesson.notes" class="w-full text-no-shrink mt-1 text-sm">{{ lesson.notes }}</p>
           </div>
@@ -34,6 +37,9 @@ export default {
     createTask(e, lessons) {
       this.$store.commit('CREATE_LESSON', { lessons, name: e.target.value })
       e.target.value = ''
+    },
+    goToLesson(lesson){
+        this.$router.push({name: 'lesson', params: {id: lesson.id}})
     }
   }
 }

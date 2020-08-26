@@ -4,2883 +4,305 @@ export default {
   forms: [
     {
       id: uid(),
-      name: 'Класс #1',
+      name: 'Класс #',
       days: [
         {
           name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #2',
+      name: 'Класс #',
       days: [
         {
           name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #3',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #4',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #5',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #6',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #7',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #8',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #9',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
     },
     {
       id: uid(),
-      name: 'Класс #10',
+      name: 'Класс #',
       days: [
         {
-          name: 'Понедельник',
-          lessons: [
-            {
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          name: 'Понедельник'
         },
         {
           name: 'Вторник',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Среда',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Четверг',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Пятница',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: [
-            {
-              notes: '',
-              name: 'Урок #1',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #2',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #3',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #4',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #5',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #6',
-              id: uid(),
-              teacherAssigned: null
-            },
-            {
-              notes: '',
-              name: 'Урок #7',
-              id: uid(),
-              teacherAssigned: null
-            }
-          ]
+          lessons: []
         }
       ]
-    },
+    }
   ]
 }
