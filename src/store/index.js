@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import defaultSchoolTimetable from '../default-school-timetable'
-import defaultForms from '../default-forms'
 import { saveStatePlugin } from '../utils'
 
 Vue.use(Vuex)
@@ -9,13 +8,10 @@ Vue.use(Vuex)
 const schooltimetable =
   JSON.parse(localStorage.getItem('schooltimetable')) || defaultSchoolTimetable
 
-const forms = JSON.parse(localStorage.getItem('forms')) || defaultForms
-
 export default new Vuex.Store({
   plugins: [saveStatePlugin],
   state: {
-    schooltimetable,
-    forms
+    schooltimetable
   },
   getters: {
     getForm(state) {
@@ -28,6 +24,18 @@ export default new Vuex.Store({
       }
     }
   },
-  mutations: {},
-  actions: {}
+  mutations: {
+    SET_DEFAULT_FORMS(state) {
+      for (var i = 1; i <= 12; i++) {
+        Object.values(state.schooltimetable).forEach(form => {
+          form.name = '0'
+        })
+      }
+    }
+  },
+  actions: {
+    setDefaultForms({ commit }) {
+      commit('SET_DEFAULT_FORMS')
+    }
+  }
 })

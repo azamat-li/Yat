@@ -3,10 +3,9 @@
     <h1>Общее школьное время корпуса</h1>
     <div class="table-header">Время начала урока</div>
     <FormWithTimeRow
-      v-for="(form, formIndex) of forms.forms"
+      v-for="(form, formIndex) in schooltimetable.forms"
       :key="formIndex"
       :form="form"
-      :indent="formIndex * 5"
     ></FormWithTimeRow>
     <div class="form-bg" v-if="isFormOpen" @click.self="close">
       <router-view />
@@ -23,7 +22,7 @@ export default {
     FormWithTimeRow
   },
   computed: {
-    ...mapState(['schooltimetable', 'forms']),
+    ...mapState(['schooltimetable']),
     isFormOpen() {
       return this.$route.name === 'form'
     }
