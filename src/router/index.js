@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Forms from '../views/Forms.vue'
 import Form from '../views/Form.vue'
 import GlobalTime from '../views/GlobalTime.vue'
 
@@ -17,6 +18,11 @@ const routes = [
         component: Form
       }
     ]
+  },
+  {
+    path: '/forms',
+    name: 'forms',
+    component: Forms
   }
 ]
 

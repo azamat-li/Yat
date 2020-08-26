@@ -1,6 +1,6 @@
 <template>
   <div class="form-row">
-    <div @click.self="goToForm" class="form" :style="computedStyle">
+    <div @click.self="goToForm(form)" class="form" :style="computedStyle">
       <input v-model="form.name" type="text" @blur="updateValue" value />
     </div>
   </div>
@@ -17,7 +17,6 @@ export default {
       type: Number
     }
   },
-
   methods: {
     goToForm(form) {
       this.$router.push({ name: 'form', params: { id: form.id } })
@@ -44,7 +43,7 @@ export default {
   @apply bg-teal-light rounded m-1 p-1 relative;
 }
 .form {
-  @apply bg-white items-center rounded shadow m-1 p-1 w-24 flex  text-grey-darkest no-underline relative;
+  @apply bg-teal items-center rounded shadow m-1 py-1 pr-5 w-24 flex  text-grey-darkest no-underline relative;
 }
 input {
   @apply rounded shadow w-full;
