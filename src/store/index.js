@@ -17,7 +17,19 @@ export default new Vuex.Store({
     getFormById: state => id => {
       return state.schooltimetable.forms.find(form => form.id === id)
     },
-
+    getLessonById(state) {
+      return id => {
+        for (const form of state.schooltimetable.forms) {
+          for (const day of form.days) {
+            for (const lesson of day.lessons) {
+              if (lesson.id === id) {
+                return lesson
+              }
+            }
+          }
+        }
+      }
+    }
   },
   mutations: {
     UPDATE_FORM_NAME(state, formWithNewName) {

@@ -6,11 +6,13 @@
         :value="lesson.name"
         @keyup.enter="updateLessonProperty($event, 'name')"
         @change="updateLessonProperty($event, 'name')"
+        placeholder="Урок"
       />
       <input
         class="relative bg-transparent border border-none leading-normal p-2 w-full mr-2 block text-xl font-bold"
         :value="lesson.room"
         @change="updateLessonProperty($event, 'room')"
+        placeholder="Кабинет"
       />
     </div>
   </div>
@@ -21,9 +23,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters('getFormById'),
+    ...mapGetters(['getLessonById']),
     lesson() {
-      return this.getFormById(this.$route.params.id)
+      return this.getLessonById(this.$route.params.id)
     }
   },
   methods: {
@@ -38,4 +40,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.lesson-view {
+  @apply relative flex flex-row bg-white pin mx-4 m-32 mx-auto py-4 text-left rounded shadow;
+  max-width: 700px;
+}
+</style>

@@ -8,28 +8,34 @@ export default {
       days: [
         {
           name: 'Понедельник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -39,28 +45,34 @@ export default {
       days: [
         {
           name: 'Понедельник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -73,24 +85,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -103,24 +120,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -133,24 +155,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -163,24 +190,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -193,24 +225,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -223,24 +260,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -253,24 +295,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     },
@@ -283,24 +330,29 @@ export default {
         },
         {
           name: 'Вторник',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Среда',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Четверг',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Пятница',
-          lessons: []
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Распределить:',
           englishname: 'unassociated',
-          lessons: []
+          lessons: [],
+          id: uid()
         }
       ]
     }

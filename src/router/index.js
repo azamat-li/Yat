@@ -17,15 +17,15 @@ const routes = [
         path: '/form/:id',
         name: 'form',
         component: Form,
-        children: [
-          {
-            path: '/lesson/:id',
-            name: 'lesson',
-            component: Lesson
-          }
-        ]
+        children: []
       }
     ]
+  },
+  {
+    path: '/lesson/:id',
+    name: 'lesson',
+    component: Lesson,
+    props: true
   },
   {
     path: '/forms',
