@@ -2,17 +2,11 @@
   <div class="lesson-view">
     <div class="flex flex-col flex-grow items-start justify-between px-4">
       <input
-        class="p-2 w-full mr-2 block text-xl font-bold"
+        class="field"
         :value="lesson.name"
         @keyup.enter="updateLessonProperty($event, 'name')"
         @change="updateLessonProperty($event, 'name')"
         placeholder="Урок"
-      />
-      <input
-        class="relative bg-transparent border border-none leading-normal p-2 w-full mr-2 block text-xl font-bold"
-        :value="lesson.room"
-        @change="updateLessonProperty($event, 'room')"
-        placeholder="Кабинет"
       />
     </div>
   </div>
@@ -42,7 +36,9 @@ export default {
 
 <style lang="css" scoped>
 .lesson-view {
-  @apply relative flex flex-row bg-white pin mx-4 m-32 mx-auto py-4 text-left rounded shadow;
-  max-width: 700px;
+  @apply bg-teal pin py-20 w-full h-full    text-left rounded shadow;
+}
+.field {
+  @apply p-2 w-full m-2  text-xl font-bold;
 }
 </style>

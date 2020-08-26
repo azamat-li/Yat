@@ -22,9 +22,6 @@
           @keyup.enter="createTask($event, day.lessons)"
         />
       </div>
-      <div class="lesson-bg" @click.self="close">
-        <router-view />
-      </div>
     </div>
   </div>
 </template>
@@ -52,7 +49,7 @@ export default {
 
 <style lang="css">
 .lesson-bg {
-  background: rgba(0, 0, 0, 0.5);
+  @apply pin absolute;
 }
 .lesson {
   @apply flex items-center text-center flex-wrap shadow mb-2 py-2 px-2 rounded bg-white text-grey-darkest no-underline;
