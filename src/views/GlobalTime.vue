@@ -41,11 +41,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.global-time {
-  @apply bg-teal-dark;
-}
 .table-header {
   @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
+}
+.global-time {
+  @apply bg-teal-dark p-1;
 }
 .form-bg {
   @apply pin py-32 absolute;
