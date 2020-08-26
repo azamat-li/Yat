@@ -31,7 +31,10 @@ export default {
       return `left: ${this.indent}em`
     },
     ...mapActions(['updateFormName']),
-    ...mapGetters(['getFormById'])
+    ...mapGetters(['getFormById']),
+    clickedForm() {
+      return this.getFormById(this.form.id)
+    }
   }
 }
 </script>
@@ -44,7 +47,7 @@ export default {
   @apply bg-white items-center rounded shadow m-1 p-1 w-24 flex  text-grey-darkest no-underline relative;
 }
 input {
-  @apply   rounded shadow w-full;
+  @apply rounded shadow w-full;
   background: #b2f5ea;
 }
 .time {

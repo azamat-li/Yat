@@ -15,7 +15,7 @@ export default new Vuex.Store({
   },
   getters: {
     getFormById: state => id => {
-      return state.schooltimetable.find(form => form.id === id)
+      return state.schooltimetable.forms.find(form => form.id === id)
     }
   },
   mutations: {
