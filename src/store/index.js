@@ -15,8 +15,7 @@ export default new Vuex.Store({
   plugins: [saveStatePlugin],
   state: {
     schooltimetable,
-    forms,
-    indent: 5
+    forms
   },
   getters: {
     getForm(state) {
@@ -29,20 +28,6 @@ export default new Vuex.Store({
       }
     }
   },
-  mutations: {
-    INCREMENT_INDENT() {
-      this.state.indent += 8
-    },
-    RESET_INDENT() {
-      this.state.indent = 30
-    }
-  },
-  actions: {
-    incrementIndent({ commit }) {
-      commit('INCREMENT_INDENT')
-    },
-    resetIndent({ commit }) {
-      commit('RESET_INDENT')
-    }
-  }
+  mutations: {},
+  actions: {}
 })

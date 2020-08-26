@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 
 export default {
   props: {
@@ -25,7 +24,6 @@ export default {
     computedStyle() {
       return `left: ${this.indent}em`
     },
-    ...mapActions(['incrementIndent'])
   }
 }
 </script>

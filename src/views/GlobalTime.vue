@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 import FormWithTimeRow from '../components/FormWithTimeRow'
 
 export default {
@@ -24,7 +24,6 @@ export default {
   },
   computed: {
     ...mapState(['schooltimetable', 'forms']),
-    ...mapActions(['resetIndent']),
     isFormOpen() {
       return this.$route.name === 'form'
     }
@@ -33,9 +32,6 @@ export default {
     close() {
       this.$router.push({ name: 'main' })
     }
-  },
-  beforeCreate() {
-    this.resetIndent()
   }
 }
 </script>
