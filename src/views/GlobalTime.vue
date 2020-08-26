@@ -1,5 +1,5 @@
 <template>
-  <div class="global-time">
+  <div class="global-time-board">
     <h1>Общее школьное время корпуса</h1>
     <div class="table-header">Время начала урока</div>
     <FormWithTimeRow
@@ -40,11 +40,10 @@ export default {
 .table-header {
   @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
 }
-.global-time {
-  @apply bg-teal-dark p-1;
+.global-time-board {
+  @apply bg-teal-dark rounded;
 }
 .form-bg {
-  @apply pin py-32 absolute;
-  background: rgba(0, 0, 0, 0.8);
+  @apply bg-teal  absolute rounded  w-full ;
 }
 </style>

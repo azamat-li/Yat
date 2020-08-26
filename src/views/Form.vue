@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="form" v-for="(form, $formIndex) of schooltimetable.forms" :key="$formIndex">
-      <div class="text-2xl font-bold">{{ form.name }}</div>
+  <div class="form-container">
+    <div class="form-class" v-for="(form, $formIndex) of schooltimetable.forms" :key="$formIndex">
+      <div class="form-name">{{ form.name }}</div>
       <div class="flex flex-row items-start">
         <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
           <div class="list-reset">
@@ -39,8 +39,13 @@ export default {
 .day {
   @apply bg-grey-light p-5 m-4 text-left shadow rounded;
 }
-
-.form {
-  @apply py-32 bg-teal-dark   h-full overflow-auto;
+.form-name {
+  @apply bg-teal rounded text-2xl font-bold;
+}
+.form-class {
+  @apply bg-teal  p-1 m-1 rounded;
+}
+.form-container {
+  @apply bg-teal rounded  ;
 }
 </style>
