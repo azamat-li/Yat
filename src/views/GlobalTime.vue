@@ -44,6 +44,7 @@ export default {
   @apply bg-teal-dark rounded;
 }
 .form-bg {
-  @apply bg-teal  absolute rounded  w-full ;
+  @apply bg-teal pin  absolute p-5 rounded  w-full;
+  background: rgba(129, 230, 217, 0.95);
 }
 </style>
