@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import defaultSchoolTimetable from '../default-school-timetable'
+import defaultSchoolTimetable from '../default-timetable'
 import { saveStatePlugin } from '../utils'
 
 Vue.use(Vuex)
