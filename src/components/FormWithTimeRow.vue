@@ -41,7 +41,7 @@ export default {
   @apply bg-teal-light rounded m-1 p-1 relative;
 }
 .form {
-  @apply bg-white items-center rounded shadow m-1 p-1 w-32 flex  text-grey-darkest no-underline relative;
+  @apply bg-white items-center rounded shadow m-1 p-1 w-24 flex  text-grey-darkest no-underline relative;
 }
 input {
   @apply   rounded shadow w-full;
