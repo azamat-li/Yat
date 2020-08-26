@@ -19,24 +19,23 @@ html
     color: #2c3e50
     height: 100%
 
-
 .container
 @apply mx-auto
 
 ::selection
-    background:  #b2f5ea
+    background: #b2f5ea
 
 ::moz-selection
-    background:  #b2f5ea
+    background: #b2f5ea
 
-.router-link 
+.router-link
     color: #4a5568
 </style>
 
 <style lang="css">
 @tailwind base;
-h1 {
-    @apply text-2xl p-2
-}
 
+.header {
+  @apply text-2xl p-2;
+}
 </style>

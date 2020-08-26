@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <div class="form-name">{{ form.name }}</div>
+    <div class="header">{{ form.name }}</div>
     <div class="flex flex-row items-start">
       <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
         <div class="list-reset">
@@ -36,7 +36,7 @@ export default {
   @apply bg-grey-light p-5 m-4 text-left shadow rounded;
 }
 .form-name {
-  @apply bg-teal rounded text-2xl font-bold;
+  @apply  rounded text-2xl font-bold p-2 m-2 ;
 }
 .form-class {
   @apply bg-teal  p-1 m-1 rounded;
