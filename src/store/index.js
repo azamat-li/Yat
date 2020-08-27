@@ -53,6 +53,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    persistSchoolTimetable({ state }) {
+      localStorage.setItem(
+        'schooltimetable',
+        JSON.stringify(state.schooltimetable)
+      )
+    },
     updateFormName({ commit, dispatch }, formWithNewName) {
       commit('UPDATE_FORM_NAME', formWithNewName)
       dispatch('persistSchoolTimetable')
@@ -61,11 +67,10 @@ export default new Vuex.Store({
       commit('CREATE_LESSON', { lessons, name })
       dispatch('persistSchoolTimetable')
     },
-    persistSchoolTimetable({ state }) {
-      localStorage.setItem(
-        'schooltimetable',
-        JSON.stringify(state.schooltimetable)
-      )
-    }
+    updateLesson({ commit, dispatch }, { lesson, key, value }) {
+      commit('UPDATE_LESSON', { lesson, key, value })
+      dispatch('persistSchoolTimetable')
+    },
+    
   }
 })
