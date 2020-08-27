@@ -38,4 +38,7 @@ html
 .header {
   @apply text-2xl p-2;
 }
+input:disabled {
+  color: #1a202c;
+}
 </style>
