@@ -25,7 +25,7 @@
           @keyup.enter="createTask($event, day.lessons)"
         />
       </div>
-      <ToggleEditability></ToggleEditability>
+      <ToggleEditability @toggle-is-editable="toggleIsEditable"></ToggleEditability>
     </div>
   </div>
 </template>
@@ -58,6 +58,13 @@ export default {
         key,
         value: e.target.value
       })
+    },
+    toggleIsEditable() {
+      this.$store.commit('TOGGLE_EDITABILITY', {
+        key: 'isEditable',
+        value: !this.isEditable
+      })
+      this.$emit('toggle-is-editable')
     }
   }
 }

@@ -4,8 +4,8 @@
       class="isEditableButton bg-teal-dark hover:bg-teal-darkest text-white font-bold py-2 px-4 rounded-full"
       @click="toggleisEditable"
     >
-      <div v-if="isEditable">Editable</div>
-      <div v-if="!isEditable">Not Editable</div>
+      <div v-if="this.isEditable">Editable</div>
+      <div v-if="!this.isEditable">Not Editable</div>
     </button>
   </div>
 </template>
@@ -18,10 +18,6 @@ export default {
   },
   methods: {
     toggleisEditable() {
-      this.$store.commit('TOGGLE_EDITABILITY', {
-        key: 'isEditable',
-        value: !this.isEditable
-      })
       this.$emit('toggle-is-editable')
     }
   }
