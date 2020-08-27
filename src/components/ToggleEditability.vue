@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <button
       class="isEditableButton bg-teal-dark hover:bg-teal-darkest text-white font-bold py-2 px-4 rounded-full"
       @click="toggleisEditable"
@@ -25,4 +25,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.main {
+    @apply my-2 p-1;
+}
+</style>

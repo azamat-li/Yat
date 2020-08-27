@@ -3,30 +3,34 @@
     <div class="header">{{ form.name }}</div>
     <div class="flex flex-row items-start">
       <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
-        <div class="list-reset ">
-          <div class="flex  flex-no-shrink items-center mb-2 font-bold ">{{ day.name }}</div>
-          <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson ">
+        <div class="list-reset">
+          <div class="flex flex-no-shrink items-center mb-2 font-bold">{{ day.name }}</div>
+          <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
             <input
               type="text"
-              class=" font-bold bg-transparent lesson-name"
+              class="font-bold bg-transparent lesson-name"
               :disabled="!isEditable"
               :value="lesson.name"
               @keyup.enter="updateLessonProperty($event, 'name', lesson)"
               @change="updateLessonProperty($event, 'name', lesson)"
               placeholder="Урок"
             />
-            <p v-if="lesson.notes" class="w-full text-no-shrink  text-sm">{{ lesson.notes }}</p>
+            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
           </div>
         </div>
         <input
           type="text"
-          class="block  w-full h-full bg-transparent"
+          class="block w-full h-full bg-transparent"
           placeholder="+ Введите урок"
           @keyup.enter="createTask($event, day.lessons)"
         />
       </div>
-      <ToggleEditability @toggle-editability="toggleIsEditable" :isEditable="isEditable"></ToggleEditability>
     </div>
+    <ToggleEditability
+      @toggle-editability="toggleIsEditable"
+      :isEditable="isEditable"
+      class="toggleEditability"
+    ></ToggleEditability>
   </div>
 </template>
 
@@ -92,8 +96,11 @@ export default {
   @apply border shadow rounded;
 }
 .lesson-name {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.toggleEditability {
+  text-align: right;
 }
 </style>
