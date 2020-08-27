@@ -1,7 +1,6 @@
 <template>
   <div class="global-time-board">
     <div class="header">Общее школьное время корпуса</div>
-    <div class="table-header">Время начала урока</div>
     <FormWithTimeRow
       v-for="(form, formIndex) in schooltimetable.forms"
       :key="formIndex"
