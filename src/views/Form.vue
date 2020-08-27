@@ -8,7 +8,7 @@
           <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
             <input
               type="text"
-              class="font-bold bg-transparent lesson-name"
+              class="font-bold lesson-name"
               :disabled="!isEditable"
               :value="lesson.name"
               @keyup.enter="updateLessonProperty($event, 'name', lesson)"
@@ -79,9 +79,14 @@ export default {
   @apply pin absolute;
 }
 .lesson {
-  @apply flex w-full h-full items-center text-center flex-wrap shadow mb-2  rounded bg-transparent text-grey-darkest no-underline;
+  @apply flex w-full h-full text-center flex-wrap shadow mb-2  rounded bg-transparent text-grey-darkest no-underline;
 }
-
+.lesson-name {
+  @apply bg-transparent;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
 .day-wrapper {
   display: flex-wrap;
   flex-wrap: wrap;
@@ -98,11 +103,6 @@ export default {
 }
 .isEditableButton {
   @apply border shadow rounded;
-}
-.lesson-name {
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
 }
 .toggleEditability {
   text-align: right;

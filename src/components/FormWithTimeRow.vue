@@ -25,7 +25,7 @@ export default {
       this.$router.push({ name: 'form', params: { id: form.id } })
     },
     updateValue() {
-      this.$store.dispatch('updateFormName')
+      this.$store.dispatch('updateFormName', this.form)
     }
   },
   computed: {

@@ -53,8 +53,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    updateFormName({ commit }, formWithNewName) {
+    updateFormName({ commit, state }, formWithNewName) {
       commit('UPDATE_FORM_NAME', formWithNewName)
+      localStorage.setItem(
+        'schooltimetable',
+        JSON.stringify(state.schooltimetable)
+      )
     }
   }
 })
