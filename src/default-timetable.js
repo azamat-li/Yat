@@ -4,7 +4,7 @@ export default {
   forms: [
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник',
@@ -41,7 +41,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник',
@@ -78,7 +78,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -113,7 +113,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -148,7 +148,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -183,7 +183,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -218,7 +218,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -253,7 +253,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -288,7 +288,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'
@@ -323,7 +323,7 @@ export default {
     },
     {
       id: uid(),
-      name: 'Класс #',
+      name: '',
       days: [
         {
           name: 'Понедельник'

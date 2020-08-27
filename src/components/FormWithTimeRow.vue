@@ -1,7 +1,14 @@
 <template>
   <div class="form-row">
     <div @click.self="goToForm(form)" class="form" :style="computedStyle">
-      <input v-model="form.name" type="text" @blur="updateValue" :disabled="!isEditable" value />
+      <input
+        v-model="form.name"
+        type="text"
+        @blur="updateValue"
+        :disabled="!isEditable"
+        placeholder="Класс #"
+        value
+      />
     </div>
   </div>
 </template>
