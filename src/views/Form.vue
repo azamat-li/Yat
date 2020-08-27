@@ -9,6 +9,7 @@
             <input
               type="text"
               class="w-full flex-no-shrink font-bold bg-transparent"
+              :disabled="!isEditable"
               :value="lesson.name"
               @keyup.enter="updateLessonProperty($event, 'name', lesson)"
               @change="updateLessonProperty($event, 'name', lesson)"
@@ -24,14 +25,20 @@
           @keyup.enter="createTask($event, day.lessons)"
         />
       </div>
+      <ToggleEditability></ToggleEditability>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
+import ToggleEditability from '../components/ToggleEditability'
 export default {
+  components: {
+    ToggleEditability
+  },
   computed: {
+    ...mapState(['isEditable']),
     ...mapGetters(['getFormById']),
     form() {
       return this.getFormById(this.$route.params.id)
@@ -75,5 +82,12 @@ export default {
 }
 .form-container {
   @apply bg-teal rounded;
+}
+.isEditableTrigger {
+  @apply relative text-right p-4;
+  right: 0;
+}
+.isEditableButton {
+  @apply border shadow rounded;
 }
 </style>

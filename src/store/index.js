@@ -11,7 +11,9 @@ const schooltimetable =
 export default new Vuex.Store({
   plugins: [saveStatePlugin],
   state: {
-    schooltimetable
+    schooltimetable,
+    isEditable: false,
+    globalTimeisEditable: false
   },
   getters: {
     getFormById: state => id => {
@@ -45,6 +47,9 @@ export default new Vuex.Store({
     },
     UPDATE_LESSON(state, { lesson, key, value }) {
       Vue.set(lesson, key, value)
+    },
+    TOGGLE_EDITABILITY(state, { key, value }) {
+      state[key] = value
     }
   },
   actions: {
