@@ -21,7 +21,7 @@
         <input
           type="text"
           class="block w-full h-full bg-transparent"
-          placeholder="+ Введите урок"
+          placeholder="+ Добавьте урок"
           @keyup.enter="createTask($event, day.lessons)"
         />
       </div>
