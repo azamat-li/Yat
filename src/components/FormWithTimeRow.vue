@@ -6,7 +6,7 @@
         type="text"
         @blur="updateValue"
         :disabled="!isEditable"
-        placeholder="Класс #"
+        placeholder="#класс"
         value
       />
     </div>
