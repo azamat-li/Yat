@@ -1,7 +1,7 @@
 <template>
   <div class="form-row">
     <div @click.self="goToForm(form)" class="form" :style="computedStyle">
-      <input v-model="form.name" type="text" @blur="updateValue" value />
+      <input v-model="form.name" type="text" @blur="updateValue" :disabled="!isEditable" value />
     </div>
   </div>
 </template>
@@ -12,6 +12,9 @@ export default {
   props: {
     form: {
       type: Object
+    },
+    isEditable: {
+      type: Boolean
     },
     indent: {
       type: Number

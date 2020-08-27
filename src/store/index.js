@@ -13,7 +13,7 @@ export default new Vuex.Store({
   state: {
     schooltimetable,
     isEditable: false,
-    globalTimeisEditable: false
+    globalTimetableIsEditable: false
   },
   getters: {
     getFormById: state => id => {

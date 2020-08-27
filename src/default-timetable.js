@@ -32,7 +32,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -69,7 +69,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -104,7 +104,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -139,7 +139,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -174,7 +174,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -209,7 +209,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -244,7 +244,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -279,7 +279,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -314,7 +314,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()
@@ -349,7 +349,7 @@ export default {
           id: uid()
         },
         {
-          name: 'Распределить:',
+          name: 'На полке',
           englishname: 'unassociated',
           lessons: [],
           id: uid()

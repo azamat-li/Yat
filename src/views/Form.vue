@@ -25,7 +25,7 @@
           @keyup.enter="createTask($event, day.lessons)"
         />
       </div>
-      <ToggleEditability @toggle-is-editable="toggleIsEditable"></ToggleEditability>
+      <ToggleEditability @toggle-editability="toggleIsEditable" :isEditable="isEditable"></ToggleEditability>
     </div>
   </div>
 </template>

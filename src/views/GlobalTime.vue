@@ -7,23 +7,32 @@
       :key="formIndex"
       :form="form"
       :indent="formIndex * 5"
+      :isEditable="globalTimetableIsEditable"
     ></FormWithTimeRow>
     <div class="form-bg" v-if="isFormOpen" @click.self="close">
       <router-view />
     </div>
+    <ToggleEditability
+      :isEditable="globalTimetableIsEditable"
+      @toggle-editability="toggleEditability"
+      class="toggleEditability"
+    ></ToggleEditability>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import FormWithTimeRow from '../components/FormWithTimeRow'
+import ToggleEditability from '../components/ToggleEditability'
 
 export default {
   components: {
-    FormWithTimeRow
+    FormWithTimeRow,
+    ToggleEditability
   },
   computed: {
     ...mapState(['schooltimetable']),
+    ...mapState(['globalTimetableIsEditable']),
     isFormOpen() {
       return this.$route.name === 'form'
     }
@@ -31,6 +40,12 @@ export default {
   methods: {
     close() {
       this.$router.push({ name: 'main' })
+    },
+    toggleEditability() {
+      this.$store.commit('TOGGLE_EDITABILITY', {
+        key: 'globalTimetableIsEditable',
+        value: !this.globalTimetableIsEditable
+      })
     }
   }
 }
@@ -46,5 +61,8 @@ export default {
 .form-bg {
   @apply bg-teal pin  absolute p-5 rounded  w-full;
   background: rgba(129, 230, 217, 0.95);
+}
+.toggleEditability {
+  text-align: right;
 }
 </style>
