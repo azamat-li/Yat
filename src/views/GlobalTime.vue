@@ -59,8 +59,8 @@ export default {
   @apply bg-teal-dark rounded;
 }
 .form-bg {
-  @apply bg-teal pin  absolute p-5 rounded  w-full;
-  background: rgba(129, 230, 217, 0.95);
+  @apply bg-teal-darkest pin  absolute p-5 rounded;
+  height: 200vh;
 }
 .toggleEditability {
   text-align: right;

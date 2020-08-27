@@ -1,7 +1,7 @@
 <template>
   <div class="form-container">
     <div class="header">{{ form.name }}</div>
-    <div class="flex flex-row items-start">
+    <div class="flex flex-row items-start day-wrapper">
       <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
         <div class="list-reset">
           <div class="flex flex-no-shrink items-center mb-2 font-bold">{{ day.name }}</div>
@@ -82,8 +82,12 @@ export default {
   @apply flex w-full h-full items-center text-center flex-wrap shadow mb-2  rounded bg-transparent text-grey-darkest no-underline;
 }
 
+.day-wrapper {
+  display: flex-wrap;
+  flex-wrap: wrap;
+}
 .day {
-  @apply bg-grey-light p-5 m-4 text-left shadow rounded;
+  @apply bg-grey-light w-40 p-5 m-4 text-left shadow rounded;
 }
 .form-container {
   @apply bg-teal rounded;
