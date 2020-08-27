@@ -4,8 +4,14 @@
     <div class="flex flex-row items-start day-wrapper">
       <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
         <div class="list-reset">
-          <div class="flex flex-no-shrink items-center mb-2 font-bold">{{ day.name }}</div>
-          <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
+          <div class="flex flex-no-shrink items-center mb-2 font-bold">
+            {{ day.name }}
+          </div>
+          <div
+            v-for="(lesson, $lessonIndex) of day.lessons"
+            :key="$lessonIndex"
+            class="lesson"
+          >
             <input
               type="text"
               class="font-bold lesson-name"
@@ -15,7 +21,9 @@
               @change="updateLessonProperty($event, 'name', lesson)"
               placeholder="Урок"
             />
-            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
+            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
+              {{ lesson.notes }}
+            </p>
           </div>
         </div>
         <input
@@ -51,6 +59,7 @@ export default {
   methods: {
     createLesson(e, lessons) {
       this.$store.dispatch('createLesson', { lessons, name: e.target.value })
+      e.target.value = ''
     },
     goToLesson(lesson) {
       this.$router.push({ name: 'lesson', params: { id: lesson.id } })
