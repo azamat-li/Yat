@@ -1,18 +1,26 @@
 <template>
   <div class="form-container">
-    <div class="form-class" v-for="(form, $formIndex) of schooltimetable.forms" :key="$formIndex">
+    <div
+      class="form-class"
+      v-for="(form, $formIndex) of schooltimetable.forms"
+      :key="$formIndex"
+    >
       <div class="form-name">{{ form.name }}</div>
       <div class="flex flex-row items-start">
         <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
           <div class="list-reset">
             <div class="flex items-center mb-2 font-bold">{{ day.name }}</div>
-            <div v-for="(lesson, $lessonIndex) of day.lessons" :key="$lessonIndex" class="lesson">
+            <div
+              v-for="(lesson, $lessonIndex) of day.lessons"
+              :key="$lessonIndex"
+              class="lesson"
+            >
               <span class="w-full flex-no-shrink font-bold">
-                {{
-                lesson.name
-                }}
+                {{ lesson.name }}
               </span>
-              <p v-if="lesson.notes" class="w-full text-no-shrink mt-1 text-sm">{{ lesson.notes }}</p>
+              <p v-if="lesson.notes" class="w-full text-no-shrink mt-1 text-sm">
+                {{ lesson.notes }}
+              </p>
             </div>
           </div>
         </div>

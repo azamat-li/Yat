@@ -4,8 +4,6 @@ import router from './router'
 import store from './store'
 import AppButton from './components/AppButton'
 
-
-
 Vue.config.productionTip = false
 Vue.component('AppButton', AppButton)
 

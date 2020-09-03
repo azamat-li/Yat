@@ -70,7 +70,6 @@ export default new Vuex.Store({
     updateLesson({ commit, dispatch }, { lesson, key, value }) {
       commit('UPDATE_LESSON', { lesson, key, value })
       dispatch('persistSchoolTimetable')
-    },
-    
+    }
   }
 })

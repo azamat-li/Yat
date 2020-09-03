@@ -27,6 +27,6 @@ export default {
 
 <style lang="css" scoped>
 .main {
-    @apply my-2 p-1;
+  @apply my-2 p-1;
 }
 </style>
