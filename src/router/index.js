@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Forms from '../views/Forms.vue'
 import Form from '../views/Form.vue'
 import Lesson from '../views/Lesson.vue'
-import GlobalTime from '../views/GlobalTime.vue'
+import Main from '../views/Main.vue'
 
 Vue.use(VueRouter)
 
@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/',
     name: 'main',
-    component: GlobalTime,
+    component: Main,
     children: [
       {
         path: '/form/:id',
