@@ -5,6 +5,7 @@
         v-model="form.name"
         type="text"
         @blur="updateValue"
+        @keyup.enter="updateValue"
         :disabled="!isEditable"
         placeholder="#класс"
         value

@@ -4,8 +4,8 @@
       class="isEditableButton bg-teal-dark hover:bg-teal-darkest text-white font-bold py-2 px-4 rounded-full"
       @click="toggleisEditable"
     >
-      <div v-if="this.isEditable">Можно менять</div>
-      <div v-if="!this.isEditable">Нельзя менять</div>
+      <div v-if="this.isEditable">Рады изменениям</div>
+      <div v-if="!this.isEditable">Заперто</div>
     </button>
   </div>
 </template>
