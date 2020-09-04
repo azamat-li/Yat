@@ -103,13 +103,13 @@ export default {
   flex-wrap: wrap;
 }
 .day {
-  @apply w-40 p-1  text-left shadow rounded;
+  @apply w-56 p-1  text-left shadow rounded;
 }
 .form-container {
   @apply rounded;
 }
 .isEditableTrigger {
-  @apply relative text-right p-4;
+  @apply relative text-right p-2;
   right: 0;
 }
 .isEditableButton {
