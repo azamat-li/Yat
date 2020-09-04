@@ -1,5 +1,5 @@
 <template>
-  <div class="global-time-board">
+  <div class="global-time-board bg-teal-100 h-full w-full">
     <div class="header">Общее школьное время корпуса</div>
     <FormWithTimeRow
       v-for="(form, formIndex) in schooltimetable.forms"
@@ -8,8 +8,8 @@
       :indent="formIndex * 5"
       :isEditable="globalTimetableIsEditable"
     ></FormWithTimeRow>
-    <div class="form-bg" v-if="isFormOpen" @click.self="close">
-      <router-view />
+    <div class="bg-teal-100 absolute top-0 w-full h-full" v-if="isFormOpen" @click.self="close">
+      <router-view class="bg-teal-300" />
     </div>
     <ToggleEditability
       :isEditable="globalTimetableIsEditable"
@@ -51,16 +51,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+@tailwind base
+
 .table-header {
   @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
 }
 .global-time-board {
-  @apply bg-teal-dark rounded;
+  @apply rounded;
 }
-.form-bg {
-  @apply bg-teal-darkest pin  absolute p-5 rounded;
-  height: 200vh;
-}
+
+
 .toggleEditability {
   text-align: right;
 }

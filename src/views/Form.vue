@@ -1,8 +1,12 @@
 <template>
-  <div class="form-container">
-    <div class="header">{{ form.name }}</div>
-    <div class="flex flex-row items-start day-wrapper">
-      <div v-for="(day, $dayIndex) of form.days" :key="$dayIndex" class="day">
+  <div class="form-container  bg-teal  top-0">
+    <div class="header ">{{ form.name }}</div>
+    <div class="flex flex-row items-start day-wrapper ">
+      <div
+        v-for="(day, $dayIndex) of form.days"
+        :key="$dayIndex"
+        class="day bg-grey-light"
+      >
         <div class="list-reset">
           <div class="flex flex-no-shrink items-center mb-2 font-bold">
             {{ day.name }}
@@ -10,11 +14,11 @@
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
-            class="lesson"
+            class="lesson text-grey-darkest"
           >
             <input
               type="text"
-              class="font-bold lesson-name"
+              class="font-bold lesson-name "
               :disabled="!isEditable"
               :value="lesson.name"
               @keyup.enter="updateLessonProperty($event, 'name', lesson)"
@@ -83,11 +87,10 @@ export default {
 </script>
 
 <style lang="css">
-.lesson-bg {
-  @apply pin absolute;
-}
+@tailwind base
+
 .lesson {
-  @apply flex w-full h-full text-center flex-wrap shadow mb-2  rounded bg-transparent text-grey-darkest no-underline;
+  @apply flex w-full h-full text-center flex-wrap shadow mb-2  rounded bg-transparent  no-underline;
 }
 .lesson-name {
   @apply bg-transparent;
@@ -100,10 +103,10 @@ export default {
   flex-wrap: wrap;
 }
 .day {
-  @apply bg-grey-light w-40 p-5 m-4 text-left shadow rounded;
+  @apply w-40 p-5 m-4 text-left shadow rounded;
 }
 .form-container {
-  @apply bg-teal rounded;
+  @apply rounded;
 }
 .isEditableTrigger {
   @apply relative text-right p-4;
@@ -114,5 +117,9 @@ export default {
 }
 .toggleEditability {
   text-align: right;
+}
+
+.inputDisabled {
+    background: #ffffff
 }
 </style>

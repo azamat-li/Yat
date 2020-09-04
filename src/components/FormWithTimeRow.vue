@@ -1,7 +1,12 @@
 <template>
-  <div class="form-row">
-    <div @click.self="goToForm(form)" class="form" :style="computedStyle">
+  <div class="form-row bg-teal-200">
+    <div
+      @click.self="goToForm(form)"
+      class="form bg-teal-300"
+      :style="computedStyle"
+    >
       <input
+        class="bg-teal-400 "
         v-model="form.name"
         type="text"
         @blur="updateValue"
@@ -51,14 +56,17 @@ export default {
 
 <style lang="css">
 .form-row {
-  @apply bg-teal-light rounded m-1 p-1 relative;
+  @apply rounded m-1 p-1 relative;
 }
 .form {
-  @apply bg-teal items-center rounded shadow m-1 py-1 pr-5 w-24 flex  text-grey-darkest no-underline relative;
+  @apply items-center rounded shadow m-1 py-1 pr-5 w-24 flex   no-underline relative;
 }
 input {
   @apply rounded shadow w-full;
-  background: #b2f5ea;
+}
+
+input::placeholder {
+    @apply text-gray-900
 }
 .time {
   @apply absolute px-2 mx-1;

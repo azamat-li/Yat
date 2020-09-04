@@ -23,6 +23,7 @@ const extensionsOfCSS = [
 
 module.exports = {
   plugins: [
+    require('autoprefixer'),
     require('postcss-preset-env')({ stage: 2 }),
     require('tailwindcss')('./tailwind.config.js'),
     IN_PRODUCTION &&

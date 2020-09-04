@@ -4,41 +4,35 @@
   </div>
 </template>
 
-<style lang="sass">
-@import 'assets/styles/tailwind.postcss'
-
-body,
-html
-    height: 100%
-
-#app
-    font-family: Avenir, Helvetica, Arial, sans-serif
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    text-align: center
-    color: #2c3e50
-    height: 100%
-
-.container
-@apply mx-auto
-
-::selection
-    background: #b2f5ea
-
-::moz-selection
-    background: #b2f5ea
-
-.router-link
-    color: #4a5568
-</style>
-
 <style lang="css">
 @tailwind base;
 
-.header {
-  @apply text-2xl p-2;
+@tailwind components;
+
+@tailwind utilities;
+
+body,
+html {
+  height: 100%;
 }
-input:disabled {
-  color: #1a202c;
+.router-link {
+    @apply text-gray-700
+}
+
+
+#app {
+  @apply text-gray-800;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  height: 100%;
+}
+
+::selection {
+  @apply bg-teal-300;
+}
+::moz-selection {
+  @apply bg-teal-300;
 }
 </style>

@@ -35,6 +35,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+@tailwind base
+
 .lesson-view {
   @apply bg-teal pin py-20 w-full h-full    text-left rounded shadow;
 }
