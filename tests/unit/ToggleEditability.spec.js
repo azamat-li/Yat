@@ -12,8 +12,30 @@ describe('ToggleEditability', () => {
     const buttonClickCalls = wrapper.emitted('toggle-editability')
     expect(buttonClickCalls).toHaveLength(1)
   }),
-    it('If isEditable is true, Рады изменениям div is seen', () => {
-      const wrapper = mount(ToggleEditability)
-      expect(true).toBe(true)
+    it('When isEditable is true, unLockedButton  is seen and  lockedButton is hidden', () => {
+      const wrapper = mount(ToggleEditability, {
+        propsData: {
+          isEditable: true
+        }
+      })
+      expect(wrapper.find('[data-testid="unLockedButton"]').isVisible()).toBe(
+        true
+      )
+      expect(wrapper.find('[data-testid="lockedButton"]').isVisible()).toBe(
+        false
+      )
+    }),
+    it('When isEditable is false, lockedButton is seen and unlockedButton is hidden', () => {
+      const wrapper = mount(ToggleEditability, {
+        propsData: {
+          isEditable: false
+        }
+      })
+      expect(wrapper.find('[data-testid="lockedButton"]').isVisible()).toBe(
+        true
+      )
+      expect(wrapper.find('[data-testid="unLockedButton').isVisible()).toBe(
+        false
+      )
     })
 })

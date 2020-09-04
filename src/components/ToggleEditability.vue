@@ -4,8 +4,10 @@
       class="isEditableButton bg-teal-300 hover:bg-teal-500 text-grey-600 font-bold py-2 px-4 rounded-full"
       @click="toggleisEditable"
     >
-      <div v-if="this.isEditable">Рады изменениям</div>
-      <div v-if="!this.isEditable">Заперто</div>
+      <div v-show="this.isEditable" data-testid="unLockedButton">
+        Рады изменениям
+      </div>
+      <div v-show="!this.isEditable" data-testid="lockedButton">Заперто</div>
     </button>
   </div>
 </template>
@@ -26,7 +28,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 .main {
   @apply my-2 p-1;
 }
