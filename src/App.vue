@@ -35,4 +35,11 @@ html {
 ::moz-selection {
   @apply bg-teal-300;
 }
+
+
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>

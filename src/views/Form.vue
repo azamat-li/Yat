@@ -1,24 +1,24 @@
 <template>
-  <div class="form-container  bg-teal  top-0">
-    <div class="header ">{{ form.name }}</div>
+  <div class="form-container  bg-teal-200  top-0">
+    <div class="header bg-teal-300 w-56 rounded ">{{ form.name }}</div>
     <div class="flex flex-row items-start day-wrapper ">
       <div
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
-        class="day bg-grey-light"
+        class="day bg-teal-300"
       >
         <div class="list-reset">
-          <div class="flex flex-no-shrink items-center mb-2 font-bold">
+          <div class="flex flex-no-shrink items-center mb-2 font-bold  rounded">
             {{ day.name }}
           </div>
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
-            class="lesson text-grey-darkest"
+            class="lesson text-grey-900 bg-red-200 rounded"
           >
             <input
               type="text"
-              class="font-bold lesson-name "
+              class="font-bold lesson-name bg-red-200"
               :disabled="!isEditable"
               :value="lesson.name"
               @keyup.enter="updateLessonProperty($event, 'name', lesson)"
@@ -32,8 +32,8 @@
         </div>
         <input
           type="text"
-          class="block w-full h-full bg-transparent"
-          placeholder="+ Добавьте урок"
+          class="block w-full h-full bg-transparent bg-red-200"
+          placeholder="+Добавьте урок"
           @keyup.enter="createLesson($event, day.lessons)"
         />
       </div>
@@ -103,7 +103,7 @@ export default {
   flex-wrap: wrap;
 }
 .day {
-  @apply w-40 p-5 m-4 text-left shadow rounded;
+  @apply w-40 p-1  text-left shadow rounded;
 }
 .form-container {
   @apply rounded;
