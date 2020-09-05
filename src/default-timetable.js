@@ -81,7 +81,9 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -116,7 +118,9 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -151,7 +155,10 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -186,7 +193,10 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -221,7 +231,10 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -256,7 +269,10 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -291,7 +307,10 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',
@@ -326,7 +345,10 @@ export default {
       name: '',
       days: [
         {
-          name: 'Понедельник'
+          name: 'Понедельник',
+
+          lessons: [],
+          id: uid()
         },
         {
           name: 'Вторник',

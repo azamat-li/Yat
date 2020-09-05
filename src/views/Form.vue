@@ -10,8 +10,8 @@
         @dragover.prevent
         @dragenter.prevent
       >
-        <div class="list-reset" @dragenter.prevent @dragover.prevent>
-          <div class="flex flex-no-shrink items-center mb-2 font-bold rounded ">{{ day.name }}</div>
+        <div class="list-reset" >
+          <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
@@ -22,19 +22,19 @@
           >
             <input
               type="text"
-              class="font-bold lesson-name "
+              class="font-bold lesson-name"
               :disabled="!isEditable"
               :value="lesson.name"
               @keyup.enter="updateLessonProperty($event, 'name', lesson)"
               @change="updateLessonProperty($event, 'name', lesson)"
-              placeholder="Урок"
+              placeholder=" Урок"
             />
             <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
           </div>
         </div>
         <input
           type="text"
-          class="block w-full h-full bg-red-100 "
+          class="block w-full h-full bg-red-100"
           placeholder="+Добавьте урок"
           @keyup.enter="createLesson($event, day.lessons)"
         />
