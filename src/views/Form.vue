@@ -1,5 +1,5 @@
 <template>
-  <div class="form-container bg-teal-200 top-0">
+  <div class="form-container bg-indigo-100 top-0">
     <div class="header bg-teal-300 w-56 rounded">{{ form.name }}</div>
     <div class="flex flex-row items-start day-wrapper">
       <div

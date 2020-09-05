@@ -1,5 +1,5 @@
 <template>
-  <div class="global-time-board bg-teal-100 h-full w-full">
+  <div class="global-time-board bg-indigo-100 h-full w-full">
     <div>
       <div class="header p-2 w-1/3 bg-teal-200 rounded">
         Общее школьное время корпуса
@@ -13,7 +13,7 @@
       :isEditable="globalTimetableIsEditable"
     ></FormWithTimeRow>
     <div
-      class="bg-teal-100 absolute top-0 w-full h-full"
+      class="bg-indigo-100 absolute top-0 w-full h-full"
       v-if="isFormOpen"
       @click.self="close"
     >
@@ -61,9 +61,6 @@ export default {
 <style lang="css" scoped>
 @tailwind base
 
-.table-header {
-  @apply mx-1 my-2 py-1 w-16 h-16 rounded bg-teal;
-}
 .global-time-board {
   @apply rounded;
 }
