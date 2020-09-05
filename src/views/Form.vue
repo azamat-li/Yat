@@ -1,20 +1,24 @@
 <template>
-  <div class="form-container  bg-teal-200  top-0">
-    <div class="header bg-teal-300 w-56 rounded ">{{ form.name }}</div>
-    <div class="flex flex-row items-start day-wrapper ">
+  <div class="form-container bg-teal-200 top-0">
+    <div class="header bg-teal-300 w-56 rounded">{{ form.name }}</div>
+    <div class="flex flex-row items-start day-wrapper">
       <div
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
         class="day bg-teal-300"
+        @drop="dropLesson($event, day.lessons)"
+        @dragover.prevent
+        @dragenter.prevent
       >
-        <div class="list-reset">
-          <div class="flex flex-no-shrink items-center mb-2 font-bold  rounded">
-            {{ day.name }}
-          </div>
+        <div class="list-reset" @dragenter.prevent @dragover.prevent>
+          <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
             class="lesson text-grey-900 bg-red-200 rounded"
+            data-testid="lesson"
+            draggable
+            @dragstart="pickUpLesson($event, $lessonIndex, $dayIndex)"
           >
             <input
               type="text"
@@ -25,9 +29,7 @@
               @change="updateLessonProperty($event, 'name', lesson)"
               placeholder="Урок"
             />
-            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
-              {{ lesson.notes }}
-            </p>
+            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
           </div>
         </div>
         <input
@@ -81,6 +83,25 @@ export default {
         value: !this.isEditable
       })
       this.$emit('toggle-is-editable')
+    },
+    pickUpLesson(e, lessonIndex, dayIndex) {
+      e.dataTransfer.effectAllowed = 'move'
+      e.dataTransfer.dropEffect = 'move'
+
+      e.dataTransfer.setData('lesson-to-move-index', lessonIndex)
+      e.dataTransfer.setData('from-day-index', dayIndex)
+    },
+    dropLesson(e, toLessons) {
+      const fromDayIndex = e.dataTransfer.getData('from-day-index')
+      const fromLessons = this.form.days[fromDayIndex].lessons
+
+      const lessonToMoveIndex = e.dataTransfer.getData('lesson-to-move-index')
+
+      this.$store.commit('MOVE_LESSON', {
+        lessonToMoveIndex,
+        fromLessons,
+        toLessons
+      })
     }
   }
 }
@@ -120,6 +141,6 @@ export default {
 }
 
 .inputDisabled {
-    background: #ffffff
+  background: #ffffff;
 }
 </style>

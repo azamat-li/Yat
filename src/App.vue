@@ -16,9 +16,8 @@ html {
   height: 100%;
 }
 .router-link {
-    @apply text-gray-700
+  @apply text-gray-700;
 }
-
 
 #app {
   @apply text-gray-800;
@@ -35,7 +34,6 @@ html {
 ::moz-selection {
   @apply bg-teal-300;
 }
-
 
 .header {
   display: block;

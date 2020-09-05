@@ -50,6 +50,10 @@ export default new Vuex.Store({
     },
     TOGGLE_EDITABILITY(state, { key, value }) {
       state[key] = value
+    },
+    MOVE_LESSON(state, { lessonToMoveIndex, fromLessons, toLessons }) {
+      const lessonToMove = fromLessons.splice(lessonToMoveIndex, 1)[0]
+      toLessons.push(lessonToMove)
     }
   },
   actions: {
