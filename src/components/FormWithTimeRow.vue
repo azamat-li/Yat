@@ -2,11 +2,11 @@
   <div class="form-row bg-teal-200">
     <div
       @click.self="goToForm(form)"
-      class="form bg-teal-300"
+      class="form bg-yellow-100"
       :style="computedStyle"
     >
       <input
-        class="bg-teal-400 "
+        class="bg-red-100 "
         v-model="form.name"
         type="text"
         @blur="updateValue"

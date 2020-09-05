@@ -16,7 +16,7 @@ html {
   height: 100%;
 }
 .router-link {
-  @apply text-gray-700;
+  @apply text-gray-900;
 }
 
 #app {
