@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="absolute top-0 stretch-to-page-height">
     <FormComponent
       v-for="(form, formIndex) in forms"
       :key="formIndex"
@@ -25,5 +25,4 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
+<style lang="css" scoped></style>
