@@ -1,21 +1,23 @@
 <template>
-  <div class="form-container bg-indigo-100 top-0">
-    <div class="header bg-teal-300 w-56 rounded">{{ form.name }}</div>
+  <div class="form-container top-0">
+    <div class="bg-white h-8">
+      <div class="header bg-teal-100 w-56 rounded">{{ form.name }}</div>
+    </div>
     <div class="flex flex-row items-start day-wrapper">
       <div
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
-        class="day bg-teal-300"
+        class="day bg-red-100 border-8 border-teal-100"
         @drop="dropLesson($event, day.lessons)"
         @dragover.prevent
         @dragenter.prevent
       >
-        <div class="list-reset" >
+        <div class="list-reset">
           <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
-            class="lesson text-grey-900 bg-yellow-100 rounded"
+            class="lesson text-grey-900 bg-yellow-100 mt-1 rounded"
             data-testid="lesson"
             draggable
             @dragstart="pickUpLesson($event, $lessonIndex, $dayIndex)"
@@ -34,12 +36,14 @@
         </div>
         <input
           type="text"
-          class="block w-full h-full bg-red-100"
-          placeholder="+Добавьте урок"
+          class="block w-full h-full bg-yellow-100"
+          placeholder="+ Добавьте урок"
           @keyup.enter="createLesson($event, day.lessons)"
+          @blur="createLesson($event, day.lessons)"
         />
       </div>
     </div>
+
     <ToggleEditability
       @toggle-editability="toggleIsEditable"
       :isEditable="isEditable"
@@ -143,4 +147,5 @@ export default {
 .inputDisabled {
   background: #ffffff;
 }
+
 </style>

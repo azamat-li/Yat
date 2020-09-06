@@ -1,12 +1,12 @@
 <template>
-  <div class="form-row bg-teal-200">
+  <div class="form-row bg-teal-100">
     <div
       @click.self="goToForm(form)"
-      class="form bg-yellow-100"
+      class="form bg-red-100"
       :style="computedStyle"
     >
       <input
-        class="bg-red-100 "
+        class="bg-yellow-100 "
         v-model="form.name"
         type="text"
         @blur="updateValue"

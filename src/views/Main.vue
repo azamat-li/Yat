@@ -1,7 +1,7 @@
 <template>
-  <div class="global-time-board bg-indigo-100 h-full w-full">
+  <div class="global-time-board  h-full w-full">
     <div>
-      <div class="header p-2 w-1/3 bg-teal-200 rounded">
+      <div class="header p-2 w-1/3 bg-teal-100 rounded">
         Общее школьное время корпуса
       </div>
     </div>
@@ -13,11 +13,11 @@
       :isEditable="globalTimetableIsEditable"
     ></FormWithTimeRow>
     <div
-      class="bg-indigo-100 absolute top-0 w-full h-full"
+      class="bg-white absolute top-0 w-full h-full"
       v-if="isFormOpen"
       @click.self="close"
     >
-      <router-view class="bg-teal-200" />
+      <router-view />
     </div>
     <ToggleEditability
       :isEditable="globalTimetableIsEditable"
