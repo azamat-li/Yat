@@ -48,6 +48,7 @@
       @toggle-editability="toggleIsEditable"
       :isEditable="isEditable"
       class="toggleEditability"
+      v-show="isEditableButtonEnabled"
     ></ToggleEditability>
   </div>
 </template>
@@ -59,6 +60,9 @@ export default {
   props: {
     form: {
       type: Object
+    },
+    isEditableButtonEnabled: {
+      type: Boolean
     }
   },
   components: {

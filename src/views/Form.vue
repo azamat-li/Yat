@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormComponent :form="form"></FormComponent>
+    <FormComponent :form="form" :isEditableButtonEnabled="true"></FormComponent>
   </div>
 </template>
 

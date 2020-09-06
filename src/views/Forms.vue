@@ -1,6 +1,11 @@
 <template>
   <div>
-    <FormComponent v-for="(form, formIndex) in forms" :key="formIndex" :form="form"></FormComponent>
+    <FormComponent
+      v-for="(form, formIndex) in forms"
+      :key="formIndex"
+      :form="form"
+      :isEditableButtonEnabled="false"
+    ></FormComponent>
   </div>
 </template>
 
