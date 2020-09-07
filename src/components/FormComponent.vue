@@ -13,7 +13,9 @@
         @dragenter.prevent
       >
         <div class="list-reset">
-          <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
+          <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
+            {{ day.name }}
+          </div>
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
@@ -31,7 +33,9 @@
               @change="updateLessonProperty($event, 'name', lesson)"
               placeholder=" Урок"
             />
-            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
+            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
+              {{ lesson.notes }}
+            </p>
           </div>
         </div>
         <input
