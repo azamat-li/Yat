@@ -29,7 +29,7 @@
               dropLessonOrBlock($event, day.lessons, $dayIndex, $lessonIndex)
             "
           >
-            <LessonInBlockComponent :lesson="lesson" :isEditable="isEditable" @update-lesson-property="updateLessonProperty"></LessonInBlockComponent>
+            <LessonInBlockComponent :lesson="lesson" :isEditable="isEditable"></LessonInBlockComponent>
             <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
           </div>
 
@@ -83,13 +83,7 @@ export default {
     goToLesson(lesson) {
       this.$router.push({ name: 'lesson', params: { id: lesson.id } })
     },
-    updateLessonProperty(e, key, lesson) {
-      this.$store.dispatch('updateLesson', {
-        lesson,
-        key,
-        value: e.target.value
-      })
-    },
+
     toggleIsEditable() {
       this.$store.commit('TOGGLE_EDITABILITY', {
         key: 'isEditable',

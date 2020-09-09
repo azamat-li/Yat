@@ -3,12 +3,13 @@
     <input
       type="text"
       class="font-bold lesson-name"
-      :disabled="!isEditable"
+      v-if="lesson.name && isEditable"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       @change="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
     />
+    <div class="font-bold lesson-name" v-else>{{ lesson.name }}</div>
   </div>
 </template>
 
@@ -24,7 +25,11 @@ export default {
   },
   methods: {
     updateLessonProperty(e, key, lesson) {
-      this.$emit('update-lesson-property', { e, key, lesson })
+      this.$store.dispatch('updateLesson', {
+        lesson,
+        key,
+        value: e.target.value
+      })
     }
   }
 }
