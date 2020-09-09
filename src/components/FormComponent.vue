@@ -8,14 +8,16 @@
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
         class="day bg-red-100 border-8 border-teal-100"
-        @drop="dropLesson($event, day.lessons)"
+        draggable
+        @drop="dropLessonOrBlock($event, day.lessons, $dayIndex)"
         @dragover.prevent
         @dragenter.prevent
+        @dragstart.self="pickUpBlock($event, $dayIndex)"
       >
+        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
+          {{ day.name }}
+        </div>
         <div class="list-reset">
-          <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
-            {{ day.name }}
-          </div>
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
             :key="$lessonIndex"
@@ -23,6 +25,11 @@
             data-testid="lesson"
             draggable
             @dragstart="pickUpLesson($event, $lessonIndex, $dayIndex)"
+            @dragover.prevent
+            @dragenter.prevent
+            @drop.stop="
+              dropLessonOrBlock($event, day.lessons, $dayIndex, $lessonIndex)
+            "
           >
             <input
               type="text"
@@ -58,7 +65,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import ToggleEditability from '../components/ToggleEditability'
 export default {
   props: {
@@ -73,7 +80,8 @@ export default {
     ToggleEditability
   },
   computed: {
-    ...mapState(['isEditable'])
+    ...mapState(['isEditable']),
+    ...mapGetters(['getFormById'])
   },
   methods: {
     createLesson(e, lessons) {
@@ -97,23 +105,52 @@ export default {
       })
       this.$emit('toggle-is-editable')
     },
-    pickUpLesson(e, lessonIndex, dayIndex) {
+    pickUpLesson(e, fromLessonIndex, fromBlockIndex) {
       e.dataTransfer.effectAllowed = 'move'
       e.dataTransfer.dropEffect = 'move'
 
-      e.dataTransfer.setData('lesson-to-move-index', lessonIndex)
-      e.dataTransfer.setData('from-day-index', dayIndex)
+      e.dataTransfer.setData('from-lesson-index', fromLessonIndex)
+      e.dataTransfer.setData('from-block-index', fromBlockIndex)
+      e.dataTransfer.setData('type', 'lesson')
     },
-    dropLesson(e, toLessons) {
-      const fromDayIndex = e.dataTransfer.getData('from-day-index')
-      const fromLessons = this.form.days[fromDayIndex].lessons
+    pickUpBlock(e, fromBlockIndex) {
+      e.dataTransfer.effectAllowed = 'move'
+      e.dataTransfer.dropEffect = 'move'
 
-      const lessonToMoveIndex = e.dataTransfer.getData('lesson-to-move-index')
+      e.dataTransfer.setData('from-block-index', fromBlockIndex)
+      e.dataTransfer.setData('type', 'block')
+    },
+    dropLessonOrBlock(e, toLessons, toBlockIndex, toLessonIndex) {
+      const type = e.dataTransfer.getData('type')
+      if (type === 'lesson') {
+        this.dropLesson(
+          e,
+          toLessons,
+          toLessonIndex !== undefined ? toLessonIndex : toLessons.length
+        )
+      } else {
+        this.dropBlock(e, toBlockIndex)
+      }
+    },
+    dropLesson(e, toLessons, toLessonIndex) {
+      const fromBlockIndex = e.dataTransfer.getData('from-block-index')
+      const fromLessons = this.form.days[fromBlockIndex].lessons
+      const fromLessonIndex = e.dataTransfer.getData('from-lesson-index')
 
-      this.$store.commit('MOVE_LESSON', {
-        lessonToMoveIndex,
+      this.$store.commit('DROP_LESSON', {
         fromLessons,
-        toLessons
+        fromLessonIndex,
+        toLessons,
+        toLessonIndex
+      })
+    },
+    dropBlock(e, toBlockIndex) {
+      const fromBlockIndex = e.dataTransfer.getData('from-block-index')
+      const formId = this.form.id
+      this.$store.dispatch('dropBlock', {
+        fromBlockIndex,
+        toBlockIndex,
+        formId
       })
     }
   }

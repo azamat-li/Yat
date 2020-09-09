@@ -51,9 +51,17 @@ export default new Vuex.Store({
     TOGGLE_EDITABILITY(state, { key, value }) {
       state[key] = value
     },
-    MOVE_LESSON(state, { lessonToMoveIndex, fromLessons, toLessons }) {
-      const lessonToMove = fromLessons.splice(lessonToMoveIndex, 1)[0]
-      toLessons.push(lessonToMove)
+    DROP_LESSON(
+      state,
+      { fromLessons, toLessons, fromLessonIndex, toLessonIndex }
+    ) {
+      const lessonToMove = fromLessons.splice(fromLessonIndex, 1)[0]
+      toLessons.splice(toLessonIndex, 0, lessonToMove)
+    },
+    DROP_BLOCK(state, { fromBlockIndex, toBlockIndex, formId, getters }) {
+      const blockList = getters.getFormById(formId).days
+      const blockToMove = blockList.splice(fromBlockIndex, 1)[0]
+      blockList.splice(toBlockIndex, 0, blockToMove)
     }
   },
   actions: {
@@ -74,6 +82,9 @@ export default new Vuex.Store({
     updateLesson({ commit, dispatch }, { lesson, key, value }) {
       commit('UPDATE_LESSON', { lesson, key, value })
       dispatch('persistSchoolTimetable')
+    },
+    dropBlock({ commit, getters }, { fromBlockIndex, toBlockIndex, formId }) {
+      commit('DROP_BLOCK', { fromBlockIndex, toBlockIndex, formId, getters })
     }
   }
 })

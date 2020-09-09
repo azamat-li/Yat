@@ -6,7 +6,6 @@ import AppButton from './components/AppButton'
 
 Vue.config.productionTip = false
 Vue.component('AppButton', AppButton)
-
 new Vue({
   router,
   store,
