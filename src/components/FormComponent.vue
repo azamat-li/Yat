@@ -14,9 +14,7 @@
         @dragenter.prevent
         @dragstart.self="pickUpBlock($event, $dayIndex)"
       >
-        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
-          {{ day.name }}
-        </div>
+        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
         <div class="list-reset">
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
@@ -31,27 +29,18 @@
               dropLessonOrBlock($event, day.lessons, $dayIndex, $lessonIndex)
             "
           >
-            <input
-              type="text"
-              class="font-bold lesson-name"
-              :disabled="!isEditable"
-              :value="lesson.name"
-              @keyup.enter="updateLessonProperty($event, 'name', lesson)"
-              @change="updateLessonProperty($event, 'name', lesson)"
-              placeholder=" Урок"
-            />
-            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
-              {{ lesson.notes }}
-            </p>
+            <LessonInBlockComponent :lesson="lesson" :isEditable="isEditable" @update-lesson-property="updateLessonProperty"></LessonInBlockComponent>
+            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
           </div>
+
+          <input
+            type="text"
+            class="block w-full h-full bg-transparent"
+            placeholder="+ Добавьте урок"
+            @keyup.enter="createLesson($event, day.lessons)"
+            @blur="createLesson($event, day.lessons)"
+          />
         </div>
-        <input
-          type="text"
-          class="block w-full h-full bg-yellow-100"
-          placeholder="+ Добавьте урок"
-          @keyup.enter="createLesson($event, day.lessons)"
-          @blur="createLesson($event, day.lessons)"
-        />
       </div>
     </div>
 
@@ -67,6 +56,8 @@
 <script>
 import { mapState, mapGetters } from 'vuex'
 import ToggleEditability from '../components/ToggleEditability'
+import LessonInBlockComponent from '@/components/LessonInBlockComponent'
+
 export default {
   props: {
     form: {
@@ -77,7 +68,8 @@ export default {
     }
   },
   components: {
-    ToggleEditability
+    ToggleEditability,
+    LessonInBlockComponent
   },
   computed: {
     ...mapState(['isEditable']),
@@ -162,12 +154,6 @@ export default {
 
 .lesson {
   @apply flex w-full h-full text-center flex-wrap shadow mb-2  rounded bg-transparent  no-underline;
-}
-.lesson-name {
-  @apply bg-transparent;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
 }
 .day-wrapper {
   display: flex-wrap;
