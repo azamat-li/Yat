@@ -12,7 +12,6 @@
         @drop="dropLessonOrBlock($event, day.lessons, $dayIndex)"
         @dragover.prevent
         @dragenter.prevent
-        @dragstart.self="pickUpBlock($event, $dayIndex)"
       >
         <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
         <div class="list-reset">
@@ -99,13 +98,6 @@ export default {
       e.dataTransfer.setData('from-block-index', fromBlockIndex)
       e.dataTransfer.setData('type', 'lesson')
     },
-    pickUpBlock(e, fromBlockIndex) {
-      e.dataTransfer.effectAllowed = 'move'
-      e.dataTransfer.dropEffect = 'move'
-
-      e.dataTransfer.setData('from-block-index', fromBlockIndex)
-      e.dataTransfer.setData('type', 'block')
-    },
     dropLessonOrBlock(e, toLessons, toBlockIndex, toLessonIndex) {
       const type = e.dataTransfer.getData('type')
       if (type === 'lesson') {
@@ -114,8 +106,6 @@ export default {
           toLessons,
           toLessonIndex !== undefined ? toLessonIndex : toLessons.length
         )
-      } else {
-        this.dropBlock(e, toBlockIndex)
       }
     },
     dropLesson(e, toLessons, toLessonIndex) {
@@ -128,15 +118,6 @@ export default {
         fromLessonIndex,
         toLessons,
         toLessonIndex
-      })
-    },
-    dropBlock(e, toBlockIndex) {
-      const fromBlockIndex = e.dataTransfer.getData('from-block-index')
-      const formId = this.form.id
-      this.$store.dispatch('dropBlock', {
-        fromBlockIndex,
-        toBlockIndex,
-        formId
       })
     }
   }
