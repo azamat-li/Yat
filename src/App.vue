@@ -29,10 +29,10 @@ html {
 }
 
 ::selection {
-  @apply bg-teal-300;
+  @apply bg-indigo-200;
 }
 ::moz-selection {
-  @apply bg-teal-300;
+  @apply bg-indigo-200;
 }
 
 .header {
