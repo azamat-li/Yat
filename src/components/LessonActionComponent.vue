@@ -3,7 +3,7 @@
     <input
       type="text"
       class="font-bold lesson-name"
-      v-if="isEditable"
+      v-if="isEditable && lesson.name"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       @change="updateLessonProperty($event, 'name', lesson)"
