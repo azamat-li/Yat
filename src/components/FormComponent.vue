@@ -13,7 +13,9 @@
         @dragover.prevent
         @dragenter.prevent
       >
-        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">{{ day.name }}</div>
+        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
+          {{ day.name }}
+        </div>
         <div class="list-reset">
           <div
             v-for="(lesson, $lessonIndex) of day.lessons"
@@ -28,8 +30,13 @@
               dropLessonOrBlock($event, day.lessons, $dayIndex, $lessonIndex)
             "
           >
-            <LessonInBlockComponent :lesson="lesson" :isEditable="isEditable"></LessonInBlockComponent>
-            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">{{ lesson.notes }}</p>
+            <LessonActionComponent
+              :lesson="lesson"
+              :isEditable="isEditable"
+            ></LessonActionComponent>
+            <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
+              {{ lesson.notes }}
+            </p>
           </div>
 
           <input
@@ -53,9 +60,10 @@
 </template>
 
 <script>
+import draggable from 'vuedraggable'
 import { mapState, mapGetters } from 'vuex'
 import ToggleEditability from '../components/ToggleEditability'
-import LessonInBlockComponent from '@/components/LessonInBlockComponent'
+import LessonActionComponent from '@/components/LessonActionComponent'
 
 export default {
   props: {
@@ -68,7 +76,8 @@ export default {
   },
   components: {
     ToggleEditability,
-    LessonInBlockComponent
+    LessonActionComponent,
+    draggable
   },
   computed: {
     ...mapState(['isEditable']),
