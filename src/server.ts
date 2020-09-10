@@ -1,8 +1,14 @@
 import express from 'express'
 
+import bodyParser from 'body-parser'
 import serveStatic from 'serve-static'
 
 const app = express()
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
 // here we are configuring dist to serve app files
 app.use('/', serveStatic('dist'))
