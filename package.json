@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix ",
+    "prebuild": "npm install --save-dev tslint && tslint -c tslint.json -p tsconfig.json --fix ",
     "build": "tsc",
     "postinstall": "npm run build",
     "lint": "tslint -c tslint.json src/**/*.ts",
