@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "prebuild": "npm install --save-dev tslint && tslint -c tslint.json -p tsconfig.json --fix ",
-    "build": "tsc -p ./",
+    "build": "tsc ",
     "postinstall": "npm run build",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prestart": "npm run build",

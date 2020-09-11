@@ -10,12 +10,11 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "rootDir": "./",
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]
     }
   },
-  "include": ["src/**/*", "server.js"]
+  "include": ["src"]
 }
