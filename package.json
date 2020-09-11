@@ -10,7 +10,8 @@
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prestart": "npm run build",
     "start": "node .",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
