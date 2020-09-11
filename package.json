@@ -10,7 +10,7 @@
     "postinstall": "npm run build",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prestart": "npm run build",
-    "start": "node dist/server.js",
+    "start": "node server.js",
     "test:unit": "vue-cli-service test:unit",
     "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
   },
