@@ -29,8 +29,7 @@
     "tailwindcss": "^1.7.6",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0",
-    "tslint": "^6.1.3"
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
@@ -55,6 +54,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "tailwind": "^4.0.0",
+    "tslint": "^6.1.3",
     "typescript": "^4.0.2",
     "vue-cli-plugin-fontawesome": "^0.2.0",
     "vue-cli-plugin-tailwind": "^1.4.2",
