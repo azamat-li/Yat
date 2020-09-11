@@ -6,8 +6,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc && npm run build",
+    "build": "tsc",
     "lint": "tslint -c tslint.json src/**/*.ts",
+    "prestart": "npm run build",
     "start": "node .",
     "test:unit": "vue-cli-service test:unit",
     "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
