@@ -5,11 +5,12 @@
   "main": "dist/server.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "prebuild": "npm run freshtall && tslint -c tslint.json -p tsconfig.json --fix ",
-    "build": "tsc && npm install",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix ",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "node dist/server.js",
     "test:unit": "vue-cli-service test:unit",
     "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
   },
