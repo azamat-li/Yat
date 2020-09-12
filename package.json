@@ -61,10 +61,6 @@
     "vue-cli-plugin-fontawesome": "^0.2.0",
     "vue-cli-plugin-tailwind": "^1.4.2"
   },
-  "engines": {
-    "node": "14.10.1",
-    "npm": "6.14.8"
-  },
   "description": "## Project setup ``` npm install ```",
   "directories": {
     "test": "tests"
