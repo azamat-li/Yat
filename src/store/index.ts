@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import defaultSchoolTimetable from '../default-timetable'
+import defaultSchoolTimetable from '@/default-timetable'
 import { saveStatePlugin, uid } from '../utils'
 
 Vue.use(Vuex)
@@ -16,11 +16,11 @@ export default new Vuex.Store({
     globalTimetableIsEditable: false
   },
   getters: {
-    getFormById: state => id => {
-      return state.schooltimetable.forms.find(form => form.id === id)
+    getFormById: state => (id:any) => {
+      return state.schooltimetable.forms.find((form:any) => form.id === id)
     },
     getLessonById(state) {
-      return id => {
+      return (id:any) => {
         for (const form of state.schooltimetable.forms) {
           for (const day of form.days) {
             for (const lesson of day.lessons) {
@@ -35,9 +35,9 @@ export default new Vuex.Store({
   },
   mutations: {
     UPDATE_FORM_NAME(state, formWithNewName) {
-      state.schooltimetable.forms.filter(form => {
-        form.id === formWithNewName.id
-      }).name = formWithNewName.name
+      state.schooltimetable.forms.filter(
+        (form:any) => form.id === formWithNewName.id
+      ).name = formWithNewName.name
     },
     CREATE_LESSON(state, { lessons, name }) {
       lessons.push({
