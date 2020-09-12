@@ -1,6 +1,7 @@
 const express = require('express')
 const serveStatic = require('serve-static')
 const path = require('path')
+const morgan = require('morgan')
 
 const app = express()
 
@@ -14,4 +15,4 @@ app.get(/.*/, function(req, res) {
 
 const port = process.env.PORT || 8080
 app.listen(port)
-console.log(`app is listening on port: ${port}`)
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))

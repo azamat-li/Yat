@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import VueRouter, { RouteConfig } from 'vue-router'
+
 import Forms from '../views/Forms.vue'
 import Form from '../views/Form.vue'
 import Lesson from '../views/Lesson.vue'
@@ -7,7 +8,7 @@ import Main from '../views/Main.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'main',
