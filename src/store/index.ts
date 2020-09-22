@@ -16,11 +16,11 @@ export default new Vuex.Store({
     globalTimetableIsEditable: false
   },
   getters: {
-    getFormById: state => (id:any) => {
-      return state.schooltimetable.forms.find((form:any) => form.id === id)
+    getFormById: state => id => {
+      return state.schooltimetable.forms.find(form => form.id === id)
     },
     getLessonById(state) {
-      return (id:any) => {
+      return (id: any) => {
         for (const form of state.schooltimetable.forms) {
           for (const day of form.days) {
             for (const lesson of day.lessons) {
@@ -36,12 +36,19 @@ export default new Vuex.Store({
   mutations: {
     UPDATE_FORM_NAME(state, formWithNewName) {
       state.schooltimetable.forms.filter(
-        (form:any) => form.id === formWithNewName.id
+        (form: any) => form.id === formWithNewName.id
       ).name = formWithNewName.name
     },
     CREATE_LESSON(state, { lessons, name }) {
       lessons.push({
         name,
+        id: uid()
+      })
+    },
+    CREATE_BLOCK(state, { form, newBlockName }) {
+      form.days.push({
+        name: newBlockName,
+        lessons: [],
         id: uid()
       })
     },
@@ -77,6 +84,10 @@ export default new Vuex.Store({
     },
     createLesson({ commit, dispatch }, { lessons, name }) {
       commit('CREATE_LESSON', { lessons, name })
+      dispatch('persistSchoolTimetable')
+    },
+    createBlock({ commit, dispatch }, { form, newBlockName }) {
+      commit('CREATE_BLOCK', { form, newBlockName })
       dispatch('persistSchoolTimetable')
     },
     updateLesson({ commit, dispatch }, { lesson, key, value }) {

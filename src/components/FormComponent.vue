@@ -49,6 +49,15 @@
       class="toggleEditability"
       v-show="isEditableButtonEnabled"
     ></ToggleEditability>
+    <div class="day bg-red-100 border-8 border-teal-100">
+      <input
+        type="text"
+        class="block w-full h-full bg-transparent"
+        placeholder="+ Добавьте Блок Уроков"
+        @keyup.enter="createBlock($event)"
+        @blur="createBlock($event)"
+      />
+    </div>
   </div>
 </template>
 
@@ -77,6 +86,13 @@ export default {
   methods: {
     createLesson(e, lessons) {
       this.$store.dispatch('createLesson', { lessons, name: e.target.value })
+      e.target.value = ''
+    },
+    createBlock(e) {
+      this.$store.dispatch('createBlock', {
+        form: this.form,
+        newBlockName: e.target.value
+      })
       e.target.value = ''
     },
     goToLesson(lesson) {
