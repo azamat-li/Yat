@@ -35,7 +35,7 @@
           <input
             type="text"
             class="block w-full h-full bg-transparent"
-            placeholder="+ Добавьте урок"
+            placeholder="+ Добавьте Урок"
             @keyup.enter="createLesson($event, day.lessons)"
             @blur="createLesson($event, day.lessons)"
           />
@@ -55,7 +55,6 @@
         class="block w-full h-full bg-transparent"
         placeholder="+ Добавьте Блок Уроков"
         @keyup.enter="createBlock($event)"
-        @blur="createBlock($event)"
       />
     </div>
   </div>
