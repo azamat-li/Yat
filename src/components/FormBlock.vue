@@ -1,6 +1,6 @@
 <template>
   <div
-    class="lesson-block bg-gray-100 border-8 border-teal-100"
+    class="lesson-block bg-gray-700 border-8 border-gray-800 "
     draggable
     @drop="dropLessonOrBlock($event, block.lessons, blockIndex)"
     @dragover.prevent
@@ -13,7 +13,7 @@
       <div
         v-for="(lesson, $lessonIndex) of block.lessons"
         :key="$lessonIndex"
-        class="lesson text-gray-800 bg-gray-900 bg-yellow-100 mt-1 rounded"
+        class="lesson  mt-1 rounded"
         data-testid="lesson"
         draggable
         @dragstart="pickUpLesson($event, $lessonIndex, blockIndex)"
@@ -40,6 +40,8 @@
         @blur="createLesson($event, block.lessons)"
       />
     </div>
+
+
   </div>
 </template>
 

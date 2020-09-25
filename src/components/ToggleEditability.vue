@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <button
-      class="isEditableButton  bg-red-100 hover:bg-yellow-100 text-grey-900 font-bold py-2 px-4 rounded-full"
+      class="isEditableButton  bg-gray-800 hover:bg-gray-900 hover:text-gray-200 text-grey-300 font-bold py-2 px-4 rounded-full"
       @click="toggleisEditable"
     >
       <div v-show="this.isEditable" data-testid="unLockedButton">Рады изменениям</div>
@@ -27,7 +27,7 @@ export default {
 
 <style lang="css" scoped>
 .main {
-  @apply my-2 p-1;
+  @apply  p-1;
 }
 
 </style>

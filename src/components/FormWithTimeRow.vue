@@ -1,12 +1,12 @@
 <template>
-  <div class="form-row bg-teal-100">
+  <div class="form-row bg-gray-800">
     <div
       @click.self="goToForm(form)"
-      class="form bg-red-100"
+      class="form bg-gray-700"
       :style="computedStyle"
     >
       <input
-        class="bg-yellow-100 "
+        class="bg-gray-800 text-gray-200 "
         v-model="form.name"
         type="text"
         @blur="updateValue"
@@ -66,7 +66,7 @@ input {
 }
 
 input::placeholder {
-    @apply text-gray-900
+    @apply text-gray-200
 }
 .time {
   @apply absolute px-2 mx-1;

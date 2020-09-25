@@ -1,9 +1,13 @@
 <template>
-  <div class="form-container  top-0">
-    <div class="bg-white h-8">
-      <div class="header bg-gray-100 w-56 rounded">{{ form.name }}</div>
+  <div class="form-container  bg-gray-700  top-0">
+    <div class="bg-gray-700 h-8">
+      <div class="header bg-gray-800 text-gray-200 w-56 rounded">
+        {{ form.name }}
+      </div>
     </div>
-    <div class="flex flex-row items-start day-wrapper">
+    <div
+      class="flex flex-row items-start day-wrapper bg-gray-800 text-gray-200"
+    >
       <FormBlock
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
@@ -12,22 +16,22 @@
         :form="form"
         :isEditable="isEditable"
       />
+      <div class="lesson-block bg-gray-800 ">
+        <input
+          type="text"
+          class="block w-full h-full bg-gray-800 text-gray-300"
+          placeholder="+ Добавьте Блок Уроков"
+          @keyup.enter="createBlock($event)"
+        />
+      </div>
     </div>
 
     <ToggleEditability
       @toggle-editability="toggleIsEditable"
       :isEditable="isEditable"
-      class="toggleEditability"
+      class="toggleEditability bg-gray-800 text-gray-300"
       v-show="isEditableButtonEnabled"
     ></ToggleEditability>
-    <div class="day bg-red-100 border-8 border-teal-100">
-      <input
-        type="text"
-        class="block w-full h-full bg-transparent"
-        placeholder="+ Добавьте Блок Уроков"
-        @keyup.enter="createBlock($event)"
-      />
-    </div>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="global-time-board h-full w-full">
+  <div class="global-time-board h-full w-full bg-gray-900">
     <div>
-      <div class="header p-2 w-1/3 bg-teal-100 rounded">Общее школьное время корпуса</div>
+      <div class="header p-2 w-1/3 bg-gray-800 text-gray-300 rounded">Общее школьное время корпуса</div>
     </div>
     <FormWithTimeRow
       v-for="(form, formIndex) in schooltimetable.forms"
@@ -68,10 +68,11 @@ export default {
 }
 
 .toggleEditability {
+    @apply bg-gray-900 text-gray-300;
   text-align: right;
 }
 .background {
-  @apply bg-gray-500 absolute  top-0 w-full h-full;
+  @apply bg-gray-900 absolute  top-0 w-full h-full;
   min-height: 100%;
 }
 .form-background {
@@ -81,7 +82,7 @@ export default {
   height: 500vh;
 }
 .router-view {
-  @apply bg-white rounded absolute;
+  @apply bg-gray-800 rounded absolute;
   width: 95vw;
   min-height: 100%;
   top: 3vh;
