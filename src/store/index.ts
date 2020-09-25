@@ -5,8 +5,12 @@ import { saveStatePlugin, uid } from '../utils'
 
 Vue.use(Vuex)
 
+const schooltimetableJson = localStorage.getItem('schooltimetable')
+
 const schooltimetable =
-  JSON.parse(localStorage.getItem('schooltimetable')) || defaultSchoolTimetable
+  schooltimetableJson !== null
+    ? JSON.parse(schooltimetableJson)
+    : defaultSchoolTimetable
 
 export default new Vuex.Store({
   plugins: [saveStatePlugin],
@@ -20,7 +24,7 @@ export default new Vuex.Store({
       return state.schooltimetable.forms.find(form => form.id === id)
     },
     getLessonById(state) {
-      return (id: any) => {
+      return (id: number) => {
         for (const form of state.schooltimetable.forms) {
           for (const day of form.days) {
             for (const lesson of day.lessons) {
@@ -36,6 +40,7 @@ export default new Vuex.Store({
   mutations: {
     UPDATE_FORM_NAME(state, formWithNewName) {
       state.schooltimetable.forms.filter(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (form: any) => form.id === formWithNewName.id
       ).name = formWithNewName.name
     },
