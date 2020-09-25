@@ -10,28 +10,15 @@
       {{ block.name }}
     </div>
     <div class="list-reset">
-      <div
+      <BlockLesson
         v-for="(lesson, $lessonIndex) of block.lessons"
         :key="$lessonIndex"
-        class="lesson  mt-1 rounded"
-        data-testid="lesson"
-        draggable
-        @dragstart="pickUpLesson($event, $lessonIndex, blockIndex)"
-        @dragover.prevent
-        @dragenter.prevent
-        @drop.stop="
-          dropLessonOrBlock($event, block.lessons, blockIndex, $lessonIndex)
-        "
-      >
-        <LessonActionComponent
-          :lesson="lesson"
-          :isEditable="isEditable"
-        ></LessonActionComponent>
-        <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
-          {{ lesson.notes }}
-        </p>
-      </div>
-
+        :lesson="lesson"
+        :lessonIndex="$lessonIndex"
+        :form="form"
+        :block="block"
+        :blockIndex="blockIndex"
+      />
       <input
         type="text"
         class="block w-full h-full bg-transparent"
@@ -40,17 +27,15 @@
         @blur="createLesson($event, block.lessons)"
       />
     </div>
-
-
   </div>
 </template>
 
 <script>
-import LessonActionComponent from '@/components/LessonActionComponent'
+import BlockLesson from '@/components/BlockLesson.vue'
 
 export default {
   components: {
-    LessonActionComponent
+    BlockLesson
   },
   props: {
     block: {
@@ -113,8 +98,5 @@ export default {
 @tailwind base
 .lesson-block {
   @apply w-56 p-1  text-left shadow rounded;
-}
-.lesson {
-  @apply flex w-full h-full text-center flex-wrap shadow mb-2  rounded bg-transparent  no-underline;
 }
 </style>
