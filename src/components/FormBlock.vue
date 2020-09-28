@@ -32,39 +32,24 @@
 
 <script>
 import BlockLesson from '@/components/BlockLesson.vue'
+import DroppingLessonOrBlockMixin from '@/mixins/DroppingLessonOrBlockMixin'
 
 export default {
   components: {
     BlockLesson
   },
+  mixins: [DroppingLessonOrBlockMixin],
+
   props: {
-    block: {
-      type: Object,
-      required: true
-    },
-    blockIndex: {
-      type: Number,
-      required: true
-    },
-    form: {
-      type: Object,
-      required: true
-    },
     isEditable: {
       type: Boolean,
       default: false
     }
   },
   methods: {
-    dropLessonOrBlock(e, toLessons, toBlockIndex, toLessonIndex) {
-      const type = e.dataTransfer.getData('type')
-      if (type === 'lesson') {
-        this.dropLesson(
-          e,
-          toLessons,
-          toLessonIndex !== undefined ? toLessonIndex : toLessons.length
-        )
-      }
+    createLesson(e, lessons) {
+      this.$store.dispatch('createLesson', { lessons, name: e.target.value })
+      e.target.value = ''
     },
     pickUpLesson(e, fromLessonIndex, fromBlockIndex) {
       e.dataTransfer.effectAllowed = 'move'
@@ -73,29 +58,12 @@ export default {
       e.dataTransfer.setData('from-lesson-index', fromLessonIndex)
       e.dataTransfer.setData('from-block-index', fromBlockIndex)
       e.dataTransfer.setData('type', 'lesson')
-    },
-    createLesson(e, lessons) {
-      this.$store.dispatch('createLesson', { lessons, name: e.target.value })
-      e.target.value = ''
-    },
-    dropLesson(e, toLessons, toLessonIndex) {
-      const fromBlockIndex = e.dataTransfer.getData('from-block-index')
-      const fromLessons = this.form.days[fromBlockIndex].lessons
-      const fromLessonIndex = e.dataTransfer.getData('from-lesson-index')
-
-      this.$store.commit('DROP_LESSON', {
-        fromLessons,
-        fromLessonIndex,
-        toLessons,
-        toLessonIndex
-      })
     }
   }
 }
 </script>
 
 <style lang="css">
-@tailwind base
 .lesson-block {
   @apply w-56 p-1  text-left shadow rounded;
 }

@@ -22,29 +22,18 @@
 
 <script>
 import LessonActionComponent from '@/components/LessonActionComponent'
-
+import DroppingLessonOrBlockMixin from '@/mixins/DroppingLessonOrBlockMixin'
 export default {
   components: {
     LessonActionComponent
   },
+  mixins: [DroppingLessonOrBlockMixin],
   props: {
     lesson: {
       type: Object,
       required: true
     },
     lessonIndex: {
-      type: Number,
-      required: true
-    },
-    form: {
-      type: Object,
-      required: true
-    },
-    block: {
-      type: Object,
-      required: true
-    },
-    blockIndex: {
       type: Number,
       required: true
     },
@@ -61,28 +50,6 @@ export default {
       e.dataTransfer.setData('from-lesson-index', fromLessonIndex)
       e.dataTransfer.setData('from-block-index', fromBlockIndex)
       e.dataTransfer.setData('type', 'lesson')
-    },
-    dropLessonOrBlock(e, toLessons, toBlockIndex, toLessonIndex) {
-      const type = e.dataTransfer.getData('type')
-      if (type === 'lesson') {
-        this.dropLesson(
-          e,
-          toLessons,
-          toLessonIndex !== undefined ? toLessonIndex : toLessons.length
-        )
-      }
-    },
-    dropLesson(e, toLessons, toLessonIndex) {
-      const fromBlockIndex = e.dataTransfer.getData('from-block-index')
-      const fromLessons = this.form.days[fromBlockIndex].lessons
-      const fromLessonIndex = e.dataTransfer.getData('from-lesson-index')
-
-      this.$store.commit('DROP_LESSON', {
-        fromLessons,
-        fromLessonIndex,
-        toLessons,
-        toLessonIndex
-      })
     }
   }
 }
