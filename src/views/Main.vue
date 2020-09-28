@@ -12,9 +12,9 @@
       :indent="formIndex * 5"
       :isEditable="globalTimetableIsEditable"
     ></FormWithTimeRow>
-      <router-link :to="{ name: 'forms' }" 
-        >Все классы</router-link
-      >
+    <router-link class="router-link" :to="{ name: 'forms' }"
+      >Все классы</router-link
+    >
     <div
       class="background forms-background"
       v-show="isFormsOpen"
@@ -95,5 +95,8 @@ export default {
 }
 .router-view {
   @apply bg-gray-800 rounded absolute p-4 m-4;
+}
+.router-link {
+  @apply text-gray-400;
 }
 </style>
