@@ -1,7 +1,9 @@
 <template>
   <div class="global-time-board h-full w-full bg-gray-900">
     <div>
-      <div class="header p-2 w-1/3 bg-gray-800 text-gray-300 rounded">Общее школьное время корпуса</div>
+      <div class="header p-2 w-1/3 bg-gray-800 text-gray-300 rounded">
+        Общее школьное время корпуса
+      </div>
     </div>
     <FormWithTimeRow
       v-for="(form, formIndex) in schooltimetable.forms"
@@ -10,11 +12,21 @@
       :indent="formIndex * 5"
       :isEditable="globalTimetableIsEditable"
     ></FormWithTimeRow>
-    <router-link :to="{ name: 'forms' }">Все классы</router-link>
-    <div class="background forms-background" v-show="isFormsOpen" @click.self="close">
+      <router-link :to="{ name: 'forms' }" 
+        >Все классы</router-link
+      >
+    <div
+      class="background forms-background"
+      v-show="isFormsOpen"
+      @click.self="close"
+    >
       <router-view class="router-view" />
     </div>
-    <div class="background form-background" v-show="isFormOpen" @click.self="close">
+    <div
+      class="background form-background"
+      v-show="isFormOpen"
+      @click.self="close"
+    >
       <router-view class="router-view" />
     </div>
     <ToggleEditability
@@ -68,7 +80,7 @@ export default {
 }
 
 .toggleEditability {
-    @apply bg-gray-900 text-gray-300;
+  @apply bg-gray-900 text-gray-300;
   text-align: right;
 }
 .background {
