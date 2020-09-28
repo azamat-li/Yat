@@ -1,10 +1,12 @@
 <template>
   <div class="main bg-gray-800">
     <button
-      class="isEditableButton  bg-gray-800 hover:bg-gray-900 hover:text-gray-200 text-grey-300 font-bold py-2 px-4 rounded-full"
+      class="rounded bg-gray-800 text-grey-300 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
       @click="toggleisEditable"
     >
-      <div v-show="this.isEditable" data-testid="unLockedButton">Рады изменениям</div>
+      <div v-show="this.isEditable" data-testid="unLockedButton">
+        Рады изменениям
+      </div>
       <div v-show="!this.isEditable" data-testid="lockedButton">Заперто</div>
     </button>
   </div>
@@ -27,7 +29,9 @@ export default {
 
 <style lang="css" scoped>
 .main {
-  @apply  p-1;
+  @apply p-1;
 }
-
+button:focus {
+    outline-color: #4a5568
+}
 </style>
