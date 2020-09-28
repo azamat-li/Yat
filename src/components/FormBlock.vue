@@ -1,45 +1,46 @@
 <template>
-  <div
-    class="lesson-block bg-gray-700 border-8 border-gray-800 "
-    draggable
-    @drop="dropLessonOrBlock($event, block.lessons, blockIndex)"
-    @dragover.prevent
-    @dragenter.prevent
-  >
-    <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
-      {{ block.name }}
-    </div>
-    <div class="list-reset">
-      <BlockLesson
-        v-for="(lesson, $lessonIndex) of block.lessons"
-        :key="$lessonIndex"
-        :lesson="lesson"
-        :lessonIndex="$lessonIndex"
-        :form="form"
-        :block="block"
-        :blockIndex="blockIndex"
-      />
-      <input
-        type="text"
-        class="block w-full h-full bg-transparent"
-        placeholder="+ Добавьте Урок"
-        @keyup.enter="createLesson($event, block.lessons)"
-        @blur="createLesson($event, block.lessons)"
-      />
-    </div>
-  </div>
+  <BaseDrop @drop="dropLessonOrBlock">
+    <BaseDrag :transferData="{ type: 'block', fromBlockIndex: blockIndex }">
+      <div class="bg-gray-700 border-8 border-gray-800 ">
+        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
+          {{ block.name }}
+        </div>
+        <div class="list-reset">
+          <BlockLesson
+            v-for="(lesson, $lessonIndex) of block.lessons"
+            :key="$lessonIndex"
+            :lesson="lesson"
+            :lessonIndex="$lessonIndex"
+            :form="form"
+            :block="block"
+            :blockIndex="blockIndex"
+          />
+          <input
+            type="text"
+            class="block w-full h-full bg-transparent"
+            placeholder="+ Добавьте Урок"
+            @keyup.enter="createLesson($event, block.lessons)"
+            @blur="createLesson($event, block.lessons)"
+          />
+        </div>
+      </div>
+    </BaseDrag>
+  </BaseDrop>
 </template>
 
 <script>
 import BlockLesson from '@/components/BlockLesson.vue'
+import BaseDrop from '@/components/BaseDrop.vue'
+import BaseDrag from '@/components/BaseDrag.vue'
 import DroppingLessonOrBlockMixin from '@/mixins/DroppingLessonOrBlockMixin'
 
 export default {
   components: {
-    BlockLesson
+    BlockLesson,
+    BaseDrop,
+    BaseDrag
   },
   mixins: [DroppingLessonOrBlockMixin],
-
   props: {
     isEditable: {
       type: Boolean,
@@ -63,8 +64,4 @@ export default {
 }
 </script>
 
-<style lang="css">
-.lesson-block {
-  @apply w-56 p-1  text-left shadow rounded;
-}
-</style>
+<style lang="css"></style>

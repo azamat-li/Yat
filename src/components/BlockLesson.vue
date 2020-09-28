@@ -1,31 +1,36 @@
 <template>
-  <div
-    class="lesson  mt-1 rounded"
-    data-testid="lesson"
-    draggable
-    @dragstart="pickUpLesson($event, lessonIndex, blockIndex)"
-    @dragover.prevent
-    @dragenter.prevent
-    @drop.stop="
-      dropLessonOrBlock($event, block.lessons, blockIndex, lessonIndex)
-    "
-  >
-    <LessonActionComponent
-      :lesson="lesson"
-      :isEditable="isEditable"
-    ></LessonActionComponent>
-    <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
-      {{ lesson.notes }}
-    </p>
-  </div>
+  <BaseDrop @drop="dropLessonOrBlock">
+    <BaseDrag
+      class="lesson"
+      :transferData="{
+        type: 'lesson',
+        fromBlockIndex: blockIndex,
+        fromLessonIndex: lessonIndex
+      }"
+    >
+      <div class="mt-1 rounded" data-testid="lesson">
+        <LessonActionComponent
+          :lesson="lesson"
+          :isEditable="isEditable"
+        ></LessonActionComponent>
+        <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
+          {{ lesson.notes }}
+        </p>
+      </div>
+    </BaseDrag>
+  </BaseDrop>
 </template>
 
 <script>
 import LessonActionComponent from '@/components/LessonActionComponent'
+import BaseDrop from '@/components/BaseDrop.vue'
+import BaseDrag from '@/components/BaseDrag.vue'
 import DroppingLessonOrBlockMixin from '@/mixins/DroppingLessonOrBlockMixin'
 export default {
   components: {
-    LessonActionComponent
+    LessonActionComponent,
+    BaseDrop,
+    BaseDrag
   },
   mixins: [DroppingLessonOrBlockMixin],
   props: {
@@ -40,16 +45,6 @@ export default {
     isEditable: {
       type: Boolean,
       default: false
-    }
-  },
-  methods: {
-    pickUpLesson(e, fromLessonIndex, fromBlockIndex) {
-      e.dataTransfer.effectAllowed = 'move'
-      e.dataTransfer.dropEffect = 'move'
-
-      e.dataTransfer.setData('from-lesson-index', fromLessonIndex)
-      e.dataTransfer.setData('from-block-index', fromBlockIndex)
-      e.dataTransfer.setData('type', 'lesson')
     }
   }
 }

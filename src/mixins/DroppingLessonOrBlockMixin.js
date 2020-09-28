@@ -14,26 +14,18 @@ export default {
     }
   },
   methods: {
-    dropLessonOrBlock(e, toLessons, toBlockIndex, toLessonIndex) {
-      const type = e.dataTransfer.getData('type')
-      if (type === 'lesson') {
-        this.dropLesson(
-          e,
-          toLessons,
-          toLessonIndex !== undefined ? toLessonIndex : toLessons.length
-        )
+    dropLessonOrBlock(transferData) {
+      if (transferData.type === 'lesson') {
+        this.dropLesson(transferData)
       }
     },
-    dropLesson(e, toLessons, toLessonIndex) {
-      const fromBlockIndex = e.dataTransfer.getData('from-block-index')
+    dropLesson({ fromBlockIndex, fromLessonIndex }) {
       const fromLessons = this.form.days[fromBlockIndex].lessons
-      const fromLessonIndex = e.dataTransfer.getData('from-lesson-index')
-
       this.$store.commit('DROP_LESSON', {
         fromLessons,
         fromLessonIndex,
-        toLessons,
-        toLessonIndex
+        toLessons: this.block.lessons,
+        toLessonIndex: this.lessonIndex
       })
     }
   }
