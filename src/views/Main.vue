@@ -94,10 +94,6 @@ export default {
   height: 500vh;
 }
 .router-view {
-  @apply bg-gray-800 rounded absolute;
-  width: 95vw;
-  min-height: 100%;
-  top: 3vh;
-  left: 2%;
+  @apply bg-gray-800 rounded absolute p-4 m-4;
 }
 </style>
