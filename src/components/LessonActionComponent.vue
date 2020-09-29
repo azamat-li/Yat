@@ -6,7 +6,6 @@
       v-if="isEditable && lesson.name"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
-      @change="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
     />
     <div v-else class="font-bold lesson-name">{{ lesson.name }}</div>

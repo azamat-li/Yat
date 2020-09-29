@@ -72,9 +72,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-@tailwind base
-
+<style lang="scss" scoped>
 .global-time-board {
   @apply rounded;
 }

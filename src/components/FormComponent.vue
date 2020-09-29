@@ -5,6 +5,7 @@
         {{ form.name }}
       </div>
     </div>
+
     <div
       class="flex flex-row items-start day-wrapper bg-gray-800 text-gray-200"
     >
@@ -16,10 +17,10 @@
         :form="form"
         :isEditable="isEditable"
       />
-      <div class="lesson-block bg-gray-800 ">
+      <div class="w-4/12 bg-gray-800">
         <input
           type="text"
-          class="block w-full h-full bg-gray-800 text-gray-300"
+          class="bg-transparent text-gray-300 p-1 m-1"
           placeholder="+ Добавьте Блок Уроков"
           @keyup.enter="createBlock($event)"
         />
@@ -76,13 +77,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
 @tailwind base
-
-.day-wrapper {
-  display: flex-wrap;
-  flex-wrap: wrap;
-}
 .form-container {
   @apply rounded;
 }

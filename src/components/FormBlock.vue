@@ -1,8 +1,8 @@
 <template>
   <BaseDrop @drop="dropLessonOrBlock">
     <BaseDrag :transferData="{ type: 'block', fromBlockIndex: blockIndex }">
-      <div class="bg-gray-700 border-8 border-gray-800 ">
-        <div class="flex flex-no-shrink items-center mb-2 font-bold rounded">
+      <div class="bg-gray-700  m-1 p-1 rounded-lg">
+        <div class="flex flex-no-shrink items-center mb-2 font-bold m-1 p-1 rounded text-gray-400">
           {{ block.name }}
         </div>
         <div class="list-reset">
@@ -17,10 +17,9 @@
           />
           <input
             type="text"
-            class="block w-full h-full bg-transparent"
+            class="block w-full h-full bg-transparent p-1"
             placeholder="+ Добавьте Урок"
             @keyup.enter="createLesson($event, block.lessons)"
-            @blur="createLesson($event, block.lessons)"
           />
         </div>
       </div>
