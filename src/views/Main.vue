@@ -1,5 +1,5 @@
 <template>
-  <div class="global-time-board h-full w-full bg-gray-900 p-2">
+  <div class="h-full w-full bg-gray-900 p-2">
     <div>
       <div class="header p-2 w-1/3 bg-gray-800 text-gray-300 rounded-full">
         Общее школьное время корпуса
@@ -73,10 +73,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.global-time-board {
-  @apply rounded;
-}
-
 .toggleEditability {
   @apply bg-gray-900 text-gray-300;
   text-align: right;
