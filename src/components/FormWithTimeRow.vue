@@ -2,11 +2,11 @@
   <div class="form-row bg-gray-800">
     <div
       @click.self="goToForm(form)"
-      class="form bg-gray-700"
+      class="form bg-gray-700 rounded-full"
       :style="computedStyle"
     >
       <input
-        class="bg-gray-800 text-gray-200 px-1"
+        class="bg-gray-800 text-gray-200 px-1 rounded-full"
         v-model="form.name"
         type="text"
         @blur="updateValue"
@@ -56,10 +56,10 @@ export default {
 
 <style lang="css">
 .form-row {
-  @apply rounded m-1 p-1 relative;
+  @apply rounded-full m-1 p-1 relative;
 }
 .form {
-  @apply items-center rounded shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative;
+  @apply items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative;
 }
 input {
   @apply rounded shadow w-full;

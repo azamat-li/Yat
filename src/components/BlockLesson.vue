@@ -52,6 +52,6 @@ export default {
 
 <style lang="css" scoped>
 .lesson {
-  @apply flex w-full h-full text-center flex-wrap shadow mb-2 p-2  rounded-lg shadow-md bg-transparent  no-underline;
+  @apply flex w-full h-full text-center flex-wrap shadow mb-2 p-2  rounded-full shadow-md bg-transparent  no-underline;
 }
 </style>
