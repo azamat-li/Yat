@@ -25,25 +25,6 @@
         />
       </div>
     </div>
-    <div class="form-blocks mt-10">
-      <FormBlock
-        v-for="(draft, $draftIndex) of form.drafts"
-        :key="$draftIndex"
-        :block="draft"
-        :blockIndex="$draftIndex"
-        :form="form"
-        :isEditable="isEditable"
-        blockType="draft"
-      />
-      <div class="w-4/12  bg-gray-800">
-        <input
-          type="text"
-          class="bg-transparent text-gray-300 p-1 m-1"
-          placeholder="+ Добавьте Черновик"
-          @keyup.enter="createDraft($event)"
-        />
-      </div>
-    </div>
     <ToggleEditability
       @toggle-editability="toggleIsEditable"
       :isEditable="isEditable"

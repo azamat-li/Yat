@@ -30,12 +30,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -69,12 +66,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -108,12 +102,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -147,12 +138,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -187,12 +175,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -227,12 +212,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -267,12 +249,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -307,12 +286,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -347,12 +323,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }
@@ -387,12 +360,9 @@ export default {
           name: 'Пятница',
           lessons: [],
           id: uid()
-        }
-      ],
-      drafts: [
+        },
         {
           name: 'Нераспределенные ',
-          englishname: 'unassociated',
           lessons: [],
           id: uid()
         }

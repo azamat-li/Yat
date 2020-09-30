@@ -1,6 +1,11 @@
 <template>
   <BaseDrop @drop="dropLessonOrBlock">
-    <BaseDrag :transferData="{ type: 'block', fromBlockIndex: blockIndex }">
+    <BaseDrag
+      :transferData="{
+        type: 'block',
+        fromBlockIndex: blockIndex
+      }"
+    >
       <div class="bg-gray-700  m-1 p-1 rounded-lg">
         <div
           class="flex flex-no-shrink items-center mb-2 font-bold m-1 p-1 rounded text-gray-400"
