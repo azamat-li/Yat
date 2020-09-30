@@ -1,7 +1,7 @@
 <template>
   <div class="h-full w-full bg-gray-900 p-2">
     <div>
-      <div class="header p-2 w-1/3 bg-gray-800 text-gray-300 rounded-full">
+      <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
         Общее школьное время корпуса
       </div>
     </div>
