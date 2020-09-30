@@ -57,6 +57,13 @@ export default new Vuex.Store({
         id: uid()
       })
     },
+    CREATE_DRAFT(state, { form, newdraftName }) {
+      form.drafts.push({
+        name: newdraftName,
+        lessons: [],
+        id: uid()
+      })
+    },
     UPDATE_LESSON(state, { lesson, key, value }) {
       Vue.set(lesson, key, value)
     },
@@ -93,6 +100,10 @@ export default new Vuex.Store({
     },
     createBlock({ commit, dispatch }, { form, newBlockName }) {
       commit('CREATE_BLOCK', { form, newBlockName })
+      dispatch('persistSchoolTimetable')
+    },
+    createDraft({ commit, dispatch }, { form, newdraftName }) {
+      commit('CREATE_DRAFT', { form, newdraftName })
       dispatch('persistSchoolTimetable')
     },
     updateLesson({ commit, dispatch }, { lesson, key, value }) {

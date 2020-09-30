@@ -11,6 +11,10 @@ export default {
     form: {
       type: Object,
       required: true
+    },
+    blockType: {
+      type: String,
+      required: true
     }
   },
   methods: {
@@ -20,7 +24,13 @@ export default {
       }
     },
     dropLesson({ fromBlockIndex, fromLessonIndex }) {
-      const fromLessons = this.form.days[fromBlockIndex].lessons
+      let fromLessons
+      console.log(fromBlockIndex + ' ' + this.blockType)
+      if (this.blockType === 'day') {
+        fromLessons = this.form.days[fromBlockIndex].lessons
+      } else if (this.blockType === 'draft') {
+        fromLessons = this.form.drafts[fromBlockIndex].lessons
+      }
       this.$store.commit('DROP_LESSON', {
         fromLessons,
         fromLessonIndex,

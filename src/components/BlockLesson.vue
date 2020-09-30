@@ -45,6 +45,10 @@ export default {
     isEditable: {
       type: Boolean,
       default: false
+    },
+    blockType: {
+      type: String,
+      required: true
     }
   }
 }
