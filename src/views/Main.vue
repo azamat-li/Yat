@@ -1,5 +1,5 @@
 <template>
-  <div class="global-time-board h-full w-full bg-gray-900">
+  <div class="global-time-board h-full w-full bg-gray-900 p-2">
     <div>
       <div class="header p-2 w-1/3 bg-gray-800 text-gray-300 rounded">
         Общее школьное время корпуса
