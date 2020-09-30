@@ -112,6 +112,18 @@ export default new Vuex.Store({
     },
     dropBlock({ commit, getters }, { fromBlockIndex, toBlockIndex, formId }) {
       commit('DROP_BLOCK', { fromBlockIndex, toBlockIndex, formId, getters })
+    },
+    dropLesson(
+      { commit, dispatch },
+      { fromLessons, toLessons, fromLessonIndex, toLessonIndex }
+    ) {
+      commit('DROP_LESSON', {
+        fromLessons,
+        toLessons,
+        fromLessonIndex,
+        toLessonIndex
+      })
+      dispatch('persistSchoolTimetable')
     }
   }
 })

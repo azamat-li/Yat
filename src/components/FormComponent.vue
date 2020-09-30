@@ -25,7 +25,6 @@
         />
       </div>
     </div>
-
     <div class="form-blocks mt-10">
       <FormBlock
         v-for="(draft, $draftIndex) of form.drafts"

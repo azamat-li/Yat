@@ -25,13 +25,20 @@ export default {
     },
     dropLesson({ fromBlockIndex, fromLessonIndex }) {
       let fromLessons
-      console.log(fromBlockIndex + ' ' + this.blockType)
+      console.log(
+        'from block index is: ' +
+          fromBlockIndex +
+          ', from lesson index is: ' +
+          fromLessonIndex +
+          ', & block type is:' +
+          this.blockType
+      )
       if (this.blockType === 'day') {
         fromLessons = this.form.days[fromBlockIndex].lessons
       } else if (this.blockType === 'draft') {
         fromLessons = this.form.drafts[fromBlockIndex].lessons
       }
-      this.$store.commit('DROP_LESSON', {
+      this.$store.dispatch('dropLesson', {
         fromLessons,
         fromLessonIndex,
         toLessons: this.block.lessons,

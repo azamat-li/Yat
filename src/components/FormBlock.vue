@@ -16,7 +16,7 @@
             :form="form"
             :block="block"
             :blockIndex="blockIndex"
-            blockType="'day'"
+            :blockType="blockType"
           />
           <input
             type="text"
