@@ -5,13 +5,7 @@
         Общее школьное время корпуса
       </div>
     </div>
-    <FormWithTimeRow
-      v-for="(form, formIndex) in schooltimetable.forms"
-      :key="formIndex"
-      :form="form"
-      :indent="formIndex * 5"
-      :isEditable="globalTimetableIsEditable"
-    ></FormWithTimeRow>
+    <FormNames />
     <router-link class="router-link" :to="{ name: 'forms' }"
       >Все классы</router-link
     >
@@ -39,12 +33,12 @@
 
 <script>
 import { mapState } from 'vuex'
-import FormWithTimeRow from '../components/FormWithTimeRow'
+import FormNames from '@/components/FormNames'
 import ToggleEditability from '../components/ToggleEditability'
 
 export default {
   components: {
-    FormWithTimeRow,
+    FormNames,
     ToggleEditability
   },
   computed: {
