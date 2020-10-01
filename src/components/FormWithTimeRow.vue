@@ -1,8 +1,8 @@
 <template>
-  <div class="form-row bg-gray-800">
+  <div class="rounded-full m-1 py-1 pl-1 relative bg-gray-800">
     <div
       @click.self="goToForm(form)"
-      class="form bg-gray-700 rounded-full"
+      class="items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative bg-gray-700 rounded-full"
       :style="computedStyle"
     >
       <input
@@ -55,20 +55,4 @@ export default {
 </script>
 
 <style lang="css">
-.form-row {
-  @apply rounded-full m-1 py-1 pl-1 relative;
-}
-.form {
-  @apply items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative;
-}
-input {
-  @apply rounded shadow w-full;
-}
-
-input::placeholder {
-  @apply text-gray-200;
-}
-.time {
-  @apply absolute px-2 mx-1;
-}
 </style>

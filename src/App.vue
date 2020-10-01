@@ -40,4 +40,12 @@ html {
   margin-left: auto;
   margin-right: auto;
 }
+
+input {
+  @apply rounded shadow w-full;
+}
+
+input::placeholder {
+  @apply text-gray-200;
+}
 </style>
