@@ -2,26 +2,30 @@
   <div class="main bg-gray-800">
     <button
       class="rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
-      @click="toggleisEditable"
+      @click="toggleEditability"
     >
-      <div v-show="this.isEditable" data-testid="unLockedButton">
+      <div v-show="globalTimetableIsEditable" data-testid="unLockedButton">
         Рады изменениям
       </div>
-      <div v-show="!this.isEditable" data-testid="lockedButton">Заперто</div>
+      <div v-show="!globalTimetableIsEditable" data-testid="lockedButton">
+        Заперто
+      </div>
     </button>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  props: {
-    isEditable: {
-      type: Boolean
-    }
+  computed: {
+    ...mapState(['globalTimetableIsEditable'])
   },
   methods: {
-    toggleisEditable() {
-      this.$emit('toggle-editability')
+    toggleEditability() {
+      this.$store.commit('TOGGLE_EDITABILITY', {
+        key: 'globalTimetableIsEditable',
+        value: !this.globalTimetableIsEditable
+      })
     }
   }
 }

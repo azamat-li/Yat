@@ -23,11 +23,7 @@
     >
       <router-view class="router-view" />
     </div>
-    <ToggleEditability
-      :isEditable="globalTimetableIsEditable"
-      @toggle-editability="toggleEditability"
-      class="toggleEditability"
-    ></ToggleEditability>
+    <ToggleEditability class="toggleEditability"></ToggleEditability>
   </div>
 </template>
 
@@ -51,13 +47,6 @@ export default {
   methods: {
     close() {
       this.$router.push({ name: 'main' })
-    },
-
-    toggleEditability() {
-      this.$store.commit('TOGGLE_EDITABILITY', {
-        key: 'globalTimetableIsEditable',
-        value: !this.globalTimetableIsEditable
-      })
     }
   }
 }
