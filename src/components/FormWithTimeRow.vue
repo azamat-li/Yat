@@ -1,5 +1,5 @@
 <template>
-  <div class="form-row bg-gray-800">
+  <div class="form-row bg-gray-800 ">
     <div
       @click.self="goToForm(form)"
       class="form bg-gray-700 rounded-full"
