@@ -6,7 +6,15 @@
       :form="form"
       :indent="formIndex * 5"
       :isEditable="globalTimetableIsEditable"
-    ></FormWithTimeRow>
+    >
+    </FormWithTimeRow>
+    <div class="m-2 w-full flex">
+      <input
+        class="bg-transparent p-1 mx-4 w-40 "
+        type="text"
+        placeholder="+ Добавьте Класс"
+      />
+    </div>
   </div>
 </template>
 
@@ -24,4 +32,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+input {
+  @apply rounded-full;
+  margin-left: auto;
+}
+</style>

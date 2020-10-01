@@ -1,5 +1,5 @@
 <template>
-  <div class="form-row bg-gray-800 ">
+  <div class="form-row bg-gray-800">
     <div
       @click.self="goToForm(form)"
       class="form bg-gray-700 rounded-full"
@@ -56,7 +56,7 @@ export default {
 
 <style lang="css">
 .form-row {
-  @apply rounded-full m-1 py-1 pl-2 relative;
+  @apply rounded-full m-1 py-1 pl-1 relative;
 }
 .form {
   @apply items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative;
