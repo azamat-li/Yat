@@ -4,7 +4,7 @@
       v-for="(form, formIndex) in schoolTimetable.forms"
       :key="formIndex"
       :form="form"
-      :indent="formIndex * 5"
+      :indent="getIndent(formIndex)"
       :isEditable="globalTimetableIsEditable"
     >
     </FormWithTimeRow>
@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { mapState } from 'vuex'
 import FormWithTimeRow from '@/components/FormWithTimeRow.vue'
 import AddForm from '@/components/AddForm.vue'
@@ -24,6 +24,13 @@ export default {
   },
   computed: {
     ...mapState(['globalTimetableIsEditable', 'schoolTimetable'])
+  },
+  methods: {
+    getIndent(formIndex: number): number {
+      let indent = 0
+      indent = (formIndex % 10) * 9
+      return indent
+    }
   }
 }
 </script>

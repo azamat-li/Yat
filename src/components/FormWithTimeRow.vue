@@ -2,7 +2,7 @@
   <div class="rounded-full m-1 py-1 pl-1 relative bg-gray-800">
     <div
       @click.self="goToForm(form)"
-      class="items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative bg-gray-700 rounded-full"
+      class="clearfix items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative bg-gray-700 rounded-full"
       :style="computedStyle"
     >
       <input
@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     computedStyle() {
-      return `left: ${this.indent}em`
+      return `left: ${this.indent}vw`
     },
     ...mapActions(['updateFormName']),
     ...mapGetters(['getFormById']),
@@ -55,4 +55,7 @@ export default {
 </script>
 
 <style lang="css">
+.clearfix {
+  overflow: auto;
+}
 </style>
