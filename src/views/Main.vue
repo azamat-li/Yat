@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 p-2">
+  <div class="bg-gray-900 p-2 relative">
     <div>
       <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
         Общее школьное время корпуса
@@ -10,18 +10,18 @@
       >Все классы</router-link
     >
     <div
-      class="background forms-background"
+      class="absolute top-0 w-full h-full  forms-background"
       v-show="isFormsOpen"
       @click.self="close"
     >
       <router-view class="router-view" />
     </div>
     <div
-      class="background form-background"
+      class="absolute top-0 w-full h-full p-4 bg-gray-900"
       v-show="isFormOpen"
       @click.self="close"
     >
-      <router-view class="router-view" />
+      <router-view class="bg-gray-800" />
     </div>
     <ToggleEditability class="toggleEditability"></ToggleEditability>
   </div>
@@ -57,18 +57,8 @@ export default {
   @apply bg-gray-900 text-gray-300;
   text-align: right;
 }
-.background {
-  @apply bg-gray-900 absolute  top-0 w-full h-full;
-  min-height: 100%;
-}
-.form-background {
-  height: 120vh;
-}
 .forms-background {
   height: 500vh;
-}
-.router-view {
-  @apply bg-gray-800 rounded absolute p-4 m-4;
 }
 .router-link {
   @apply text-gray-400;
