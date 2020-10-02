@@ -17,7 +17,7 @@ export default new Vuex.Store({
   plugins: [saveStatePlugin],
   state: {
     schoolTimetable,
-    isEditable: false,
+    isFormEditable: false,
     globalTimetableIsEditable: false
   },
   getters: {
