@@ -24,6 +24,7 @@ export default {
   },
   computed: {
     ...mapState(['globalTimetableIsEditable', 'schoolTimetable'])
+<<<<<<< HEAD
   },
   methods: {
     getIndent(formIndex: number): number {
@@ -31,7 +32,8 @@ export default {
       indent = (formIndex % 10) * 9
       return indent
     }
-  }
+=======
+>>>>>>> 294a44ec06b54634eaedd91665f3465d7263cefb
 }
 </script>
 
