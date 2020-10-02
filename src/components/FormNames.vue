@@ -1,7 +1,7 @@
 <template>
   <div>
     <FormWithTimeRow
-      v-for="(form, formIndex) in schooltimetable.forms"
+      v-for="(form, formIndex) in schoolTimetable.forms"
       :key="formIndex"
       :form="form"
       :indent="formIndex * 5"
@@ -23,7 +23,7 @@ export default {
     AddForm
   },
   computed: {
-    ...mapState(['globalTimetableIsEditable', 'schooltimetable'])
+    ...mapState(['globalTimetableIsEditable', 'schoolTimetable'])
   }
 }
 </script>

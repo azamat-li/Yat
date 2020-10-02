@@ -4,14 +4,27 @@
       class="bg-transparent p-1 mx-4 w-40 r-align"
       type="text"
       placeholder="+ Добавьте Класс"
+      @keyup.enter="addForm"
     />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapState } from 'vuex'
 
-export default Vue.extend({})
+export default Vue.extend({
+  computed: {
+    ...mapState(['schooltimetable'])
+  },
+  methods: {
+    addForm(e) {
+      const newFormName: string = e.target.value
+      this.$store.dispatch('creatForm', { newFormName })
+      e.target.value = ''
+    }
+  }
+})
 </script>
 
 <style scoped>

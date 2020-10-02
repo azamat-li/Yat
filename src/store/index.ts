@@ -1,31 +1,32 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import defaultSchoolTimetable from '@/default-timetable'
+import { getDays } from '@/default-days'
 import { saveStatePlugin, uid } from '../utils'
 
 Vue.use(Vuex)
 
-const schooltimetableJson = localStorage.getItem('schooltimetable')
+const schoolTimetableJson = localStorage.getItem('schoolTimetable')
 
-const schooltimetable =
-  schooltimetableJson !== null
-    ? JSON.parse(schooltimetableJson)
+const schoolTimetable =
+  schoolTimetableJson !== null
+    ? JSON.parse(schoolTimetableJson)
     : defaultSchoolTimetable
 
 export default new Vuex.Store({
   plugins: [saveStatePlugin],
   state: {
-    schooltimetable,
+    schoolTimetable,
     isEditable: false,
     globalTimetableIsEditable: false
   },
   getters: {
     getFormById: state => id => {
-      return state.schooltimetable.forms.find(form => form.id === id)
+      return state.schoolTimetable.forms.find(form => form.id === id)
     },
     getLessonById(state) {
       return (id: number) => {
-        for (const form of state.schooltimetable.forms) {
+        for (const form of state.schoolTimetable.forms) {
           for (const day of form.days) {
             for (const lesson of day.lessons) {
               if (lesson.id === id) {
@@ -39,7 +40,7 @@ export default new Vuex.Store({
   },
   mutations: {
     UPDATE_FORM_NAME(state, formWithNewName) {
-      state.schooltimetable.forms.filter(
+      state.schoolTimetable.forms.filter(
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (form: any) => form.id === formWithNewName.id
       ).name = formWithNewName.name
@@ -57,11 +58,11 @@ export default new Vuex.Store({
         id: uid()
       })
     },
-    CREATE_DRAFT(state, { form, newdraftName }) {
-      form.drafts.push({
-        name: newdraftName,
-        lessons: [],
-        id: uid()
+    CREATE_FORM(state, { newFormName }) {
+      state.schoolTimetable.forms.push({
+        id: uid(),
+        name: newFormName,
+        days: getDays()
       })
     },
     UPDATE_LESSON(state, { lesson, key, value }) {
@@ -86,8 +87,8 @@ export default new Vuex.Store({
   actions: {
     persistSchoolTimetable({ state }) {
       localStorage.setItem(
-        'schooltimetable',
-        JSON.stringify(state.schooltimetable)
+        'schoolTimetable',
+        JSON.stringify(state.schoolTimetable)
       )
     },
     updateFormName({ commit, dispatch }, formWithNewName) {
@@ -102,8 +103,8 @@ export default new Vuex.Store({
       commit('CREATE_BLOCK', { form, newBlockName })
       dispatch('persistSchoolTimetable')
     },
-    createDraft({ commit, dispatch }, { form, newdraftName }) {
-      commit('CREATE_DRAFT', { form, newdraftName })
+    creatForm({ commit, dispatch }, { newFormName }) {
+      commit('CREATE_FORM', { newFormName })
       dispatch('persistSchoolTimetable')
     },
     updateLesson({ commit, dispatch }, { lesson, key, value }) {
