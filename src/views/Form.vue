@@ -1,5 +1,5 @@
 <template>
-  <div class="top-0">
+  <div class="top-0 rounded">
     <div v-if="form.name" class="h-8">
       <div class="header bg-gray-700 text-gray-200 w-56 rounded-full">
         {{ form.name }}
