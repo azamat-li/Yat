@@ -23,18 +23,15 @@
     >
       <router-view class="bg-gray-800" />
     </div>
-    <ToggleEditability class="toggleEditability"></ToggleEditability>
   </div>
 </template>
 
 <script>
 import FormNames from '@/components/FormNames'
-import ToggleEditability from '../components/ToggleEditability'
 
 export default {
   components: {
-    FormNames,
-    ToggleEditability
+    FormNames
   },
   computed: {
     isFormOpen() {

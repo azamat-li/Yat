@@ -21,6 +21,12 @@ export default new Vuex.Store({
     globalTimetableIsEditable: false
   },
   getters: {
+    getEditableStateByName: state => editableStateString => {
+      if (editableStateString === 'isFormEditable') return state.isFormEditable
+      else if (editableStateString === 'globalTimetableIsEditable') {
+        return state.globalTimetableIsEditable
+      }
+    },
     getFormById: state => id => {
       return state.schoolTimetable.forms.find(form => form.id === id)
     },

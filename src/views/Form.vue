@@ -13,7 +13,7 @@
         :block="day"
         :blockIndex="$dayIndex"
         :form="form"
-        :isEditable="isEditable"
+        :isEditable="isFormEditable"
         blockType="day"
       />
       <div class="w-4/12 bg-gray-800">
@@ -26,10 +26,8 @@
       </div>
     </div>
     <ToggleEditability
-      @toggle-editability="toggleIsEditable"
-      :isEditable="isFormEditable"
       class="toggleEditability bg-gray-800 text-gray-300"
-      v-show="isEditableButtonEnabled"
+      editableStateSting="isFormEditable"
     ></ToggleEditability>
   </div>
 </template>
@@ -71,7 +69,6 @@ export default {
         key: 'isFormEditable',
         value: !this.isFormEditable
       })
-      this.$emit('toggle-is-editable')
     }
   }
 }

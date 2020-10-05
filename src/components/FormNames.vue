@@ -9,6 +9,10 @@
     >
     </FormWithTimeRow>
     <AddForm />
+    <ToggleEditability
+      :editableStateString="editableStateString"
+      class="toggleEditability"
+    ></ToggleEditability>
   </div>
 </template>
 
@@ -16,11 +20,17 @@
 import { mapState } from 'vuex'
 import FormWithTimeRow from '@/components/FormWithTimeRow.vue'
 import AddForm from '@/components/AddForm.vue'
+import ToggleEditability from '@/components/ToggleEditability.vue'
 
 export default {
   components: {
     FormWithTimeRow,
-    AddForm
+    AddForm,
+    ToggleEditability
+  },
+  data() {
+    const editableStateString = 'globalTimetableIsEditable'
+    return { editableStateString }
   },
   computed: {
     ...mapState(['globalTimetableIsEditable', 'schoolTimetable'])

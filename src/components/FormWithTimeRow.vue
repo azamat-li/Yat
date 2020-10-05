@@ -24,13 +24,16 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   props: {
     form: {
-      type: Object
-    },
-    isEditable: {
-      type: Boolean
+      type: Object,
+      required: true
     },
     indent: {
-      type: Number
+      type: Number,
+      required: true
+    },
+    isEditable: {
+      type: Boolean,
+      required: true
     }
   },
   methods: {
@@ -47,6 +50,7 @@ export default {
     },
     ...mapActions(['updateFormName']),
     ...mapGetters(['getFormById']),
+
     clickedForm() {
       return this.getFormById(this.form.id)
     }

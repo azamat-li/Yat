@@ -4,10 +4,10 @@
       class="rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
       @click="toggleEditability"
     >
-      <div v-show="globalTimetableIsEditable" data-testid="unLockedButton">
+      <div v-show="editableState" data-testid="unLockedButton">
         Рады изменениям
       </div>
-      <div v-show="!globalTimetableIsEditable" data-testid="lockedButton">
+      <div v-show="!editableState" data-testid="lockedButton">
         Заперто
       </div>
     </button>
@@ -15,16 +15,25 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
+  props: {
+    editableStateString: {
+      type: String,
+      required: true
+    }
+  },
   computed: {
-    ...mapState(['globalTimetableIsEditable'])
+    ...mapGetters(['getEditableStateByName']),
+    editableState() {
+      return this.getEditableStateByName(this.editableStateString)
+    }
   },
   methods: {
     toggleEditability() {
       this.$store.commit('TOGGLE_EDITABILITY', {
-        key: 'globalTimetableIsEditable',
-        value: !this.globalTimetableIsEditable
+        key: this.editableStateString,
+        value: !this.editableState
       })
     }
   }
