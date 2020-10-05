@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-transparent p-2 relative">
+  <div class="bg-transparent p-2 ">
     <div>
       <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
         Общее школьное время корпуса
@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+body {
+  @apply relative;
+}
 .toggleEditability {
   @apply bg-gray-900 text-gray-300;
   text-align: right;
