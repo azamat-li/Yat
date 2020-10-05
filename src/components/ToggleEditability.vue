@@ -1,5 +1,5 @@
 <template>
-  <div class="main bg-gray-800">
+  <div class="main mt-5">
     <button
       class="rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
       @click="toggleEditability"

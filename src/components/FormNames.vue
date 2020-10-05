@@ -11,7 +11,7 @@
     <AddForm />
     <ToggleEditability
       :editableStateString="editableStateString"
-      class="toggleEditability"
+      class="text-right"
     ></ToggleEditability>
   </div>
 </template>

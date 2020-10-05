@@ -26,7 +26,7 @@
       </div>
     </div>
     <ToggleEditability
-      class="toggleEditability bg-gray-800 text-gray-300"
+      class="text-right bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
     ></ToggleEditability>
   </div>
@@ -83,9 +83,6 @@ export default {
 }
 .isEditableButton {
   @apply border shadow rounded;
-}
-.toggleEditability {
-  text-align: right;
 }
 .inputDisabled {
   background: #ffffff;
