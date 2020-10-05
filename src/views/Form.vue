@@ -27,7 +27,7 @@
     </div>
     <ToggleEditability
       class="toggleEditability bg-gray-800 text-gray-300"
-      editableStateSting="isFormEditable"
+      editableStateString="isFormEditable"
     ></ToggleEditability>
   </div>
 </template>

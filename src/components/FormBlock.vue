@@ -22,6 +22,7 @@
             :block="block"
             :blockIndex="blockIndex"
             :blockType="blockType"
+            :isEditable="isEditable"
           />
           <input
             type="text"
@@ -42,18 +43,18 @@ import BaseDrag from '@/components/BaseDrag.vue'
 import DroppingLessonOrBlockMixin from '@/mixins/DroppingLessonOrBlockMixin'
 
 export default {
-  components: {
-    BlockLesson,
-    BaseDrop,
-    BaseDrag
-  },
-  mixins: [DroppingLessonOrBlockMixin],
   props: {
     isEditable: {
       type: Boolean,
       default: false
     }
   },
+  components: {
+    BlockLesson,
+    BaseDrop,
+    BaseDrag
+  },
+  mixins: [DroppingLessonOrBlockMixin],
   methods: {
     createLesson(e, lessons) {
       this.$store.dispatch('createLesson', { lessons, name: e.target.value })
