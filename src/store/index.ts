@@ -77,6 +77,10 @@ export default new Vuex.Store({
         days: getDays()
       })
     },
+    REMOVE_FORM(state, { formToRemove }) {
+      Vue.delete(formToRemove, 'name')
+    },
+
     TOGGLE_EDITABILITY(state, { key, value }) {
       state[key] = value
     },
@@ -122,6 +126,10 @@ export default new Vuex.Store({
     },
     creatForm({ commit, dispatch }, { newFormName }) {
       commit('CREATE_FORM', { newFormName })
+      dispatch('persistSchoolTimetable')
+    },
+    removeForm({ commit, dispatch }, { formToRemove }) {
+      commit('REMOVE_FORM', { formToRemove })
       dispatch('persistSchoolTimetable')
     },
     dropBlock({ commit, getters }, { fromBlockIndex, toBlockIndex, formId }) {

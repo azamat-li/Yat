@@ -31,14 +31,6 @@ export default {
       type: Object,
       required: true
     },
-    block: {
-      type: Object,
-      required: true
-    },
-    form: {
-      type: Object,
-      required: true
-    },
     isEditable: {
       type: Boolean
     }

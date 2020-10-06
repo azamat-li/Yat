@@ -6,7 +6,7 @@
       :style="computedStyle"
     >
       <input
-        class="bg-gray-800 text-gray-200 px-2 rounded-full"
+        class="bg-gray-800 text-gray-200 w-5/6 px-2 rounded-full"
         v-model="form.name"
         type="text"
         @blur="updateValue"
@@ -15,13 +15,23 @@
         placeholder="класс #"
         value
       />
+      <BaseRemove
+        v-if="isEditable && form.name"
+        :toRemove="form"
+        toRemoveType="form"
+        class="right-0  "
+      />
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import BaseRemove from '@/components/BaseRemove.vue'
 export default {
+  components: {
+    BaseRemove
+  },
   props: {
     form: {
       type: Object,
