@@ -19,6 +19,14 @@ export default Vue.extend({
     toRemoveType: {
       type: String,
       required: true
+    },
+    toRemoveFrom: {
+      type: Object,
+      required: true
+    },
+    toRemoveIndex: {
+      type: Number,
+      required: true
     }
   },
   methods: {
@@ -33,7 +41,9 @@ export default Vue.extend({
     },
     removeForm(form) {
       this.$store.dispatch('removeForm', {
-        formToRemove: form
+        formToRemove: form,
+        toRemoveFrom: this.toRemoveFrom,
+        toRemoveIndex: this.toRemoveIndex
       })
     }
   }

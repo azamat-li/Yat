@@ -17,7 +17,9 @@
       />
       <BaseRemove
         v-if="isEditable && form.name"
+        :toRemoveFrom="schoolTimetable"
         :toRemove="form"
+        :toRemoveIndex="formIndex"
         toRemoveType="form"
         class="right-0  "
       />
@@ -26,7 +28,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 import BaseRemove from '@/components/BaseRemove.vue'
 export default {
   components: {
@@ -35,6 +37,10 @@ export default {
   props: {
     form: {
       type: Object,
+      required: true
+    },
+    formIndex: {
+      type: Number,
       required: true
     },
     indent: {
@@ -58,6 +64,7 @@ export default {
     computedStyle() {
       return `left: ${this.indent}vw`
     },
+    ...mapState(['schoolTimetable']),
     ...mapActions(['updateFormName']),
     ...mapGetters(['getFormById']),
 
