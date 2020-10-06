@@ -2,36 +2,42 @@
   <div>
     <input
       type="text"
-      class="font-bold lesson-name"
-      v-if="isEditable && lesson.name"
+      class=" font-bold bg-transparent w-4/6 rounded shadow-sm"
+      v-if="isEditable"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
     />
-    <span class="font-bold lesson-name">
+    <span v-else class=" font-bold bg-transparent w-full ">
       <div class="inline">{{ lesson.name }}</div>
-      <button
-        class="inline rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
-        @click="removeLesson(lesson)"
-      >
-        -
-      </button>
     </span>
+    <BaseRemove
+      v-if="isEditable"
+      :toRemove="lesson"
+      :toRemoveIndex="lessonIndex"
+      :toRemoveFrom="block"
+      toRemoveType="lesson"
+      class="right-0  "
+    />
   </div>
 </template>
 
 <script>
+import BaseRemove from '@/components/BaseRemove.vue'
 export default {
+  components: {
+    BaseRemove
+  },
   props: {
     lesson: {
       type: Object,
       required: true
     },
-    block: {
-      type: Object,
+    lessonIndex: {
+      type: Number,
       required: true
     },
-    form: {
+    block: {
       type: Object,
       required: true
     },
@@ -46,21 +52,9 @@ export default {
         key,
         value: e.target.value
       })
-    },
-    removeLesson(lesson) {
-      this.$store.dispatch('removeLesson', {
-        lessonToRemove: lesson
-      })
     }
   }
 }
 </script>
 
-<style lang="css" scoped>
-.lesson-name {
-  @apply bg-transparent;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-</style>
+<style lang="css" scoped></style>

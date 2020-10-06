@@ -25,9 +25,10 @@
             :isEditable="isEditable"
           />
           <input
+            v-if="isFormEditable"
             type="text"
-            class="block w-full h-full bg-transparent p-1"
-            placeholder="+ Добавьте Урок"
+            class="block shadow-none w-full h-full bg-transparent p-1"
+            placeholder="+ "
             @keyup.enter="createLesson($event, block.lessons)"
           />
         </div>
@@ -37,6 +38,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import BlockLesson from '@/components/BlockLesson.vue'
 import BaseDrop from '@/components/BaseDrop.vue'
 import BaseDrag from '@/components/BaseDrag.vue'
@@ -48,6 +50,9 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    ...mapState(['isFormEditable'])
   },
   components: {
     BlockLesson,
