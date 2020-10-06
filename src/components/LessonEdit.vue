@@ -11,7 +11,12 @@
     <span v-else class=" font-bold bg-transparent w-full ">
       <div class="inline">{{ lesson.name }}</div>
     </span>
-    <BaseRemove v-if="isEditable && lesson.name" :toRemove="lesson" toRemoveType="lesson" class="right-0  " />
+    <BaseRemove
+      v-if="isEditable && lesson.name"
+      :toRemove="lesson"
+      toRemoveType="lesson"
+      class="right-0  "
+    />
   </div>
 </template>
 

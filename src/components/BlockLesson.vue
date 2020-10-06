@@ -9,10 +9,10 @@
       }"
     >
       <div class="mt-1 rounded" data-testid="lesson">
-        <LessonActionComponent
+        <LessonEdit
           :lesson="lesson"
           :isEditable="isEditable"
-        ></LessonActionComponent>
+        ></LessonEdit>
         <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
           {{ lesson.notes }}
         </p>
@@ -22,13 +22,13 @@
 </template>
 
 <script>
-import LessonActionComponent from '@/components/LessonActionComponent'
+import LessonEdit from '@/components/LessonEdit'
 import BaseDrop from '@/components/BaseDrop.vue'
 import BaseDrag from '@/components/BaseDrag.vue'
 import DroppingLessonOrBlockMixin from '@/mixins/DroppingLessonOrBlockMixin'
 export default {
   components: {
-    LessonActionComponent,
+    LessonEdit,
     BaseDrop,
     BaseDrag
   },
