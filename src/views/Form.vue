@@ -1,9 +1,7 @@
 <template>
   <div class="top-0 rounded-lg">
     <div v-if="form.name" class="h-8">
-      <div 
-      draggable
-      class="header bg-gray-700 text-gray-200 w-56 rounded-full">
+      <div draggable class="header bg-gray-700 text-gray-200 w-56 rounded-full">
         {{ form.name }}
       </div>
     </div>

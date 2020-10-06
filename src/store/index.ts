@@ -57,6 +57,13 @@ export default new Vuex.Store({
         id: uid()
       })
     },
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    REMOVE_LESSON(state, { lessonToRemove }) {
+      Vue.delete(lessonToRemove, 'name')
+    },
+    UPDATE_LESSON(state, { lesson, key, value }) {
+      Vue.set(lesson, key, value)
+    },
     CREATE_BLOCK(state, { form, newBlockName }) {
       form.days.push({
         name: newBlockName,
@@ -70,9 +77,6 @@ export default new Vuex.Store({
         name: newFormName,
         days: getDays()
       })
-    },
-    UPDATE_LESSON(state, { lesson, key, value }) {
-      Vue.set(lesson, key, value)
     },
     TOGGLE_EDITABILITY(state, { key, value }) {
       state[key] = value
@@ -105,16 +109,20 @@ export default new Vuex.Store({
       commit('CREATE_LESSON', { lessons, name })
       dispatch('persistSchoolTimetable')
     },
+    removeLesson({ commit, dispatch }, { lessonToRemove }) {
+      commit('REMOVE_LESSON', { lessonToRemove })
+      dispatch('persistSchoolTimetable')
+    },
+    updateLesson({ commit, dispatch }, { lesson, key, value }) {
+      commit('UPDATE_LESSON', { lesson, key, value })
+      dispatch('persistSchoolTimetable')
+    },
     createBlock({ commit, dispatch }, { form, newBlockName }) {
       commit('CREATE_BLOCK', { form, newBlockName })
       dispatch('persistSchoolTimetable')
     },
     creatForm({ commit, dispatch }, { newFormName }) {
       commit('CREATE_FORM', { newFormName })
-      dispatch('persistSchoolTimetable')
-    },
-    updateLesson({ commit, dispatch }, { lesson, key, value }) {
-      commit('UPDATE_LESSON', { lesson, key, value })
       dispatch('persistSchoolTimetable')
     },
     dropBlock({ commit, getters }, { fromBlockIndex, toBlockIndex, formId }) {

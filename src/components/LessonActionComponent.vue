@@ -8,7 +8,15 @@
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
     />
-    <div v-else class="font-bold lesson-name">{{ lesson.name }}</div>
+    <span class="font-bold lesson-name">
+      <div class="inline">{{ lesson.name }}</div>
+      <button
+        class="inline rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
+        @click="removeLesson(lesson)"
+      >
+        -
+      </button>
+    </span>
   </div>
 </template>
 
@@ -16,7 +24,16 @@
 export default {
   props: {
     lesson: {
-      type: Object
+      type: Object,
+      required: true
+    },
+    block: {
+      type: Object,
+      required: true
+    },
+    form: {
+      type: Object,
+      required: true
     },
     isEditable: {
       type: Boolean
@@ -28,6 +45,11 @@ export default {
         lesson,
         key,
         value: e.target.value
+      })
+    },
+    removeLesson(lesson) {
+      this.$store.dispatch('removeLesson', {
+        lessonToRemove: lesson
       })
     }
   }
