@@ -58,6 +58,7 @@ export default new Vuex.Store({
       })
     },
     REMOVE_LESSON(state, { block, lessonToRemoveIndex }) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const lessonToDelete = block.lessons.splice(lessonToRemoveIndex, 1)[1]
     },
     UPDATE_LESSON(state, { lesson, key, value }) {
@@ -78,6 +79,7 @@ export default new Vuex.Store({
       })
     },
     REMOVE_FORM(state, { toRemoveIndex }) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const formToDelete = state.schoolTimetable.forms.splice(
         toRemoveIndex,
         1

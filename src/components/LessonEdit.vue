@@ -3,7 +3,7 @@
     <input
       type="text"
       class=" font-bold bg-transparent w-4/6 rounded shadow-sm"
-      v-if="isEditable && lesson.name"
+      v-if="isEditable"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
@@ -12,7 +12,7 @@
       <div class="inline">{{ lesson.name }}</div>
     </span>
     <BaseRemove
-      v-if="isEditable && lesson.name"
+      v-if="isEditable"
       :toRemove="lesson"
       :toRemoveIndex="lessonIndex"
       :toRemoveFrom="block"

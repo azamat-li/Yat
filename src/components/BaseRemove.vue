@@ -31,7 +31,7 @@ export default Vue.extend({
     },
     removeLesson() {
       this.$store.dispatch('removeLesson', {
-        toRemoveIndex: this.toRemoveIndex,
+        lessonToRemoveIndex: this.toRemoveIndex,
         block: this.toRemoveFrom
       })
     },
