@@ -1,6 +1,6 @@
 <template>
   <button
-    class="inline rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
+    class=" inline  mx-1 px-1 rounded-full bg-gray-700 text-gray-500 font-bold  hover:bg-gray-400 hover:text-gray-800 "
     @click="removeLesson(toRemove)"
   >
     -

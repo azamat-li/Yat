@@ -2,16 +2,16 @@
   <div>
     <input
       type="text"
-      class="font-bold lesson-name"
+      class=" font-bold bg-transparent w-4/6 rounded shadow-sm"
       v-if="isEditable && lesson.name"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
     />
-    <span class="font-bold lesson-name">
+    <span v-else class=" font-bold bg-transparent w-full ">
       <div class="inline">{{ lesson.name }}</div>
     </span>
-    <BaseRemove :toRemove="lesson" toRemoveType="lesson" />
+    <BaseRemove v-if="isEditable && lesson.name" :toRemove="lesson" toRemoveType="lesson" class="right-0  " />
   </div>
 </template>
 
@@ -50,11 +50,4 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-.lesson-name {
-  @apply bg-transparent;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-</style>
+<style lang="css" scoped></style>
