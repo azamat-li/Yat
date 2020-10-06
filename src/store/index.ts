@@ -57,7 +57,6 @@ export default new Vuex.Store({
         id: uid()
       })
     },
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
     REMOVE_LESSON(state, { lessonToRemove }) {
       Vue.delete(lessonToRemove, 'name')
     },

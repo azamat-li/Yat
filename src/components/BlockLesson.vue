@@ -8,7 +8,7 @@
         fromLessonIndex: lessonIndex
       }"
     >
-      <div  class="mt-1 rounded" data-testid="lesson">
+      <div class="mt-1 rounded" data-testid="lesson">
         <LessonActionComponent
           :lesson="lesson"
           :isEditable="isEditable"
