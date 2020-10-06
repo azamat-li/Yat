@@ -57,8 +57,9 @@ export default new Vuex.Store({
         id: uid()
       })
     },
-    REMOVE_LESSON(state, { lessonToRemove }) {
-      Vue.delete(lessonToRemove, 'name')
+    REMOVE_LESSON(state, { block, lessonToRemoveIndex }) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const lessonToDelete = block.lessons.splice(lessonToRemoveIndex, 1)[1]
     },
     UPDATE_LESSON(state, { lesson, key, value }) {
       Vue.set(lesson, key, value)
@@ -77,6 +78,14 @@ export default new Vuex.Store({
         days: getDays()
       })
     },
+    REMOVE_FORM(state, { toRemoveIndex }) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const formToDelete = state.schoolTimetable.forms.splice(
+        toRemoveIndex,
+        1
+      )[1]
+    },
+
     TOGGLE_EDITABILITY(state, { key, value }) {
       state[key] = value
     },
@@ -108,8 +117,8 @@ export default new Vuex.Store({
       commit('CREATE_LESSON', { lessons, name })
       dispatch('persistSchoolTimetable')
     },
-    removeLesson({ commit, dispatch }, { lessonToRemove }) {
-      commit('REMOVE_LESSON', { lessonToRemove })
+    removeLesson({ commit, dispatch }, { block, lessonToRemoveIndex }) {
+      commit('REMOVE_LESSON', { block, lessonToRemoveIndex })
       dispatch('persistSchoolTimetable')
     },
     updateLesson({ commit, dispatch }, { lesson, key, value }) {
@@ -122,6 +131,10 @@ export default new Vuex.Store({
     },
     creatForm({ commit, dispatch }, { newFormName }) {
       commit('CREATE_FORM', { newFormName })
+      dispatch('persistSchoolTimetable')
+    },
+    removeForm({ commit, dispatch }, { toRemoveIndex }) {
+      commit('REMOVE_FORM', { toRemoveIndex })
       dispatch('persistSchoolTimetable')
     },
     dropBlock({ commit, getters }, { fromBlockIndex, toBlockIndex, formId }) {

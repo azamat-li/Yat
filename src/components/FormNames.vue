@@ -4,6 +4,7 @@
       v-for="(form, formIndex) in schoolTimetable.forms"
       :key="formIndex"
       :form="form"
+      :formIndex="formIndex"
       :indent="getIndent(formIndex)"
       :isEditable="globalTimetableIsEditable"
     >
