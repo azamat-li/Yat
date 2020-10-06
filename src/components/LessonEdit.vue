@@ -14,6 +14,8 @@
     <BaseRemove
       v-if="isEditable && lesson.name"
       :toRemove="lesson"
+      :toRemoveIndex="lessonIndex"
+      :toRemoveFrom="block"
       toRemoveType="lesson"
       class="right-0  "
     />
@@ -28,6 +30,14 @@ export default {
   },
   props: {
     lesson: {
+      type: Object,
+      required: true
+    },
+    lessonIndex: {
+      type: Number,
+      required: true
+    },
+    block: {
       type: Object,
       required: true
     },

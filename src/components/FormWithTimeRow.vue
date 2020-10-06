@@ -17,8 +17,6 @@
       />
       <BaseRemove
         v-if="isEditable && form.name"
-        :toRemoveFrom="schoolTimetable"
-        :toRemove="form"
         :toRemoveIndex="formIndex"
         toRemoveType="form"
         class="right-0  "

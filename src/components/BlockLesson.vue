@@ -9,7 +9,12 @@
       }"
     >
       <div class="mt-1 rounded" data-testid="lesson">
-        <LessonEdit :lesson="lesson" :isEditable="isEditable"></LessonEdit>
+        <LessonEdit
+          :lesson="lesson"
+          :lessonIndex="lessonIndex"
+          :block="block"
+          :isEditable="isEditable"
+        ></LessonEdit>
         <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
           {{ lesson.notes }}
         </p>
