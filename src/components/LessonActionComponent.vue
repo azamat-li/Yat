@@ -10,18 +10,17 @@
     />
     <span class="font-bold lesson-name">
       <div class="inline">{{ lesson.name }}</div>
-      <button
-        class="inline rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
-        @click="removeLesson(lesson)"
-      >
-        -
-      </button>
     </span>
+    <BaseRemove :toRemove="lesson" toRemoveType="lesson" />
   </div>
 </template>
 
 <script>
+import BaseRemove from '@/components/BaseRemove.vue'
 export default {
+  components: {
+    BaseRemove
+  },
   props: {
     lesson: {
       type: Object,
@@ -45,11 +44,6 @@ export default {
         lesson,
         key,
         value: e.target.value
-      })
-    },
-    removeLesson(lesson) {
-      this.$store.dispatch('removeLesson', {
-        lessonToRemove: lesson
       })
     }
   }
