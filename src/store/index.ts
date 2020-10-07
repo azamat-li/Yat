@@ -71,6 +71,10 @@ export default new Vuex.Store({
         id: uid()
       })
     },
+    REMOVE_BLOCK(state, { form, blockToRemoveIndex }) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const blockToDelete = form.days.splice(blockToRemoveIndex, 1)[1]
+    },
     CREATE_FORM(state, { newFormName }) {
       state.schoolTimetable.forms.push({
         id: uid(),
@@ -127,6 +131,10 @@ export default new Vuex.Store({
     },
     createBlock({ commit, dispatch }, { form, newBlockName }) {
       commit('CREATE_BLOCK', { form, newBlockName })
+      dispatch('persistSchoolTimetable')
+    },
+    removeBlock({ commit, dispatch }, { form, blockToRemoveIndex }) {
+      commit('REMOVE_BLOCK', { form, blockToRemoveIndex })
       dispatch('persistSchoolTimetable')
     },
     creatForm({ commit, dispatch }, { newFormName }) {

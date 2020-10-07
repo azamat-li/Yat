@@ -14,6 +14,7 @@
           <button
             v-if="isFormEditable"
             class="absolute right-0 top-0 px-2  font-bold bg-transparent"
+            @click.prevent="remove"
           >
             -
           </button>
@@ -70,6 +71,12 @@ export default {
     createLesson(e, lessons) {
       this.$store.dispatch('createLesson', { lessons, name: e.target.value })
       e.target.value = ''
+    },
+    remove() {
+      this.$store.dispatch('removeBlock', {
+        form: this.form,
+        blockToRemoveIndex: this.blockIndex
+      })
     },
     pickUpLesson(e, fromLessonIndex, fromBlockIndex) {
       e.dataTransfer.effectAllowed = 'move'
