@@ -1,6 +1,6 @@
 <template>
   <button
-    class=" inline  mx-1 px-1 rounded-full bg-gray-700 text-gray-500 font-bold  hover:bg-gray-400 hover:text-gray-800 "
+    class=" inline font-bold mx-1 px-1 rounded-full bg-gray-700 text-gray-500   hover:bg-gray-400 hover:text-gray-800 "
     @click="remove(toRemoveType)"
   >
     -

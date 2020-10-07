@@ -6,11 +6,17 @@
         fromBlockIndex: blockIndex
       }"
     >
-      <div class="bg-gray-700  m-1 p-1 rounded-lg">
+      <div class="bg-gray-700 relative m-1 p-1 rounded-lg">
         <div
           class="flex flex-no-shrink items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
         >
           {{ block.name }}
+          <button
+            v-if="isFormEditable"
+            class="absolute right-0 top-0 px-2  font-bold bg-transparent"
+          >
+            -
+          </button>
         </div>
         <div class="list-reset">
           <BlockLesson
@@ -27,8 +33,8 @@
           <input
             v-if="isFormEditable"
             type="text"
-            class="block shadow-none w-full h-full bg-transparent p-1"
-            placeholder="+ "
+            class="block font-bold   text-right shadow-none w-full h-full bg-transparent px-3"
+            placeholder="+"
             @keyup.enter="createLesson($event, block.lessons)"
           />
         </div>
