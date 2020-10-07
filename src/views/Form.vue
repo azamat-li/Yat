@@ -57,13 +57,6 @@ export default {
       })
       e.target.value = ''
     },
-    createDraft(e) {
-      this.$store.dispatch('createDraft', {
-        form: this.form,
-        newdraftName: e.target.value
-      })
-      e.target.value = ''
-    },
     toggleIsEditable() {
       this.$store.commit('TOGGLE_EDITABILITY', {
         key: 'isFormEditable',
