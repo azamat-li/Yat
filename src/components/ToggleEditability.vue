@@ -1,14 +1,14 @@
 <template>
-  <div class="main mt-5">
+  <div class="p-1 mt-5">
     <button
       class="rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
       @click="toggleEditability"
     >
       <div v-show="editableState" data-testid="unLockedButton">
-        Рады изменениям
+        Менять
       </div>
       <div v-show="!editableState" data-testid="lockedButton">
-        Заперто
+        Смотреть
       </div>
     </button>
   </div>
@@ -41,9 +41,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.main {
-  @apply p-1;
-}
 button:focus {
   outline: none;
 }

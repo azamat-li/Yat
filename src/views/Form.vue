@@ -1,12 +1,12 @@
 <template>
-  <div class="top-0 rounded-lg">
+  <div class="top-0 rounded-lg absolute">
     <div v-if="form.name" class="h-8">
       <div draggable class="header bg-gray-700 text-gray-200 w-56 rounded-full">
         {{ form.name }}
       </div>
     </div>
 
-    <div class="form-blocks">
+    <div class="flex flex-row items-start bg-gray-800 text-gray-200 ">
       <FormBlock
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
@@ -16,7 +16,7 @@
         :isEditable="isFormEditable"
         blockType="day"
       />
-      <div class="w-4/12 bg-gray-800">
+      <div v-if="isFormEditable" class="w-4/12 bg-gray-800">
         <input
           type="text"
           class="bg-transparent text-gray-300 p-1 m-1"
@@ -26,7 +26,7 @@
       </div>
     </div>
     <ToggleEditability
-      class="text-right bg-gray-800 text-gray-300"
+      class=" text-right  bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
     ></ToggleEditability>
   </div>
@@ -68,8 +68,6 @@ export default {
 </script>
 
 <style lang="scss">
-@tailwind base
-
 .isEditableTrigger {
   @apply relative text-right p-2;
   right: 0;
@@ -79,8 +77,5 @@ export default {
 }
 .inputDisabled {
   background: #ffffff;
-}
-.form-blocks {
-  @apply flex flex-row items-start bg-gray-800 text-gray-200;
 }
 </style>
