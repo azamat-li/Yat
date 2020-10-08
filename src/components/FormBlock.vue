@@ -1,7 +1,6 @@
 <template>
-  <BaseDrop @drop="dropLessonOrBlock" class="w-full">
+  <BaseDrop @drop="dropLessonOrBlock">
     <BaseDrag
-      class="w-full"
       :transferData="{
         type: 'block',
         fromBlockIndex: blockIndex
@@ -9,7 +8,7 @@
     >
       <div class="bg-gray-700  relative m-1 p-1 rounded-lg ">
         <div
-          class="px-1 w-full items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
+          class="px-1  items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
         >
           {{ block.name }}
           <button
@@ -33,7 +32,6 @@
             :blockIndex="blockIndex"
             :blockType="blockType"
             :isEditable="isEditable"
-            class="w-full"
           />
           <div class="mt-8">
             <input

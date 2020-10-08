@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-transparent p-2 ">
+  <div class="bg-transparent  ">
     <div>
       <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
         Общее школьное время корпуса
@@ -10,18 +10,18 @@
       >Все классы</router-link
     >
     <div
-      class="absolute top-0 w-full h-full  forms-background"
+      class="absolute top-0 w-full h-full  p-2 bg-gray-900"
       v-show="isFormsOpen"
       @click.self="close"
     >
-      <router-view class="router-view" />
+      <router-view class="bg-gray-800" />
     </div>
     <div
-      class="absolute top-0 w-full h-full p-4 bg-gray-900"
+      class="absolute top-0 w-full h-full p-2  bg-gray-900"
       v-show="isFormOpen"
       @click.self="close"
     >
-      <router-view class="bg-gray-800" />
+      <router-view class="bg-gray-800 " />
     </div>
   </div>
 </template>

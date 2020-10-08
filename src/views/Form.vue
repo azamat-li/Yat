@@ -1,5 +1,5 @@
 <template>
-  <div class="top-0 w-full rounded-lg absolute">
+  <div class="top-0 absolute  rounded-lg  my-2 mr-3">
     <div class=" flex flex-wrap">
       <div v-if="form.name" class="h-8 w-full">
         <div
@@ -11,7 +11,7 @@
       </div>
 
       <div
-        class="flex flex-row  flex-shrink items-start bg-gray-800 text-gray-200 "
+        class="flex flex-wrap   flex-shrink items-start bg-gray-800 text-gray-200 "
       >
         <FormBlock
           v-for="(day, $dayIndex) of form.days"
@@ -21,7 +21,7 @@
           :form="form"
           :isEditable="isFormEditable"
           blockType="day"
-          class="flex-shrink"
+          class=" flex-shrink"
         />
         <div v-if="isFormEditable" class=" bg-gray-800">
           <input

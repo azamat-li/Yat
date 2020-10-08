@@ -1,7 +1,5 @@
 <template>
-  <BaseDrop 
-  class="w-full"
-  v-if="lesson.name" @drop="dropLessonOrBlock">
+  <BaseDrop class="w-full" v-if="lesson.name" @drop="dropLessonOrBlock">
     <BaseDrag
       class="flex  w-full h-full text-center flex-wrap  mb-2   rounded-full bg-transparent  no-underline"
       :transferData="{
