@@ -2,17 +2,17 @@
   <div class="rounded-full m-1 py-1 pl-1 relative bg-gray-800">
     <div
       @click.self="goToForm(form)"
-      class="items-center relative shadow  w-24 flex   no-underline relative bg-gray-700 rounded-full"
+      class="items-center  shadow  w-24 flex   no-underline relative bg-gray-700 rounded-full"
       :style="computedStyle"
     >
       <input
-        class="m-1 py-1 px-1 pr-4 bg-gray-800 text-gray-200 w-9/12 px-2 rounded-full"
+        class="m-1 py-1   pr-4 bg-gray-800 text-gray-200 w-9/12 px-2 rounded-full"
         v-model="form.name"
         type="text"
         @blur="updateValue"
         @keyup.enter="updateValue"
         :disabled="!isEditable"
-        placeholder="класс #"
+        placeholder="класс "
         value
       />
       <BaseRemove
