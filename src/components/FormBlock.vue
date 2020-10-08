@@ -8,18 +8,20 @@
     >
       <div class="bg-gray-700 relative m-1 p-1 rounded-lg">
         <div
-          class="flex flex-no-shrink items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
+          class="flex flex-no-shrink px-1 items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
         >
           {{ block.name }}
           <button
             v-if="isFormEditable"
-            class="absolute right-0 top-0 px-2  font-bold bg-transparent"
+            class="absolute
+            handler-btn-colors
+             top-0 left-0 px-1 font-bold bg-transparent"
             @click.prevent="remove"
           >
             -
           </button>
         </div>
-        <div class="list-reset">
+        <div class="list-reset w-full">
           <BlockLesson
             v-for="(lesson, $lessonIndex) of block.lessons"
             :key="$lessonIndex"
@@ -30,14 +32,17 @@
             :blockIndex="blockIndex"
             :blockType="blockType"
             :isEditable="isEditable"
+            class="w-full"
           />
-          <input
-            v-if="isFormEditable"
-            type="text"
-            class="block font-bold   text-right shadow-none w-full h-full bg-transparent px-3"
-            placeholder="+"
-            @keyup.enter="createLesson($event, block.lessons)"
-          />
+          <div class="mt-8">
+            <input
+              v-if="isFormEditable"
+              type="text"
+              class="absolute text-right px-2 font-bold right-0 bottom-0 shadow-none  bg-transparent"
+              placeholder="+"
+              @keyup.enter="createLesson($event, block.lessons)"
+            />
+          </div>
         </div>
       </div>
     </BaseDrag>
@@ -89,5 +94,11 @@ export default {
   }
 }
 </script>
-
-<style lang="css"></style>
+<style lang="css">
+.handler-btn-colors {
+  @apply text-gray-600;
+}
+.handler-btn-colors:hover {
+  @apply text-gray-200;
+}
+</style>

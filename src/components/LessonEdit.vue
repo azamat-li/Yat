@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="w-full">
     <input
       type="text"
-      class=" font-bold bg-transparent w-4/6 rounded shadow-sm"
+      class="w-full font-bold bg-transparent "
+      style="caret-color: white;"
       v-if="isEditable"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"
     />
-    <span v-else class=" font-bold bg-transparent w-full ">
-      <div class="inline">{{ lesson.name }}</div>
+    <span v-else class="font-bold bg-transparent">
+      <div>{{ lesson.name }}</div>
     </span>
     <BaseRemove
       v-if="isEditable"
@@ -17,7 +18,7 @@
       :toRemoveIndex="lessonIndex"
       :toRemoveFrom="block"
       toRemoveType="lesson"
-      class="right-0  "
+      class="absolute"
     />
   </div>
 </template>

@@ -16,11 +16,11 @@
         :isEditable="isFormEditable"
         blockType="day"
       />
-      <div v-if="isFormEditable" class="w-4/12 bg-gray-800">
+      <div v-if="isFormEditable" class=" bg-gray-800">
         <input
           type="text"
-          class="bg-transparent text-gray-300 p-1 m-1"
-          placeholder="+ Добавьте Блок Уроков"
+          class="bg-transparent   text-gray-300 "
+          placeholder="+"
           @keyup.enter="createBlock($event)"
         />
       </div>

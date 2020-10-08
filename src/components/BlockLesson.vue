@@ -1,21 +1,21 @@
 <template>
   <BaseDrop v-if="lesson.name" @drop="dropLessonOrBlock">
     <BaseDrag
-      class="lesson"
+      class="flex  w-full h-full text-center flex-wrap  mb-2   rounded-full bg-transparent  no-underline"
       :transferData="{
         type: 'lesson',
         fromBlockIndex: blockIndex,
         fromLessonIndex: lessonIndex
       }"
     >
-      <div class="mt-1 rounded" data-testid="lesson">
+      <div class="w-full mt-1 rounded flex " data-testid="lesson">
         <LessonEdit
           :lesson="lesson"
           :lessonIndex="lessonIndex"
           :block="block"
           :isEditable="isEditable"
         ></LessonEdit>
-        <p v-if="lesson.notes" class="w-full text-no-shrink text-sm">
+        <p v-if="lesson.notes" class="text-no-shrink text-sm">
           {{ lesson.notes }}
         </p>
       </div>
@@ -56,8 +56,4 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-.lesson {
-  @apply flex w-full h-full text-center flex-wrap shadow mb-2 p-2  rounded-full shadow-md bg-transparent  no-underline;
-}
-</style>
+<style lang="css" scoped></style>
