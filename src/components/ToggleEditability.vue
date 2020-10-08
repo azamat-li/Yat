@@ -5,10 +5,10 @@
       @click="toggleEditability"
     >
       <div v-show="editableState" data-testid="unLockedButton">
-        Менять
+        Изменение
       </div>
       <div v-show="!editableState" data-testid="lockedButton">
-        Смотреть
+        Просмотр
       </div>
     </button>
   </div>

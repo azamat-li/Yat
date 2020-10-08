@@ -12,7 +12,7 @@
         @blur="updateValue"
         @keyup.enter="updateValue"
         :disabled="!isEditable"
-        placeholder="класс "
+        placeholder="Класс "
         value
       />
       <BaseRemove
