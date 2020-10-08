@@ -2,11 +2,11 @@
   <div class="rounded-full m-1 py-1 pl-1 relative bg-gray-800">
     <div
       @click.self="goToForm(form)"
-      class="clearfix items-center  shadow m-1 py-1 px-1 pr-4 w-24 flex   no-underline relative bg-gray-700 rounded-full"
+      class="items-center relative shadow  w-24 flex   no-underline relative bg-gray-700 rounded-full"
       :style="computedStyle"
     >
       <input
-        class="bg-gray-800 text-gray-200 w-5/6 px-2 rounded-full"
+        class="m-1 py-1 px-1 pr-4 bg-gray-800 text-gray-200 w-9/12 px-2 rounded-full"
         v-model="form.name"
         type="text"
         @blur="updateValue"
@@ -16,10 +16,10 @@
         value
       />
       <BaseRemove
-        v-if="isEditable && form.name"
+        v-if="isEditable"
         :toRemoveIndex="formIndex"
         toRemoveType="form"
-        class="right-0  "
+        class="absolute  right-0 mr-3 pl-1 h-1 top-0 "
       />
     </div>
   </div>

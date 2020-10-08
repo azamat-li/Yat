@@ -62,7 +62,7 @@
     "typescript": "~3.9.3",
     "vue-cli-plugin-fontawesome": "^0.2.0",
     "vue-cli-plugin-tailwind": "^1.4.2",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
   },
   "description": "## Project setup ``` npm install ```",
   "directories": {
