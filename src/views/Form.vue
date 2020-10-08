@@ -1,12 +1,14 @@
 <template>
-  <div class="top-0 rounded-lg absolute">
-    <div v-if="form.name" class="h-8">
+  <div class="top-0 w-full rounded-lg absolute">
+    <div v-if="form.name" class="h-8 w-full">
       <div draggable class="header bg-gray-700 text-gray-200 w-56 rounded-full">
         {{ form.name }}
       </div>
     </div>
 
-    <div class="flex flex-row items-start bg-gray-800 text-gray-200 ">
+    <div
+      class="flex flex-row flex-shrink items-start bg-gray-800 text-gray-200 "
+    >
       <FormBlock
         v-for="(day, $dayIndex) of form.days"
         :key="$dayIndex"
@@ -15,6 +17,7 @@
         :form="form"
         :isEditable="isFormEditable"
         blockType="day"
+        class="flex-shrink"
       />
       <div v-if="isFormEditable" class=" bg-gray-800">
         <input
@@ -26,7 +29,7 @@
       </div>
     </div>
     <ToggleEditability
-      class=" text-right  bg-gray-800 text-gray-300"
+      class=" text-left  bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
     ></ToggleEditability>
   </div>

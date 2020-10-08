@@ -1,14 +1,15 @@
 <template>
-  <BaseDrop @drop="dropLessonOrBlock">
+  <BaseDrop @drop="dropLessonOrBlock" class="w-full">
     <BaseDrag
+      class="w-full"
       :transferData="{
         type: 'block',
         fromBlockIndex: blockIndex
       }"
     >
-      <div class="bg-gray-700 relative m-1 p-1 rounded-lg">
+      <div class="bg-gray-700  relative m-1 p-1 rounded-lg ">
         <div
-          class="flex flex-no-shrink px-1 items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
+          class="px-1 w-full items-center mb-2 font-bold m-1 p-1 rounded-full  text-gray-400"
         >
           {{ block.name }}
           <button
@@ -21,7 +22,7 @@
             -
           </button>
         </div>
-        <div class="list-reset w-full">
+        <div class="list-reset ">
           <BlockLesson
             v-for="(lesson, $lessonIndex) of block.lessons"
             :key="$lessonIndex"
@@ -38,7 +39,7 @@
             <input
               v-if="isFormEditable"
               type="text"
-              class="absolute text-right px-2 font-bold right-0 bottom-0 shadow-none  bg-transparent"
+              class="absolute w-full text-right px-2 font-bold right-0 bottom-0 shadow-none  bg-transparent"
               placeholder="+"
               @keyup.enter="createLesson($event, block.lessons)"
             />

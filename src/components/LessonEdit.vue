@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full">
+  <div>
     <input
       type="text"
-      class="w-full font-bold bg-transparent "
+      class="w-full px-3 font-bold bg-transparent "
       style="caret-color: white;"
       v-if="isEditable"
       :value="lesson.name"
@@ -18,7 +18,7 @@
       :toRemoveIndex="lessonIndex"
       :toRemoveFrom="block"
       toRemoveType="lesson"
-      class="absolute"
+      class="absolute px-1  left-0 "
     />
   </div>
 </template>

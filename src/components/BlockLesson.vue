@@ -1,5 +1,7 @@
 <template>
-  <BaseDrop v-if="lesson.name" @drop="dropLessonOrBlock">
+  <BaseDrop 
+  class="w-full"
+  v-if="lesson.name" @drop="dropLessonOrBlock">
     <BaseDrag
       class="flex  w-full h-full text-center flex-wrap  mb-2   rounded-full bg-transparent  no-underline"
       :transferData="{
@@ -8,12 +10,13 @@
         fromLessonIndex: lessonIndex
       }"
     >
-      <div class="w-full mt-1 rounded flex " data-testid="lesson">
+      <div class="mt-1 w-full rounded flex" data-testid="lesson">
         <LessonEdit
           :lesson="lesson"
           :lessonIndex="lessonIndex"
           :block="block"
           :isEditable="isEditable"
+          class="w-full"
         ></LessonEdit>
         <p v-if="lesson.notes" class="text-no-shrink text-sm">
           {{ lesson.notes }}
