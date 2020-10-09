@@ -1,13 +1,14 @@
 <template>
-  <div class=" top-0  bg-white text-black">
-    <Form
-      v-for="(form, formIndex) of forms"
-      :formProp="form"
-      :key="formIndex"
-      :form="form"
-      class="w-full h-full"
-    >
-    </Form>
+  <div class="top-0  rounded-lg  my-2 mr-3 p-2">
+    <div class="flex flex-wrap ">
+      <Form
+        v-for="(form, formIndex) of forms"
+        :formProp="form"
+        :key="formIndex"
+        :form="form"
+      >
+      </Form>
+    </div>
   </div>
 </template>
 

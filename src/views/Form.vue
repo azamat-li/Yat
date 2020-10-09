@@ -1,5 +1,5 @@
 <template>
-  <div class="top-0   rounded-lg  my-2 mr-3 p-2 ">
+  <div class="top-0 rounded-lg  my-2 mr-3 p-4 ">
     <div class=" flex flex-wrap">
       <div v-if="form.name" class="h-8 w-full">
         <div

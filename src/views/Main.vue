@@ -10,18 +10,18 @@
       >Все классы</router-link
     >
     <div
-      class="absolute top-0 w-full h-full  p-2 bg-gray-900"
+      class="absolute top-0 flex flex-wrap   p-2 bg-gray-900"
       v-show="isFormsOpen"
       @click.self="close"
     >
       <router-view class="bg-gray-800 " />
     </div>
     <div
-      class="absolute top-0 w-full h-full p-2  bg-gray-900"
+      class="absolute w-full h-full bg-opacity-75 top-0 flex flex-wrap  p-2  bg-gray-900"
       v-show="isFormOpen"
       @click.self="close"
     >
-      <router-view class="bg-gray-800 " />
+      <router-view class="bg-gray-800 w-full h-full" />
     </div>
   </div>
 </template>
