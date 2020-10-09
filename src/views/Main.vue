@@ -14,7 +14,7 @@
       v-show="isFormsOpen"
       @click.self="close"
     >
-      <router-view class="bg-gray-800" />
+      <router-view class="bg-gray-800 " />
     </div>
     <div
       class="absolute top-0 w-full h-full p-2  bg-gray-900"

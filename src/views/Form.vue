@@ -1,5 +1,5 @@
 <template>
-  <div class="top-0 absolute  rounded-lg  my-2 mr-3">
+  <div class="top-0   rounded-lg  my-2 mr-3 p-2 ">
     <div class=" flex flex-wrap">
       <div v-if="form.name" class="h-8 w-full">
         <div
@@ -33,7 +33,6 @@
         </div>
       </div>
     </div>
-
     <ToggleEditability
       class=" text-left   bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
@@ -47,6 +46,12 @@ import ToggleEditability from '../components/ToggleEditability'
 import FormBlock from '@/components/FormBlock'
 
 export default {
+  props: {
+    formProp: {
+      type: Object,
+      default: null
+    }
+  },
   components: {
     ToggleEditability,
     FormBlock
@@ -55,7 +60,11 @@ export default {
     ...mapState(['isFormEditable']),
     ...mapGetters(['getFormById']),
     form() {
-      return this.getFormById(this.$route.params.id)
+      const form =
+        this.formProp !== null
+          ? this.formProp
+          : this.getFormById(this.$route.params.id)
+      return form
     }
   },
   methods: {
