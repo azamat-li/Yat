@@ -21,7 +21,7 @@
             -
           </button>
         </div>
-        <div class="list-reset ">
+        <div class="list-reset flex flex-col ">
           <BlockLesson
             v-for="(lesson, $lessonIndex) of block.lessons"
             :key="$lessonIndex"

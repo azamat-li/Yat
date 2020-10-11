@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class=" flex flex-wrap">
     <input
-      type="text"
-      class="w-full px-3 font-bold bg-transparent "
-      style="caret-color: white;"
       v-if="isEditable"
+      type="text"
+      class="font-bold bg-transparent mx-2 w-40"
+      style="caret-color: white;"
       :value="lesson.name"
       @keyup.enter="updateLessonProperty($event, 'name', lesson)"
       placeholder=" Урок"

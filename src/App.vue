@@ -42,7 +42,7 @@ html {
 }
 
 input {
-  @apply rounded-full text-gray-300 shadow;
+  @apply rounded-sm shadow-sm text-gray-300;
 }
 
 input::placeholder {
