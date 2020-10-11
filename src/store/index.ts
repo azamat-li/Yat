@@ -100,10 +100,9 @@ export default new Vuex.Store({
       const lessonToMove = fromLessons.splice(fromLessonIndex, 1)[0]
       toLessons.splice(toLessonIndex, 0, lessonToMove)
     },
-    DROP_BLOCK(state, { fromBlockIndex, toBlockIndex, formId, getters }) {
-      const blockList = getters.getFormById(formId).days
-      const blockToMove = blockList.splice(fromBlockIndex, 1)[0]
-      blockList.splice(toBlockIndex, 0, blockToMove)
+    DROP_BLOCK(state, { fromBlockIndex, toBlockIndex, form }) {
+      const blockToMove = form.days.splice(fromBlockIndex, 1)[0]
+      form.days.splice(toBlockIndex, 0, blockToMove)
     }
   },
   actions: {
@@ -145,8 +144,13 @@ export default new Vuex.Store({
       commit('REMOVE_FORM', { toRemoveIndex })
       dispatch('persistSchoolTimetable')
     },
-    dropBlock({ commit, getters }, { fromBlockIndex, toBlockIndex, formId }) {
-      commit('DROP_BLOCK', { fromBlockIndex, toBlockIndex, formId, getters })
+    dropBlock({ commit, dispatch }, { fromBlockIndex, toBlockIndex, form }) {
+      commit('DROP_BLOCK', {
+        fromBlockIndex,
+        toBlockIndex,
+        form
+      })
+      dispatch('persistSchoolTimetable')
     },
     dropLesson(
       { commit, dispatch },

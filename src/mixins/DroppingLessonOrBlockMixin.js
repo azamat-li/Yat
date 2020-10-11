@@ -22,6 +22,7 @@ export default {
       if (transferData.type === 'lesson') {
         this.dropLesson(transferData)
       }
+      this.dropBlock(transferData)
     },
     dropLesson({ fromBlockIndex, fromLessonIndex }) {
       const fromLessons = this.form.days[fromBlockIndex].lessons
@@ -30,6 +31,13 @@ export default {
         fromLessonIndex,
         toLessons: this.block.lessons,
         toLessonIndex: this.lessonIndex
+      })
+    },
+    dropBlock({ fromBlockIndex }) {
+      this.$store.dispatch('dropBlock', {
+        fromBlockIndex,
+        toBlockIndex: this.blockIndex,
+        form: this.form
       })
     }
   }
