@@ -13,6 +13,7 @@
         @keyup.enter="updateValue"
         :disabled="!isEditable"
         placeholder="Класс "
+        data-testid="formName"
         value
       />
       <BaseRemove

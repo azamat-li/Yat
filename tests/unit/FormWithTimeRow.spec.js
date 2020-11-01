@@ -2,30 +2,24 @@ import FormWithTimeRow from '@/components/FormWithTimeRow.vue'
 import { mount } from '@vue/test-utils'
 
 describe('FormWithTimeRow', () => {
-  it('If isEditable is false, input is disabled', async () => {
+  it('when form.name is "11A", formName is "11A" ', async () => {
     const wrapper = mount(FormWithTimeRow, {
       propsData: {
         form: {
           name: '11A'
         },
+        formIndex: 1,
+        indent: 2,
         isEditable: false
       }
     })
 
     await wrapper.vm.$nextTick()
-    expect(true).toBe(true)
-  }),
-    it('Input value data is equal to form.name prop value data', async () => {
-      const wrapper = mount(FormWithTimeRow, {
-        propsData: {
-          form: {
-            name: '11A'
-          }
-        }
-      })
-
-      await wrapper.vm.$nextTick()
-
-      expect('11A').toBe('11A')
-    })
+    expect(wrapper).toBeDefined()
+    expect(wrapper.find('input').toBeDefined)
+    expect(wrapper.find('input').element.value).toEqual('11A')
+    expect(wrapper.find('[data-testid="formName"]').element.value).toEqual(
+      '11A'
+    )
+  })
 })
