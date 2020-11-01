@@ -4,10 +4,10 @@
       class="rounded-full bg-gray-700 text-gray-500 font-bold py-2 px-4 hover:bg-gray-400 hover:text-gray-800 "
       @click="toggleEditability"
     >
-      <div v-show="editableState" data-testid="unLockedButton">
+      <div v-if="editableState" data-testid="unLockedButton">
         Изменение
       </div>
-      <div v-show="!editableState" data-testid="lockedButton">
+      <div v-if="!editableState" data-testid="lockedButton">
         Просмотр
       </div>
     </button>

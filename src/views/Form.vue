@@ -1,6 +1,6 @@
 <template>
   <div
-    class="top-0 rounded-lg flex flex-wrap
+    class="top-0 rounded-lg  
    my-2 mr-3 p-4 "
   >
     <div class=" flex flex-wrap">
@@ -12,7 +12,6 @@
           {{ form.name }}
         </div>
       </div>
-
       <div class="flex flex-wrap   items-start bg-gray-800 text-gray-200 ">
         <FormBlock
           v-for="(day, $dayIndex) of form.days"
@@ -35,7 +34,7 @@
       </div>
     </div>
     <ToggleEditability
-      class=" text-left   bg-gray-800 text-gray-300"
+      class=" text-left    bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
     ></ToggleEditability>
   </div>
