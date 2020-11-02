@@ -19,9 +19,7 @@ export default {
 
 <style lang="css">
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 body,

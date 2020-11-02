@@ -11,13 +11,6 @@
         <p>{{ $t('watching') }}</p>
       </div>
     </button>
-    <section>
-      <button class="button btn" type="button" @click="setLocale('en')">
-        English
-      </button>
-      |
-      <button @click="setLocale('ru')">Russian</button>
-    </section>
   </div>
 </template>
 
@@ -42,10 +35,6 @@ export default {
         key: this.editableStateString,
         value: !this.editableState
       })
-    },
-    setLocale(locale) {
-      this.$i18n.locale = locale
-      localStorage.setItem('locale', locale)
     }
   }
 }

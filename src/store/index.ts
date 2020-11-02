@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import defaultSchoolTimetable from '@/default-timetable'
-import { getDays } from '../DefaultDays'
+import { getDays } from '@/DefaultDays'
 import { saveStatePlugin, uid } from '../utils'
 
 Vue.use(Vuex)

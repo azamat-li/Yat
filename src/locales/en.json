@@ -1,10 +1,12 @@
 {
-  "classes": {
-    "add": "Add Form",
+  "forms": {
     "all": "All Forms",
-    "class": "Form"
+    "form": "Form",
+    "add": "Add Form"
   },
-  "editing": "Editing",
+  "tables": {
+    "all": "All Tables"
+  },
   "watching": "Watching",
   "week": {
     "Friday": "Friday",

@@ -39,7 +39,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx", "src/store/index.ts", "src/default-timetable.ts"
+    "tests/**/*.tsx", "src/store/index.ts", "src/default-timetable.ts", "src/DefaultDays.js"
   ],
   "exclude": [
     "node_modules"

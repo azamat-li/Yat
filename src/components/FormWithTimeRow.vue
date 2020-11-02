@@ -12,7 +12,7 @@
         @blur="updateValue"
         @keyup.enter="updateValue"
         :disabled="!isEditable"
-        placeholder="Класс "
+        placeholder="Form"
         data-testid="formName"
         value
       />

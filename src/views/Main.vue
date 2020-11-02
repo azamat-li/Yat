@@ -2,13 +2,14 @@
   <div class="bg-transparent  ">
     <div>
       <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
-        Общее школьное время корпуса
+        {{ $t('tables.all') }}
       </div>
     </div>
     <FormNames />
-    <router-link class="router-link" :to="{ name: 'forms' }"
-      >Все классы</router-link
-    >
+    <router-link class="router-link" :to="{ name: 'forms' }">
+      {{ $t('forms.all') }}
+    </router-link>
+    <Foo> </Foo>
     <div
       class="absolute top-0 flex flex-wrap   p-2 bg-gray-900"
       v-show="isFormsOpen"
@@ -27,11 +28,13 @@
 </template>
 
 <script>
+import Foo from '@/components/Foo.vue'
 import FormNames from '@/components/FormNames'
 
 export default {
   components: {
-    FormNames
+    FormNames,
+    Foo
   },
   computed: {
     isFormOpen() {

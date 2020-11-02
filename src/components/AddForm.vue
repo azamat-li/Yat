@@ -3,7 +3,7 @@
     <input
       class="bg-transparent p-1 mx-4 w-40 r-align"
       type="text"
-      placeholder="+ Добавьте Класс"
+      placeholder="+ Add Form"
       @keyup.enter="addForm"
     />
   </div>

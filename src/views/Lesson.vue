@@ -6,7 +6,7 @@
         :value="lesson.name"
         @keyup.enter="updateLessonProperty($event, 'name')"
         @change="updateLessonProperty($event, 'name')"
-        placeholder="Урок"
+        placeholder="+"
       />
     </div>
   </div>
