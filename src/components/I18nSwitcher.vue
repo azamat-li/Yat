@@ -5,6 +5,8 @@
         English
       </button>
       <button @click="setLocale('ru')">Russian</button>
+      <button @click="setLocale('ba')">Bashkir</button>
+      <button @click="setLocale('tat')">Tatar</button>
     </section>
   </div>
 </template>

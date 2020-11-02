@@ -1,14 +1,14 @@
 {
+  "editing": "Үзгәртү",
   "forms": {
-    "all": "All Forms",
-    "form": "Form",
-    "add": "Add Form"
+    "add": "Синыф өстәү",
+    "all": "Бөтен Синыфлар",
+    "form": "Синыф"
   },
   "tables": {
-    "all": "All Tables"
+    "all": "Бөтен Такталар"
   },
-  "watching": "Watching",
-  "editing": "Editing",
+  "watching": "Карау",
   "week": {
     "Friday": "Friday",
     "Monday": "Monday",

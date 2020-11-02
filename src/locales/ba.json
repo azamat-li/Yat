@@ -1,14 +1,14 @@
 {
   "forms": {
-    "all": "All Forms",
-    "form": "Form",
-    "add": "Add Form"
+    "add": "Класс Өҫтәргә",
+    "all": "Бөтә Кластар",
+    "form": "Класс"
   },
   "tables": {
-    "all": "All Tables"
+    "all": "Бөтә Таҡталар"
   },
-  "watching": "Watching",
-  "editing": "Editing",
+  "watching": "Ҡарау",
+  "editing": "Үҙгәртеү",
   "week": {
     "Friday": "Friday",
     "Monday": "Monday",
