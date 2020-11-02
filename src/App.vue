@@ -5,11 +5,6 @@
 </template>
 
 <script>
-import Meta from 'vue-meta'
-import Vue from 'vue'
-
-Vue.use(Meta)
-
 export default {
   created() {
     const locale = localStorage.getItem('locale')

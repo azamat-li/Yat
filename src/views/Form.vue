@@ -13,16 +13,6 @@
         </div>
       </div>
       <div class="flex flex-wrap   items-start bg-gray-800 text-gray-200 ">
-        <FormBlock
-          v-for="(day, $dayIndex) of form.days"
-          :key="$dayIndex"
-          :block="day"
-          :blockIndex="$dayIndex"
-          :form="form"
-          :isEditable="isFormEditable"
-          blockType="day"
-          class=" flex"
-        />
         <div v-if="isFormEditable" class=" bg-gray-800">
           <input
             type="text"
@@ -33,6 +23,11 @@
         </div>
       </div>
     </div>
+    <FormBlocks
+      :form="form"
+      :isFormEditable="isFormEditable"
+      class="flex flex-wrap"
+    ></FormBlocks>
     <ToggleEditability
       class=" text-left    bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
@@ -43,8 +38,8 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
+import FormBlocks from '@/components/FormBlocks.vue'
 import ToggleEditability from '../components/ToggleEditability'
-import FormBlock from '@/components/FormBlock'
 import Foo from '@/components/Foo.vue'
 
 export default {
@@ -56,8 +51,8 @@ export default {
   },
   components: {
     ToggleEditability,
-    FormBlock,
-    Foo
+    Foo,
+    FormBlocks
   },
   computed: {
     ...mapState(['isFormEditable']),
