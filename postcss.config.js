@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const IN_PRODUCTION = process.env.NODE_ENV === 'production'
 
 class TailwindVueExtractor {

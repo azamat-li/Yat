@@ -1,0 +1,17 @@
+{
+  "classes": {
+    "add": "Add Form",
+    "all": "All Forms",
+    "class": "Form"
+  },
+  "editing": "Editing",
+  "watching": "Watching",
+  "week": {
+    "Friday": "Friday",
+    "Monday": "Monday",
+    "Saturday": "Saturday",
+    "Thursday": "Thursday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday"
+  }
+}

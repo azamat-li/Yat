@@ -1,19 +1,11 @@
 <template>
-    <div class="m-2 p-2  ">
-
-      <i18n> </i18n>
-    </div>
+  <div class="m-2 p-2  "></div>
 </template>
 
 <script>
-import i18n from '@/components/i18n.vue';
-    export default {
-    components: {
-    i18n
-    },       
-    }
+export default {
+  components: {}
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

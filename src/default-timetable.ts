@@ -1,5 +1,5 @@
 import { uid } from './utils'
-import { getDays } from './default-days'
+import { getDays } from './DefaultDays'
 
 export default {
   forms: [

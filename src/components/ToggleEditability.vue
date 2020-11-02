@@ -5,12 +5,19 @@
       @click="toggleEditability"
     >
       <div v-if="editableState" data-testid="unLockedButton">
-        Изменение
+        <p>{{ $t('editing') }}</p>
       </div>
       <div v-if="!editableState" data-testid="lockedButton">
-        Просмотр
+        <p>{{ $t('watching') }}</p>
       </div>
     </button>
+    <section>
+      <button class="button btn" type="button" @click="setLocale('en')">
+        English
+      </button>
+      |
+      <button @click="setLocale('ru')">Russian</button>
+    </section>
   </div>
 </template>
 
@@ -35,6 +42,10 @@ export default {
         key: this.editableStateString,
         value: !this.editableState
       })
+    },
+    setLocale(locale) {
+      this.$i18n.locale = locale
+      localStorage.setItem('locale', locale)
     }
   }
 }
@@ -43,5 +54,8 @@ export default {
 <style lang="css" scoped>
 button:focus {
   outline: none;
+}
+button {
+  @apply p-2 m-2;
 }
 </style>
