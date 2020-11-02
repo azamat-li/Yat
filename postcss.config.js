@@ -22,17 +22,13 @@ const extensionsOfCSS = [
   'styl'
 ]
 
-import tailwindcss from '.tailwind.config.js'
-import postcssPresetEnv from 'post-preset-env'
-import fullhuman from '@fullhuman/postcss-purgecss'
-import autoprefixer from 'autoprefixer'
 module.exports = {
   plugins: [
     require('autoprefixer'),
-    postcssPresetEnv,
-    tailwindcss,
+    require('postcss-preset-env'),
+    require('tailwindcss'),
     IN_PRODUCTION &&
-      fullhuman({
+      require('fullhuman')({
         content: [`./@(public|src)/**/*.@(${extensionsUsingCSS.join('|')})`],
         css: [`./src/**/*.@(${extensionsOfCSS.join('|')})`],
         extractors: [
@@ -48,6 +44,6 @@ module.exports = {
           /^router-link(|-exact)-active$/
         ]
       }),
-    autoprefixer()
+    require('autoprefixer')()
   ]
 }
