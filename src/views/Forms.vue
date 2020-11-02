@@ -18,7 +18,7 @@ import Form from '@/views/Form.vue'
 
 export default {
   components: {
-    Form
+    Form,
   },
   computed: {
     ...mapState(['schoolTimetable']),

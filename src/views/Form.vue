@@ -37,6 +37,7 @@
       class=" text-left    bg-gray-800 text-gray-300"
       editableStateString="isFormEditable"
     ></ToggleEditability>
+  <Foo> </Foo>
   </div>
 </template>
 
@@ -44,6 +45,7 @@
 import { mapState, mapGetters } from 'vuex'
 import ToggleEditability from '../components/ToggleEditability'
 import FormBlock from '@/components/FormBlock'
+import Foo from '@/components/Foo.vue';
 
 export default {
   props: {
@@ -54,7 +56,8 @@ export default {
   },
   components: {
     ToggleEditability,
-    FormBlock
+    FormBlock,
+    Foo
   },
   computed: {
     ...mapState(['isFormEditable']),
