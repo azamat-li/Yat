@@ -2,16 +2,25 @@
   "name": "yat",
   "version": "0.2.1",
   "private": true,
-  "main": "server.js",
+  "description": "## Project setup ``` npm install ```",
+  "author": {
+    "name": "Azamat Alibaev"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "jest": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
+    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
+    "jest": "vue-cli-service test:unit",
     "prestart": "npm run build",
-    "start": "node server.js",
-    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
+    "start": "node server.js"
   },
+  "main": "server.js",
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
   "dependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/express": "^4.17.8",
@@ -25,6 +34,7 @@
     "tailwindcss": "^1.7.6",
     "vue": "^2.6.12",
     "vue-gtm": "^3.0.0",
+    "vue-i18n": "^8.17.3",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
@@ -65,40 +75,33 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.9.3",
     "vue-cli-plugin-fontawesome": "^0.2.0",
+    "vue-cli-plugin-i18n": "~1.0.1",
     "vue-cli-plugin-tailwind": "^1.4.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "description": "## Project setup ``` npm install ```",
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Azamat-Alibaev/Floating-timetable.git"
-  },
-  "keywords": [
-    "smart-head-teacher",
-    "timetable"
-  ],
-  "author": {
-    "name": "Azamat Alibaev"
-  },
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Azamat-Alibaev/Floating-timetable/issues"
   },
+  "directories": {
+    "test": "tests"
+  },
   "homepage": "https://github.com/Azamat-Alibaev/Floating-timetable#readme",
-  "files": [
-    "./bin/*",
-    "./lib/*"
-  ],
-  "typings": "./lib/index.d.ts",
   "husky": {
     "hooks": {
       "pre-commit": "npm run jest && lint-staged"
     }
   },
+  "keywords": [
+    "smart-head-teacher",
+    "timetable"
+  ],
+  "license": "Apache-2.0",
   "lint-staged": {
     "*.js": "eslint --cache --fix"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azamat-Alibaev/Floating-timetable.git"
+  },
+  "typings": "./lib/index.d.ts"
 }

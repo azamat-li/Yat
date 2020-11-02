@@ -1,7 +1,7 @@
-const express = require('express')
-const serveStatic = require('serve-static')
-const path = require('path')
-const morgan = require('morgan')
+import express from 'express'
+import serveStatic from 'serve-static'
+import path from 'path'
+import morgan from 'morgan'
 
 const app = express()
 

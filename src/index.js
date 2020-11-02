@@ -1,3 +1,3 @@
 export function sayHelloWorld(world) {
-    return "Hello " + world;
+  return 'Hello ' + world
 }
