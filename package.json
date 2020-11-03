@@ -1,110 +1,110 @@
 {
-  "name": "yat",
-  "version": "0.2.1",
-  "private": true,
-  "description": "## Project setup ``` npm install ```",
-  "author": {
-    "name": "Azamat Alibaev"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
-    "jest": "vue-cli-service test:unit",
-    "prestart": "npm run build",
-    "start": "node server.js"
-  },
-  "main": "server.js",
-  "files": [
-    "./bin/*",
-    "./lib/*"
-  ],
-  "dependencies": {
-    "@types/body-parser": "^1.19.0",
-    "@types/express": "^4.17.8",
-    "@types/express-serve-static-core": "^4.17.12",
-    "@types/serve-static": "^1.13.5",
-    "body-parser": "^1.15.2",
-    "core-js": "^3.6.5",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "serve-static": "^1.14.1",
-    "tailwindcss": "^1.7.6",
-    "vue": "^2.6.12",
-    "vue-gtm": "^3.0.0",
-    "vue-i18n": "^8.17.3",
-    "vue-meta": "^2.4.0",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@fullhuman/postcss-purgecss": "^1.1.0",
-    "@types/jest": "^24.0.19",
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/eslint-config-typescript": "^5.0.2",
-    "@vue/test-utils": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-vue": "^6.2.2",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "node-sass": "^4.14.1",
-    "postcss": "^8.1.4",
-    "postcss-loader": "^4.0.4",
-    "postcss-preset-env": "^6.3.0",
-    "prettier": "^1.19.1",
-    "react-test-renderer": "^16.13.1",
-    "sass": "^1.26.11",
-    "sass-loader": "^9.0.3",
-    "styled-components-test-utils": "^1.0.2",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "tailwind": "^4.0.0",
-    "tslint": "^6.1.3",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "~3.9.3",
-    "vue-cli-plugin-fontawesome": "^0.2.0",
-    "vue-cli-plugin-i18n": "~1.0.1",
-    "vue-cli-plugin-tailwind": "^1.4.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "bugs": {
-    "url": "https://github.com/Azamat-Alibaev/Floating-timetable/issues"
-  },
-  "directories": {
-    "test": "tests"
-  },
-  "homepage": "https://github.com/Azamat-Alibaev/Floating-timetable#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run jest && lint-staged"
-    }
-  },
-  "keywords": [
-    "smart-head-teacher",
-    "timetable"
-  ],
-  "license": "Apache-2.0",
-  "lint-staged": {
-    "*.js": "eslint --cache --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Azamat-Alibaev/Floating-timetable.git"
-  },
-  "typings": "./lib/index.d.ts"
+    "name": "yat",
+    "version": "0.2.2",
+    "private": true,
+    "description": "## Project setup ``` npm install ```",
+    "author": {
+        "name": "Azamat Alibaev"
+    },
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install",
+        "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
+        "jest": "vue-cli-service test:unit",
+        "prestart": "npm run build",
+        "start": "node server.js"
+    },
+    "main": "server.js",
+    "files": [
+        "./bin/*",
+        "./lib/*"
+    ],
+    "dependencies": {
+        "@types/body-parser": "^1.19.0",
+        "@types/express": "^4.17.8",
+        "@types/express-serve-static-core": "^4.17.12",
+        "@types/serve-static": "^1.13.5",
+        "body-parser": "^1.15.2",
+        "core-js": "^3.6.5",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0",
+        "serve-static": "^1.14.1",
+        "tailwindcss": "^1.7.6",
+        "vue": "^2.6.12",
+        "vue-gtm": "^3.0.0",
+        "vue-i18n": "^8.17.3",
+        "vue-meta": "^2.4.0",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "@fullhuman/postcss-purgecss": "^1.1.0",
+        "@types/jest": "^24.0.19",
+        "@typescript-eslint/eslint-plugin": "^2.33.0",
+        "@typescript-eslint/parser": "^2.33.0",
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-typescript": "~4.5.0",
+        "@vue/cli-plugin-unit-jest": "~4.5.0",
+        "@vue/cli-plugin-vuex": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "^5.0.2",
+        "@vue/test-utils": "^1.0.3",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-prettier": "^3.1.3",
+        "eslint-plugin-vue": "^6.2.2",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.5.1",
+        "node-sass": "^4.14.1",
+        "postcss": "^8.1.4",
+        "postcss-loader": "^4.0.4",
+        "postcss-preset-env": "^6.3.0",
+        "prettier": "^1.19.1",
+        "react-test-renderer": "^16.13.1",
+        "sass": "^1.26.11",
+        "sass-loader": "^9.0.3",
+        "styled-components-test-utils": "^1.0.2",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
+        "tailwind": "^4.0.0",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "~3.9.3",
+        "vue-cli-plugin-fontawesome": "^0.2.0",
+        "vue-cli-plugin-i18n": "~1.0.1",
+        "vue-cli-plugin-tailwind": "^1.4.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "bugs": {
+        "url": "https://github.com/Azamat-Alibaev/Floating-timetable/issues"
+    },
+    "directories": {
+        "test": "tests"
+    },
+    "homepage": "https://github.com/Azamat-Alibaev/Floating-timetable#readme",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && npm run jest"
+        }
+    },
+    "keywords": [
+        "smart-head-teacher",
+        "timetable"
+    ],
+    "license": "Apache-2.0",
+    "lint-staged": {
+        "*.js": "eslint --cache --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Azamat-Alibaev/Floating-timetable.git"
+    },
+    "typings": "./lib/index.d.ts"
 }
