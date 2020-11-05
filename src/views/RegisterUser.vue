@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <form>
+    <div >
+        <form class="form">
             <label for="name">
                  auth.name
             </label>
