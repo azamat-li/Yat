@@ -2,8 +2,8 @@ form {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 15em;
   margin-bottom: 2em;
+  @apply w-1/2;
 
   p {
     color: tomato;
@@ -20,10 +20,14 @@ input {
   font: 1em 'Avenir', Helvetica, sans-serif;
 }
 
+.input {
+  @apply rounded-full;
+}
+
 h1 {
   margin-top: 0;
 }
 
 .form {
-  @apply bg-gray-700 text-gray-400;
+  @apply bg-gray-700 text-gray-400 block ml-auto mr-auto rounded-xl;
 }

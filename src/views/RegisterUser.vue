@@ -1,10 +1,11 @@
 <template>
     <div >
         <form class="form">
+            <div class=" p-6"> 
             <label for="name">
                  auth.name
             </label>
-            <input v-model="name" type="text" name="name" value>
+            <input   v-model="name" type="text" name="name" value>
 
             <label for="email">
                 auth.email
@@ -19,6 +20,7 @@
                 <button type="submit" name="button">
                      auth.submit
                 </button>
+        </div>
         </form>
     </div>
 </template>
@@ -48,5 +50,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+input {
+    @apply rounded-full;
+}
 </style>
