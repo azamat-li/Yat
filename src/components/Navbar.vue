@@ -1,12 +1,12 @@
 <template>
-    <div id="nav" class="rounded-full"> 
+    <div id="nav" class="rounded-full mb-2"> 
 <section >
-    <template v-if="user" >
+    <template v-if="loggedIn" >
        <router-link to="dashboard"> 
            {{ $t('dashboard') }}
        </router-link>
 
-        <span class="nav-welcome"> Welcome, {{ user.name}}.</span>
+        <span class="nav-welcome"> {{ $t(auth.welcome) }} </span>
         <button type="button" class="logoutButton btn" @click="logout">
             {{ $t('auth.logout') }}
         </button>
@@ -28,11 +28,13 @@
 </template>
 
 <script>
+import { authComputed } from '../store/heplers'
     export default {
         computed: {
             user() {
                 return this.$store.state.user
-            }
+            },
+         ...authComputed
         },
         methods: {
             logout() {

@@ -45,7 +45,7 @@ Navbar
     },
     isFormsOpen() {
       return this.$route.name === 'forms'
-    }
+    },
   },
   methods: {
     close() {

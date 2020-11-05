@@ -36,7 +36,6 @@ md {
   @apply w-full;
 }
 
-
 form,
 xl {
   @apply w-2/3;
@@ -51,6 +50,7 @@ input {
   margin-bottom: 1em;
   font: 1em 'Avenir', Helvetica, sans-serif;
 }
+
 
 .input {
   @apply rounded-full;

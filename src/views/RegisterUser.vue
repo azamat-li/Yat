@@ -52,6 +52,6 @@
 
 <style lang="scss" scoped>
 input {
-    @apply rounded-full;
+  @apply text-gray-900 rounded-full text-gray-800 p-2;
 }
 </style>

@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
 import axios from 'axios'
+import Vuex from 'vuex'
 import defaultSchoolTimetable from '@/default-timetable'
 import { getDays } from '@/DefaultDays'
 import { saveStatePlugin, uid } from '../utils'
@@ -44,6 +44,9 @@ export default new Vuex.Store({
           }
         }
       }
+    },
+    loggedIn(state) {
+        return !!state.user
     }
   },
   mutations: {
