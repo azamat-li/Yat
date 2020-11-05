@@ -1,47 +1,49 @@
 <template>
     <div id="nav" class="rounded-full mb-2"> 
-<section >
-    <div class="text-yellow-300">
-    {{ loggedIn }}
-    </div>
-    <template v-if="!loggedIn" >
-            <router-link to="login" class="btn">
-                {{ $t('auth.login') }}
-            </router-link>
-            <router-link to="register" class="btn">
-               {{ $t('auth.register') }} 
-            </router-link>
-    </template>
-
-    <template v-else>
-       <router-link to="dashboard"> 
-           {{ $t('dashboard') }}
-       </router-link>
-
-        <span class="nav-welcome"> {{ $t(auth.welcome) }} </span>
-        <button type="button" class="logoutButton btn" @click="logout">
-            {{ $t('auth.logout') }}
-        </button>
-    </template>
-
-
-</section>
-
+        <div v-if="notLoggedIn" >
+                <button type="button" class="btn"  @click="login">
+                    {{ $t('auth.login') }}
+                </button>
+                <button type="button" class="btn" @click="register">
+                    {{ $t('auth.register') }} 
+                </button>
+        </div>
+        <div v-else>
+            <button type="button"  class="btn" @click="goToDashboard"   > 
+            {{     $t('dashboard')   }}
+            </button>
+            <button type="button" class="logoutButton btn" @click="logout">
+                {{ $t('auth.logout') }}
+            </button>
+        </div>
     </div>
 </template>
 
 <script>
-import { authComputed } from '../store/heplers'
+import { authComputed } from '../store/helpers'
     export default {
         computed: {
             user() {
                 return this.$store.state.user
             },
-         ...authComputed
+         ...authComputed,
+         notLoggedIn() {
+             return !this.loggedIn
+         }
         },
         methods: {
+            login() {
+                this.$router.push({ name: 'login'})
+            },
             logout() {
+                this.$router.push('/')
                 this.$store.dispatch('logout')
+            },
+            register() {
+                this.$router.push({name: 'register'})
+            },
+            goToDashboard() {
+                this.$router.push({ name: 'dashboard'})
             }
         }
     }
@@ -81,12 +83,13 @@ button,
     background: white;
     text-decoration: none ;
     color:  #2c3e50;
-    @apply rounded-full p-1 m-1;
+    @apply rounded-full p-1 m-1 inline-block;
      
      &.router-link-active {
          color: #2c3e50;
      }
 }
+
 
 .logoutButton {
     cursor: pointer;

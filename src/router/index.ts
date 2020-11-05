@@ -7,12 +7,18 @@ import Lesson from '../views/Lesson.vue'
 import  Dashboard from '../views/Dashboard.vue'
 import RegisterUser from '@/views/RegisterUser.vue';
 import LoginUser from '@/views/LoginUser.vue';
+import Home  from '@/views/Home.vue';
 
 Vue.use(VueRouter)
 
 const routes: RouteConfig[] = [
+    {
+        path: '/',
+        name: 'home',
+        component: Home
+    },
   {
-    path: '/',
+    path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
     children: [

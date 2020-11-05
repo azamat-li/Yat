@@ -37,7 +37,7 @@ export default {
   components: {
     FormNames,
     Foo,
-Navbar
+    Navbar
   },
   computed: {
     isFormOpen() {
@@ -49,7 +49,7 @@ Navbar
   },
   methods: {
     close() {
-      this.$router.push({ name: 'main' })
+      this.$router.push({ name: 'dashboard' })
     }
   }
 }

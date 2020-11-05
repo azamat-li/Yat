@@ -46,7 +46,7 @@ export default new Vuex.Store({
       }
     },
     loggedIn(state) {
-        return state.user
+        return (state.user) ? true : false
     }
   },
   mutations: {
@@ -118,7 +118,7 @@ export default new Vuex.Store({
     },
     LOGOUT(){
         localStorage.removeItem('user')
-        localStorage.reload()
+        location.reload()
     }
   },
   actions: {
