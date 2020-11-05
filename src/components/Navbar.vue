@@ -16,10 +16,10 @@
 
     <template v-else>
             <router-link to="authenticate" class="button">
-                login
+                {{ $t('auth.login') }}
             </router-link>
             <router-link to="register" class="button">
-               register 
+               {{ $t('auth.register') }} 
             </router-link>
     </template>
 </section>

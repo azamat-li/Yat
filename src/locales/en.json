@@ -1,14 +1,22 @@
 {
+  "auth": {
+    "email": "Email",
+    "login": "Log In",
+    "name": "Name",
+    "password": "Password",
+    "register": "Sign Up",
+    "submit": "Create New Account"
+  },
+  "editing": "Editing",
   "forms": {
+    "add": "Add Form",
     "all": "All Forms",
-    "form": "Form",
-    "add": "Add Form"
+    "form": "Form"
   },
   "tables": {
     "all": "All Tables"
   },
   "watching": "Watching",
-  "editing": "Editing",
   "week": {
     "Friday": "Friday",
     "Monday": "Monday",

@@ -3,22 +3,22 @@
         <form class="form">
             <div class=" p-6"> 
             <label for="name">
-                 auth.name
+            {{ $t('auth.name')  }}  
             </label>
             <input   v-model="name" type="text" name="name" value>
 
             <label for="email">
-                auth.email
+                {{ $t('auth.email') }} 
             </label>
                     <input v-model="email" type="email" name="email" value>
 
             <label for="password">
-                auth.password
+                {{ $t('auth.password') }}
                 </label>
                     <input v-model="password" type="password" name value>
 
                 <button class="button" type="submit" name="button">
-                     auth.submit
+                     {{ $t('auth.submit') }}  
                 </button>
         </div>
         </form>
