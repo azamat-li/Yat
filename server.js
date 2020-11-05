@@ -1,10 +1,10 @@
 /* eslint-disable */
-
 const express = require('express')
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const fs = require('fs')
+const forms = require('./db/forms.json')
 
 const app = express()
 
@@ -17,27 +17,13 @@ app.get('/', (req, res) => {
   })
 })
 
-// MIDDLEWARE
-function verifyToken(req, res, next) {
-  const bearerHeader = req.headers['authorization']
-
-  if (typeof bearerHeader !== 'undefined') {
-    const bearer = bearerHeader.split(' ')
-    const bearerToken = bearer[1]
-    req.token = bearerToken
-    next()
-  } else {
-    res.sendStatus(401)
-  }
-}
-
-app.get('/form', verifyToken, (req, res) => {
-  verify(req.token, 'the_secret_key', err => {
+app.get('/dashboard', verifyToken, (req, res) => {
+  jwt.verify(req.token, 'the_secret_key', err => {
     if (err) {
       res.sendStatus(401)
     } else {
       res.json({
-        events: events
+        forms: forms 
       })
     }
   })
@@ -53,16 +39,16 @@ app.post('/register', (req, res) => {
     }
 
     const data = JSON.stringify(user, null, 2)
-    const dbUserEmail = require('./db/user.json').email
+    var dbUserEmail = require('./db/user.json').email
 
     if (dbUserEmail === req.body.email) {
       res.sendStatus(400)
     } else {
-      writeFile('./db/user.json', data, err => {
+      fs.writeFile('./db/user.json', data, err => {
         if (err) {
           console.log(err + data)
         } else {
-          const token = sign({ user }, 'the_secret_key')
+          const token = jwt.sign({ user }, 'the_secret_key')
           // In a production app, you'll want the secret key to be an environment variable
           res.json({
             token,
@@ -78,14 +64,14 @@ app.post('/register', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-  const userDB = readFileSync('./db/user.json')
+  const userDB = fs.readFileSync('./db/user.json')
   const userInfo = JSON.parse(userDB)
   if (
     req.body &&
     req.body.email === userInfo.email &&
     req.body.password === userInfo.password
   ) {
-    const token = sign({ userInfo }, 'the_secret_key')
+    const token = jwt.sign({ userInfo }, 'the_secret_key')
     // In a production app, you'll want the secret key to be an environment variable
     res.json({
       token,
@@ -97,6 +83,23 @@ app.post('/login', (req, res) => {
   }
 })
 
+// MIDDLEWARE
+function verifyToken (req, res, next) {
+  const bearerHeader = req.headers['authorization']
+
+  if (typeof bearerHeader !== 'undefined') {
+    const bearer = bearerHeader.split(' ')
+    const bearerToken = bearer[1]
+    req.token = bearerToken
+    next()
+  } else {
+    res.sendStatus(401)
+  }
+}
+
 app.listen(3000, () => {
   console.log('Server started on port 3000')
 })
+
+
+

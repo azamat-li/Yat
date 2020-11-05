@@ -13,7 +13,7 @@
         "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install",
         "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
         "jest": "vue-cli-service test:unit",
-        "prestart": "npm run build",
+        "prestart": "yarn build",
         "start": "node server.js"
     },
     "main": "server.js",
@@ -100,7 +100,7 @@
         "smart-head-teacher",
         "timetable"
     ],
-    "license": "Apache-2.0",
+    "license": "MIT",
     "lint-staged": {
         "*.js": "eslint --cache --fix"
     },
