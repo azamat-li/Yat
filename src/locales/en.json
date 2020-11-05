@@ -2,11 +2,13 @@
   "auth": {
     "email": "Email",
     "login": "Log In",
+    "logout": "Sign Out",
     "name": "Name",
     "password": "Password",
     "register": "Sign Up",
     "submit": "Create New Account"
   },
+  "dashboard": "Dashboard",
   "editing": "Editing",
   "forms": {
     "add": "Add Form",

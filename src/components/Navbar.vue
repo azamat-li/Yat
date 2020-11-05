@@ -3,22 +3,22 @@
 <section >
     <template v-if="user" >
        <router-link to="dashboard"> 
-           dashboard
+           {{ $t('dashboard') }}
        </router-link>
 
-<span class="nav-welcome"> Welcome, {{ user.name}}.</span>
+        <span class="nav-welcome"> Welcome, {{ user.name}}.</span>
+        <button type="button" class="logoutButton btn" @click="logout">
+            {{ $t('auth.logout') }}
+        </button>
 
-<button type="button" class="logoutButton" @click="logout">
-    logout
-</button>
     </template>
 
 
     <template v-else>
-            <router-link to="authenticate" class="button">
+            <router-link to="authenticate" class="btn">
                 {{ $t('auth.login') }}
             </router-link>
-            <router-link to="register" class="button">
+            <router-link to="register" class="btn">
                {{ $t('auth.register') }} 
             </router-link>
     </template>
@@ -71,7 +71,7 @@ a {
 }
 
 button,
-.button {
+.btn {
     margin-left: auto;
     background: white;
     text-decoration: none ;
