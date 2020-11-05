@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <button @click="setLocale('en')">
+      <button @click="setLocale('en')" >
         English
       </button>
       <button @click="setLocale('ru')">Russian</button>
@@ -24,6 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 button {
-  @apply p-1 m-1;
+  @apply p-1 m-1 inline-block;
 }
 </style>
