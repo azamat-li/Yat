@@ -1,6 +1,9 @@
 <template>
     <div id="nav" class="rounded-full mb-2"> 
 <section >
+    <div class="text-yellow-300">
+    {{ loggedIn }}
+    </div>
     <template v-if="!loggedIn" >
             <router-link to="login" class="btn">
                 {{ $t('auth.login') }}
