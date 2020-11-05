@@ -20,9 +20,9 @@ export default {
 <style lang="scss">
 @import 'src/assets/styles/global.scss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body,
 html {

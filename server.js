@@ -1,14 +1,15 @@
-import express from 'express'
-import { verify, sign } from 'jsonwebtoken'
-import cors from 'cors'
-import { json } from 'body-parser'
-import { writeFile, readFileSync } from 'fs'
-import events from './db/events.json'
+/* eslint-disable */
+
+const express = require('express')
+const jwt = require('jsonwebtoken')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const fs = require('fs')
 
 const app = express()
 
 app.use(cors())
-app.use(json())
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
   res.json({
