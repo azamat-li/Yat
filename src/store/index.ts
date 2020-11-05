@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 import defaultSchoolTimetable from '@/default-timetable'
 import { getDays } from '@/DefaultDays'
 import { saveStatePlugin, uid } from '../utils'
@@ -18,7 +19,8 @@ export default new Vuex.Store({
   state: {
     schoolTimetable,
     isFormEditable: false,
-    globalTimetableIsEditable: false
+    globalTimetableIsEditable: false,
+    user: null
   },
   getters: {
     getEditableStateByName: state => editableStateString => {
@@ -102,6 +104,14 @@ export default new Vuex.Store({
     DROP_BLOCK(state, { fromBlockIndex, toBlockIndex, form }) {
       const blockToMove = form.days.splice(fromBlockIndex, 1)[0]
       form.days.splice(toBlockIndex, 0, blockToMove)
+    },
+    SET_USER_DATA(state, userData) {
+        state.user = userData
+        localStorage.setItem('user', JSON.stringify(userData))
+        const auth= 'Authorization'
+        axios.defaults.headers.common[auth] = `Bearer ${
+            userData.token
+        }`
     }
   },
   actions: {
@@ -162,6 +172,13 @@ export default new Vuex.Store({
         toLessonIndex
       })
       dispatch('persistSchoolTimetable')
-    }
+    },
+  register( { commit}, credentials) {
+      return axios
+        .post('//localhost:3000/register', credentials)
+        .then(({data}) => {
+            commit('SET_USER_DATA', data)
+        })
+  }
   }
 })

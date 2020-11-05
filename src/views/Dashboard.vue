@@ -1,5 +1,6 @@
 <template>
   <div class="bg-transparent  ">
+      <Navbar></Navbar>
     <div>
       <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
         {{ $t('tables.all') }}
@@ -28,13 +29,15 @@
 </template>
 
 <script>
+import Navbar from '@/components/Navbar.vue';
 import Foo from '@/components/Foo.vue'
 import FormNames from '@/components/FormNames'
 
 export default {
   components: {
     FormNames,
-    Foo
+    Foo,
+Navbar
   },
   computed: {
     isFormOpen() {

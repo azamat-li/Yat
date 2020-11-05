@@ -4,15 +4,16 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Forms from '../views/Forms.vue'
 import Form from '../views/Form.vue'
 import Lesson from '../views/Lesson.vue'
-import Main from '../views/Main.vue'
+import  Dashboard from '../views/Dashboard.vue'
+import RegisterUser from '@/views/RegisterUser.vue';
 
 Vue.use(VueRouter)
 
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'main',
-    component: Main,
+    name: 'dashboard',
+    component: Dashboard,
     children: [
       {
         path: '/form/:id',
@@ -31,7 +32,12 @@ const routes: RouteConfig[] = [
     name: 'lesson',
     component: Lesson,
     props: true
-  }
+  },
+  {
+  path: '/register',
+  name: 'register',
+  component: RegisterUser
+}
 ]
 
 const router = new VueRouter({
