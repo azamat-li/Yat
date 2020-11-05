@@ -2,10 +2,12 @@
   "auth": {
     "email": "Email",
     "login": "Log In",
+    "loginSentence": "Already with us? You may Log In.",
     "logout": "Sign Out",
     "name": "Name",
     "password": "Password",
     "register": "Sign Up",
+    "registerSentence": "Not with us? You may Create New Account.",
     "submit": "Create New Account"
   },
   "dashboard": "Dashboard",

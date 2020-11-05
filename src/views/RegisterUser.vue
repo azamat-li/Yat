@@ -19,6 +19,9 @@
                 <button class="button" type="submit" name="button">
                      {{ $t('auth.submit') }}  
                 </button>
+                <router-link :to="{name: 'login'}">
+                    {{ $t('auth.loginSentence')}}
+                </router-link>
         </form>
     </div>
 </template>
