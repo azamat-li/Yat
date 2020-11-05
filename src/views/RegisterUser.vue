@@ -17,7 +17,7 @@
                 </label>
                     <input v-model="password" type="password" name value>
 
-                <button type="submit" name="button">
+                <button class="button" type="submit" name="button">
                      auth.submit
                 </button>
         </div>
