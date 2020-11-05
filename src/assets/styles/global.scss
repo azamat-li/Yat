@@ -1,18 +1,17 @@
-
 .button,
 button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2em;
-    margin: 0.5em;
-    border-radius: 5px;
-    background: linear-gradient(to right, #16c0b0, #84cf6a);
-    font-size: 1em;
-    color: white;
-    border: none;
-    outline: none;
-    @apply m-2 p-2 block ml-auto mr-auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  margin: 0.5em;
+  border-radius: 5px;
+  background: linear-gradient(to right, #16c0b0, #84cf6a);
+  font-size: 1em;
+  color: white;
+  border: none;
+  outline: none;
+  @apply m-2 p-2 block ml-auto mr-auto;
 }
 
 form {
@@ -20,11 +19,27 @@ form {
   align-items: center;
   flex-direction: column;
   margin-bottom: 2em;
-  @apply w-1/2;
+  @apply w-1/2 min-w-0;
 
   p {
     color: tomato;
   }
+}
+
+form,
+sm {
+  @apply w-full;
+}
+
+form,
+md {
+  @apply w-full;
+}
+
+
+form,
+xl {
+  @apply w-2/3;
 }
 
 input {
@@ -46,5 +61,5 @@ h1 {
 }
 
 .form {
-  @apply bg-gray-700 text-gray-400 block ml-auto mr-auto rounded-xl p-6; 
+  @apply bg-gray-700 text-gray-400 block ml-auto mr-auto rounded-xl p-6;
 }
