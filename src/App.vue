@@ -17,7 +17,9 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+@import 'src/assets/styles/global.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
