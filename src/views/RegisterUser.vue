@@ -1,7 +1,6 @@
 <template>
     <div >
         <form class="form">
-            <div class=" p-6"> 
             <label for="name">
             {{ $t('auth.name')  }}  
             </label>
@@ -20,7 +19,6 @@
                 <button class="button" type="submit" name="button">
                      {{ $t('auth.submit') }}  
                 </button>
-        </div>
         </form>
     </div>
 </template>

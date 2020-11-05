@@ -15,7 +15,7 @@
 
 
     <template v-else>
-            <router-link to="authenticate" class="btn">
+            <router-link to="login" class="btn">
                 {{ $t('auth.login') }}
             </router-link>
             <router-link to="register" class="btn">

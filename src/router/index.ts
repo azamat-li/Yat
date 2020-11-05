@@ -6,6 +6,7 @@ import Form from '../views/Form.vue'
 import Lesson from '../views/Lesson.vue'
 import  Dashboard from '../views/Dashboard.vue'
 import RegisterUser from '@/views/RegisterUser.vue';
+import LoginUser from '@/views/LoginUser.vue';
 
 Vue.use(VueRouter)
 
@@ -37,6 +38,11 @@ const routes: RouteConfig[] = [
   path: '/register',
   name: 'register',
   component: RegisterUser
+},
+{
+    path: '/login',
+    name: 'login',
+    component: LoginUser
 }
 ]
 
