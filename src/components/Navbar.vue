@@ -1,7 +1,16 @@
 <template>
     <div id="nav" class="rounded-full mb-2"> 
 <section >
-    <template v-if="loggedIn" >
+    <template v-if="!loggedIn" >
+            <router-link to="login" class="btn">
+                {{ $t('auth.login') }}
+            </router-link>
+            <router-link to="register" class="btn">
+               {{ $t('auth.register') }} 
+            </router-link>
+    </template>
+
+    <template v-else>
        <router-link to="dashboard"> 
            {{ $t('dashboard') }}
        </router-link>
@@ -10,18 +19,9 @@
         <button type="button" class="logoutButton btn" @click="logout">
             {{ $t('auth.logout') }}
         </button>
-
     </template>
 
 
-    <template v-else>
-            <router-link to="login" class="btn">
-                {{ $t('auth.login') }}
-            </router-link>
-            <router-link to="register" class="btn">
-               {{ $t('auth.register') }} 
-            </router-link>
-    </template>
 </section>
 
     </div>

@@ -93,7 +93,7 @@ export default {
   }
 }
 </script>
-<style lang="css">
+<style lang="scss">
 .handler-btn-colors {
   @apply text-gray-600;
 }

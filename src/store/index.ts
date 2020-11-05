@@ -46,7 +46,7 @@ export default new Vuex.Store({
       }
     },
     loggedIn(state) {
-        return !!state.user
+        return state.user
     }
   },
   mutations: {
@@ -115,6 +115,10 @@ export default new Vuex.Store({
         axios.defaults.headers.common[auth] = `Bearer ${
             userData.token
         }`
+    },
+    LOGOUT(){
+        localStorage.removeItem('user')
+        localStorage.reload()
     }
   },
   actions: {
@@ -190,5 +194,8 @@ export default new Vuex.Store({
             commit('SET_USER_DATA', data)
         })
   },
+  logout({ commit }) {
+      commit('LOGOUT')
+  }
   }
 })
