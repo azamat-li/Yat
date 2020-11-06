@@ -17,6 +17,10 @@
     "all": "All Forms",
     "form": "Form"
   },
+  "home": {
+    "message": "Now you may",
+    "status": "You are in home page."
+  },
   "tables": {
     "all": "All Tables"
   },

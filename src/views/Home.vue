@@ -1,8 +1,8 @@
 <template>
     <div>
-      <Navbar></Navbar>
+      <DefaultTemp>
       <template   v-if="notLoggedIn">
-            <h1 > {{ $t('home.greeting')}} </h1>
+            <h1 > {{ $t('home.status')}} </h1>
             <div >
                 {{ $t('home.message')}}
             </div>
@@ -14,15 +14,17 @@
                 {{ $t('auth.register')}}
             </router-link>
       </template>
+      </DefaultTemp>
     </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar'
+import DefaultTemp from '@/templates/DefaultTemp'
+
 import { authComputed } from '@/store/helpers'
     export default {
         components: {
-            Navbar
+            DefaultTemp
         },
     computed: {
         notLoggedIn() {

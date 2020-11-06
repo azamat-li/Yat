@@ -1,43 +1,41 @@
 <template>
   <div class="bg-transparent  ">
-      <Navbar></Navbar>
-    <div>
-      <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
-        {{ $t('tables.all') }}
-      </div>
-    </div>
-    <FormNames />
-    <router-link class="router-link" :to="{ name: 'forms' }">
-      {{ $t('forms.all') }}
-    </router-link>
-    <Foo> </Foo>
-    <div
-      class="absolute top-0 flex flex-wrap   p-2 bg-gray-900"
-      v-show="isFormsOpen"
-      @click.self="close"
-    >
-      <router-view class="bg-gray-800 " />
-    </div>
-    <div
-      class="absolute w-full h-full bg-opacity-75 top-0 flex flex-wrap  p-2  bg-gray-900"
-      v-show="isFormOpen"
-      @click.self="close"
-    >
-      <router-view class="bg-gray-800 w-full h-full" />
-    </div>
+            <DefaultTemp>
+                <div>
+                <div class="header p-2 mb-4 w-1/3 bg-gray-800 text-gray-300 rounded-full">
+                    {{ $t('tables.all') }}
+                </div>
+                </div>
+                <FormNames />
+                <router-link class="router-link" :to="{ name: 'forms' }">
+                {{ $t('forms.all') }}
+                </router-link>
+                <div
+                class="absolute top-0 flex flex-wrap   p-2 bg-gray-900"
+                v-show="isFormsOpen"
+                @click.self="close"
+                >
+                <router-view class="bg-gray-800 " />
+                </div>
+                <div
+                class="absolute w-full h-full bg-opacity-75 top-0 flex flex-wrap  p-2  bg-gray-900"
+                v-show="isFormOpen"
+                @click.self="close"
+                >
+                <router-view class="bg-gray-800 w-full h-full" />
+                </div>
+            </DefaultTemp>
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
-import Foo from '@/components/Foo.vue'
+import DefaultTemp from '@/templates/DefaultTemp'
 import FormNames from '@/components/FormNames'
 
 export default {
   components: {
     FormNames,
-    Foo,
-    Navbar
+    DefaultTemp
   },
   computed: {
     isFormOpen() {
