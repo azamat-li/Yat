@@ -55,7 +55,7 @@ import { authComputed } from '../store/helpers'
     align-items: center;
     min-height: 50px;
     padding: 0.2em 1em;
-    background: linear-gradient(to right, #16c0b0, #84cf6a)
+   background:  radial-gradient( circle farthest-corner at 4.7% 14%, rgba(48,225,152,1) 0%, rgba(9,123,226,1) 90% );
 }
 
 .nav-welcome {
