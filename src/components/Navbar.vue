@@ -44,7 +44,7 @@ import { authComputed } from '../store/helpers'
             },
             goToDashboard() {
                 this.$router.push({ name: 'dashboard'})
-            }
+            },
         }
     }
 </script>
