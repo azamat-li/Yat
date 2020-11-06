@@ -56,23 +56,7 @@ import { authComputed } from '../store/helpers'
     min-height: 50px;
     padding: 0.2em 1em;
    background:  radial-gradient( circle farthest-corner at 4.7% 14%, rgba(48,225,152,1) 0%, rgba(9,123,226,1) 90% );
-}
-
-.nav-welcome {
-    margin-left: auto;
-    margin-right: 1rem;
-    color: white;
-}
-
-a {
-    font-weight: bold;
-    color: #2c3e50;
-    margin: auto 0.8em auto 0.4em;
-    text-decoration: none;
-    border-top: 2px solid transparent;
-}
-
-.router-lint-exact-active {
+} .nav-welcome { margin-left: auto; margin-right: 1rem; color: white; } a { font-weight: bold; color: #2c3e50; margin: auto 0.8em auto 0.4em; text-decoration: none; border-top: 2px solid transparent; } .router-lint-exact-active {
     color: white;
     border-bottom: 2px solid #fff;
 }
