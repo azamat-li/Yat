@@ -1,6 +1,6 @@
 <template>
     <div >
-        <form class="form">
+        <form class="form" @submit.prevent="register">
             <label for="name">
             {{ $t('auth.name')  }}  
             </label>
@@ -22,13 +22,25 @@
                 <router-link :to="{name: 'login'}">
                     {{ $t('auth.loginSentence')}}
                 </router-link>
-                    <ul
+                    <p
                         class="text-red-400"
                     >
-                        <li v-for="(error, index) of errors" :key="index"> 
-                            {{ error }}
-                        </li>
-                    </ul>
+                        {{ errorStatus}}
+                    </p>
+                    <div
+                        class="text-red-400"
+                    >
+                    <div v-for="(err, errIndex) of errorsCollected" 
+                    :key="errIndex"
+                    >
+                            <div v-if="err==='EmailAlreadyUsed'" >
+                                {{ $t('auth.register.EmailAlreadyUsed') }}
+                            </div>
+                            <div v-if="err==='PasswordLessThen6'">
+                                {{ $t('auth.register.PasswordLessThen6') }}
+                            </div>
+                    </div>
+                    </div>
         </form>
     </div>
 </template>
@@ -40,21 +52,21 @@
                 name: '',
                 email: '',
                 password: '',
-                error: null
+                errorStatus: '',
+                errorsCollected: null
         }
     },
     methods:  {
-        RegisterUser(){
+        register(){
             this.$store.dispatch('register', {
                 name: this.name,
                 email: this.email,
                 password: this.password
-            })
-            .then(() => {
-                this.$router.push({name: 'dashboard'})
-            })
-            .catch(err => {
-                this.error = err.response.data.error
+            }).then(() => {
+                    this.$router.push({name: 'dashboard'})
+            }).catch(err => {
+                this.errorStatus = err.response.status
+                this.errorsCollected = err.response.data.errors
             })
         }
     }

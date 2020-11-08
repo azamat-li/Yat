@@ -42,11 +42,12 @@ app.post('/register', (req, res) => {
     var dbUserEmail = require('./db/user.json').email
 
     if (dbUserEmail === user.email) {
-        errorsCollected.push('Account with this email already exists.')
+        console.log('In database: ' + dbUserEmail + 'and  got from page: '  + user.email );
+        errorsCollected.push('EmailAlreadyUsed')
     }
 
     if (user.password.length < 6 ) {
-        errorsCollected.push('Password should be at least 6 characters ')
+        errorsCollected.push('PasswordLessThen6')
     }
 
     if (errorsCollected.length > 0)     
