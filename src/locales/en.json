@@ -12,6 +12,11 @@
   },
   "dashboard": "Dashboard",
   "editing": "Editing",
+  "errors": {
+    "messages": {
+      "401": "Failed to log in. Please Make sure that you have Entered your Login and Password Correctly. "
+    }
+  },
   "forms": {
     "add": "Add Form",
     "all": "All Forms",
