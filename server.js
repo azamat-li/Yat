@@ -42,7 +42,6 @@ app.post('/register', (req, res) => {
     var dbUserEmail = require('./db/user.json').email
 
     if (dbUserEmail === user.email) {
-        console.log('In database: ' + dbUserEmail + 'and  got from page: '  + user.email );
         errorsCollected.push('EmailAlreadyUsed')
     }
 
