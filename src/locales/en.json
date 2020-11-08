@@ -6,9 +6,12 @@
     "logout": "Sign Out",
     "name": "Name",
     "password": "Password",
-    "register": "Sign Up",
-    "registerSentence": "Not with us? You may Create New Account.",
-    "submit": "Create New Account"
+    "register": {
+      "EmailAlreadyUsed": "We are Sorry, but this Email is Already Used.",
+      "PasswordLessThen6": "Please Use Password Not Less Then 6 Characters.",
+      "register": "Join"
+    },
+    "registerSentence": "Not with us? You may Create New Account."
   },
   "dashboard": "Dashboard",
   "editing": "Editing",

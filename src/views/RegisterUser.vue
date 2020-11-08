@@ -17,7 +17,7 @@
                     <input v-model="password" type="password" name value>
 
                 <button class="button" type="submit" name="button">
-                     {{ $t('auth.submit') }}  
+                     {{ $t('auth.register.register') }}  
                 </button>
                 <router-link :to="{name: 'login'}">
                     {{ $t('auth.loginSentence')}}

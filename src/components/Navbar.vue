@@ -5,7 +5,7 @@
                     {{ $t('auth.login') }}
                 </button>
                 <button type="button" class="btn" @click="register">
-                    {{ $t('auth.register') }} 
+                    {{ $t('auth.register.register') }} 
                 </button>
         </div>
         <div v-else>

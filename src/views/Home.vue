@@ -12,7 +12,7 @@
                 </button>
                 {{ $t('or')}}
                 <button type="button" class="button inline-block" @click="register">
-                {{ $t('auth.register')}}
+                {{ $t('auth.register.register')}}
                 </button>
           </div>
       </template>
