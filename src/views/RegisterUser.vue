@@ -22,6 +22,13 @@
                 <router-link :to="{name: 'login'}">
                     {{ $t('auth.loginSentence')}}
                 </router-link>
+                    <ul
+                        class="text-red-400"
+                    >
+                        <li v-for="(error, index) of errors" :key="index"> 
+                            {{ error }}
+                        </li>
+                    </ul>
         </form>
     </div>
 </template>
@@ -32,7 +39,8 @@
             return {
                 name: '',
                 email: '',
-                password: ''
+                password: '',
+                error: null
         }
     },
     methods:  {
@@ -44,6 +52,9 @@
             })
             .then(() => {
                 this.$router.push({name: 'dashboard'})
+            })
+            .catch(err => {
+                this.error = err.response.data.error
             })
         }
     }

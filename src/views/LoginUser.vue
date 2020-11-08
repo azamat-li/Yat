@@ -15,10 +15,20 @@
                 <button class="button" type="submit" name="button"> 
                     {{ $t('auth.login')}}
                 </button>
-
+                <p class="text-red-500">
+                    {{ error}}
+                </p>
                 <router-link :to="{name: 'register'}">
                     {{ $t('auth.registerSentence')}}
                 </router-link>
+            <p class="text-red-400">
+                {{ errorStatus }}
+            </p>
+            <p
+            
+            v-if="errorStatus===401">
+           {{ $t('errors.messages.401') }} 
+            </p>
             </form>
         </section>
     </div>
@@ -29,7 +39,8 @@
         data() {
             return {
                 email: '',
-                password: ''
+               password: '',
+               errorStatus: ''
             }
         },
         methods: {
@@ -40,6 +51,9 @@
                 })
                 .then(() => {
                     this.$router.push({ name: 'dashboard'})
+                })
+                .catch(err => {
+                    this.errorStatus = err.response.status
                 })
             }
         }

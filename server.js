@@ -37,13 +37,22 @@ app.post('/register', (req, res) => {
       password: req.body.password
       // In a production app, you'll want to encrypt the password
     }
-
     const data = JSON.stringify(user, null, 2)
+    var errorsCollected = [] 
     var dbUserEmail = require('./db/user.json').email
 
-    if (dbUserEmail === req.body.email) {
-      res.sendStatus(400)
-    } else {
+    if (dbUserEmail === user.email) {
+        errorsCollected.push('Account with this email already exists.')
+    }
+
+    if (user.password.length < 6 ) {
+        errorsCollected.push('Password should be at least 6 characters ')
+    }
+
+    if (errorsCollected.length > 0)     
+        {
+            res.status(400).json({ errors:  errorsCollected})
+        } else {
       fs.writeFile('./db/user.json', data, err => {
         if (err) {
           console.log(err + data)
@@ -79,7 +88,7 @@ app.post('/login', (req, res) => {
       name: userInfo.name
     })
   } else {
-    res.sendStatus(400)
+    res.sentStatus(401)
   }
 })
 
