@@ -1,11 +1,11 @@
 export function uid() {
   return Math.random()
     .toString(16)
-    .slice(2)
+    .slice(2);
 }
 
 export function saveStatePlugin(store) {
   store.subscribe((mutation, state) => {
-    localStorage.setItem('board', JSON.stringify(state.board))
-  })
+    localStorage.setItem("board", JSON.stringify(state.board));
+  });
 }

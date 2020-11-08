@@ -7,22 +7,22 @@
 <script>
 export default {
   created() {
-    const locale = localStorage.getItem('locale')
+    const locale = localStorage.getItem("locale");
     if (locale) {
-      this.$i18n.locale = locale
+      this.$i18n.locale = locale;
     } else if (navigator.language) {
-      this.$i18n.locale = navigator.language.substring(0, 2)
+      this.$i18n.locale = navigator.language.substring(0, 2);
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
-@import 'src/assets/styles/global.scss';
+@import "src/assets/styles/global.scss";
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body,
 html {
