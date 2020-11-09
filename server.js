@@ -88,7 +88,7 @@ app.post('/login', (req, res) => {
       name: userInfo.name
     })
   } else {
-    res.sentStatus(401)
+    res.sendStatus(401)
   }
 })
 

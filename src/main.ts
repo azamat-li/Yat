@@ -20,9 +20,11 @@ new Vue({
     axios.interceptors.response.use(
       response => response,
       error => {
-        this.$router.push("/");
-        this.$store.dispatch("logout");
-        return Promise.reject(error);
+        if (error) {
+          this.$store.dispatch("logout");
+          this.$router.push("/");
+          return Promise.reject(error);
+        }
       }
     );
   },

@@ -8,6 +8,7 @@ import Dashboard from "../views/Dashboard.vue";
 import RegisterUser from "@/views/RegisterUser.vue";
 import LoginUser from "@/views/LoginUser.vue";
 import Home from "@/views/Home.vue";
+import store from "@/store";
 
 Vue.use(VueRouter);
 
