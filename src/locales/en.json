@@ -15,6 +15,11 @@
   },
   "dashboard": "Dashboard",
   "editing": "Editing",
+  "error": {
+    "messages": {
+      "500": "Internal Server Error"
+    }
+  },
   "errors": {
     "messages": {
       "401": "Failed to log in. Please Make sure that you have Entered your Login and Password Correctly. "
