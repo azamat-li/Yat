@@ -1,70 +1,70 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
+import Vue from "vue";
+import VueRouter, { RouteConfig } from "vue-router";
 
-import Forms from '../views/Forms.vue'
-import Form from '../views/Form.vue'
-import Lesson from '../views/Lesson.vue'
-import  Dashboard from '../views/Dashboard.vue'
-import RegisterUser from '@/views/RegisterUser.vue';
-import LoginUser from '@/views/LoginUser.vue';
-import Home  from '@/views/Home.vue';
+import Forms from "../views/Forms.vue";
+import Form from "../views/Form.vue";
+import Lesson from "../views/Lesson.vue";
+import Dashboard from "../views/Dashboard.vue";
+import RegisterUser from "@/views/RegisterUser.vue";
+import LoginUser from "@/views/LoginUser.vue";
+import Home from "@/views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
-    {
-        path: '/',
-        name: 'home',
-        component: Home
-    },
   {
-    path: '/dashboard',
-    name: 'dashboard',
+    path: "/",
+    name: "home",
+    component: Home
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
     component: Dashboard,
-    meta: { requiresAuth: true},
+    meta: { requiresAuth: true },
     children: [
       {
-        path: '/form/:id',
-        name: 'form',
+        path: "/form/:id",
+        name: "form",
         component: Form
       },
       {
-        path: '/forms',
-        name: 'forms',
+        path: "/forms",
+        name: "forms",
         component: Forms
       }
     ]
   },
   {
-    path: '/lesson/:id',
-    name: 'lesson',
+    path: "/lesson/:id",
+    name: "lesson",
     component: Lesson,
     props: true
   },
   {
-  path: '/register',
-  name: 'register',
-  component: RegisterUser
-},
-{
-    path: '/login',
-    name: 'login',
+    path: "/register",
+    name: "register",
+    component: RegisterUser
+  },
+  {
+    path: "/login",
+    name: "login",
     component: LoginUser
-}
-]
+  }
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes
-})
+});
 
 router.beforeEach((to, from, next) => {
-    const loggedIn = localStorage.getItem('user')
-
-    if (to.matched.some(record => record.meta.requiresAuth) && !loggedIn ) {
-        next('/')
-    }
-    next()
-})
-export default router
+  const loggedIn = localStorage.getItem("user");
+  const notLoggedIn = !loggedIn;
+  if (to.matched.some(record => record.meta.requiresAuth) && notLoggedIn) {
+    next("/");
+  }
+  next();
+});
+export default router;
