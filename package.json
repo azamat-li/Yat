@@ -93,7 +93,7 @@
     "homepage": "https://github.com/Azamat-Alibaev/Floating-timetable#readme",
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged && npm run jest"
+            "pre-commit": " npm run jest"
         }
     },
     "keywords": [
