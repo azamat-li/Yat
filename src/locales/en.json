@@ -13,7 +13,10 @@
     },
     "registerSentence": "Not with us? You may Create New Account."
   },
-  "dashboard": "Dashboard",
+  "dashboard": {
+    "hint": "Hint",
+    "prompt": "Buttons are clickable"
+  },
   "editing": "Editing",
   "error": {
     "messages": {
@@ -32,7 +35,8 @@
   },
   "home": {
     "message": "Now you may",
-    "status": "You are in home page."
+    "status": "You are in home page.",
+    "try": "Or try it right now"
   },
   "or": "or",
   "tables": {

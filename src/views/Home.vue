@@ -14,6 +14,11 @@
           <button type="button" class="button inline-block" @click="register">
             {{ $t("auth.register.register") }}
           </button>
+          <div class="pt-40 pb-24">
+						<button type="button" class="button inline-block" @click="dashboard">
+							{{ $t("home.try") }}
+						</button>
+          </div>
         </div>
       </template>
     </DefaultTemp>
@@ -39,6 +44,9 @@ export default {
     },
     register() {
       this.$router.push({ name: "register" });
+    },
+    dashboard() {
+      this.$router.push({ name: "dashboard" });
     }
   }
 };

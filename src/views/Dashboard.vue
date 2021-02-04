@@ -24,6 +24,7 @@
                 >
                 <router-view class="bg-gray-800 w-full h-full" />
                 </div>
+								<p class="text-yellow-800"><b>{{$t('dashboard.hint')}}:</b> {{ $t('dashboard.prompt') }}</p>
             </DefaultTemp>
   </div>
 </template>

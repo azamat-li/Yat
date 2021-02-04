@@ -22,7 +22,7 @@ const routes: RouteConfig[] = [
     path: "/dashboard",
     name: "dashboard",
     component: Dashboard,
-    meta: { requiresAuth: true },
+    // meta: { requiresAuth: true },
     children: [
       {
         path: "/form/:id",
