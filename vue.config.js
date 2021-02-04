@@ -7,5 +7,9 @@ module.exports = {
       enableInSFC: false
     }
   },
-  publicPath: '/Yat/'
+
+  //publicPath: '/Yat/'
+	publicPath: process.env.NODE_ENV === 'production'
+	? '/Yat/'
+	: '/'
 }

@@ -3,18 +3,20 @@
     <DefaultTemp>
       <template v-if="notLoggedIn">
         <div class="p-10 m-10">
-          <h1>{{ $t("home.status") }}</h1>
-          <div>
-            {{ $t("home.message") }}
+					<div class="text-gray-200 p-4 m-6">
+						<h1>{{ $t("home.status") }}</h1>
+						<div  >
+							{{ $t("home.message") }}
+						</div>
           </div>
           <button type="button" class="button inline-block" @click="login">
             {{ $t("auth.login") }}
           </button>
-          {{ $t("or") }}
+					<div class="text-gray-200 inline-block">{{$t("or")}}</div>
           <button type="button" class="button inline-block" @click="register">
             {{ $t("auth.register.register") }}
           </button>
-          <div class="pt-40 pb-24">
+          <div class="m-24 p-2 block">
 						<button type="button" class="button inline-block" @click="dashboard">
 							{{ $t("home.try") }}
 						</button>
